@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>评论 on WeLog</title>
+    <link>https://xieha.cn/tags/%E8%AF%84%E8%AE%BA/</link>
+    <description>Recent content in 评论 on WeLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2023 WeLog</copyright>
+    <lastBuildDate>Wed, 12 Oct 2022 22:41:02 +0800</lastBuildDate><atom:link href="https://xieha.cn/tags/%E8%AF%84%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giscus评论系统简单配置</title>
+      <link>https://xieha.cn/posts/giscus/</link>
+      <pubDate>Wed, 12 Oct 2022 22:41:02 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/giscus/</guid>
+      <description>&lt;p&gt;很早之前就想给博客弄个评论系统，又互动才更加有乐趣。看了其他的一些评论系统，就选择了Giscus评论系统，由于小白一个，弄了很久才搞明白怎么回事。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

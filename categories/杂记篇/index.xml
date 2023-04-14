@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>杂记篇 on WeLog</title>
+    <link>https://xieha.cn/categories/%E6%9D%82%E8%AE%B0%E7%AF%87/</link>
+    <description>Recent content in 杂记篇 on WeLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright © 2023 WeLog</copyright>
+    <lastBuildDate>Sat, 26 Nov 2022 15:22:45 +0800</lastBuildDate><atom:link href="https://xieha.cn/categories/%E6%9D%82%E8%AE%B0%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitalk评论系统Error: Network Error</title>
+      <link>https://xieha.cn/posts/gitalk/</link>
+      <pubDate>Sat, 26 Nov 2022 15:22:45 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/gitalk/</guid>
+      <description>&lt;p&gt;解决一些gitalk评论系统出现的一些问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Gitalk评论系统出现 Error: Network Erro&lt;/li&gt;
+&lt;li&gt;Gitalk评论系统出现 Error: Validation Failed&lt;/li&gt;
+&lt;li&gt;未找到相关的Issues进行评论，请联系XXX进行创建&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Giscus评论系统简单配置</title>
+      <link>https://xieha.cn/posts/giscus/</link>
+      <pubDate>Wed, 12 Oct 2022 22:41:02 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/giscus/</guid>
+      <description>&lt;p&gt;很早之前就想给博客弄个评论系统，又互动才更加有乐趣。看了其他的一些评论系统，就选择了Giscus评论系统，由于小白一个，弄了很久才搞明白怎么回事。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录一些Hugo的错误日志</title>
+      <link>https://xieha.cn/posts/hugo/</link>
+      <pubDate>Mon, 03 Oct 2022 16:07:16 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/hugo/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里记录的是hugo运行过程中发生的错误与解决方法。&lt;/p&gt;
+&lt;p&gt;运营之中，难免会发生各种各样的问题，也经常要搜索各种问题答案，归档起来，也方便些。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
