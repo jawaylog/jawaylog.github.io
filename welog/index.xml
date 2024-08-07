@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微言微语 on WeLog</title>
+    <link>https://xieha.cn/welog/</link>
+    <description>Recent content in 微言微语 on WeLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Welog</copyright>
+    <lastBuildDate>Tue, 18 Oct 2022 22:40:06 +0800</lastBuildDate><atom:link href="https://xieha.cn/welog/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

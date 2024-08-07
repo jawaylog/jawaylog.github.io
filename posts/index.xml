@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>最近的文章 on WeLog</title>
+    <link>https://xieha.cn/posts/</link>
+    <description>Recent content in 最近的文章 on WeLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Welog</copyright>
+    <lastBuildDate>Sun, 16 Oct 2022 18:29:59 +0800</lastBuildDate><atom:link href="https://xieha.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitalk评论系统Error: Network Error</title>
+      <link>https://xieha.cn/posts/gitalk/</link>
+      <pubDate>Sat, 26 Nov 2022 15:22:45 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/gitalk/</guid>
+      <description>收集一些gitalk评论系统出现的一些问题，方便以后查询并解决</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/gitalk/featured.webp" />
+    </item>
+    
+    <item>
+      <title>Giscus评论系统简单配置</title>
+      <link>https://xieha.cn/posts/giscus/</link>
+      <pubDate>Wed, 12 Oct 2022 22:41:02 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/giscus/</guid>
+      <description>给博客弄个评论系统，有互动才更加有乐趣。 看了其他的一些评论系统，就选择了Giscus评论系统。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/giscus/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>记录一些Hugo的错误日志</title>
+      <link>https://xieha.cn/posts/hugo/</link>
+      <pubDate>Mon, 03 Oct 2022 16:07:16 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/hugo/</guid>
+      <description>记录hugo程序运行过程中发生的错误与解决方法，归档起来。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/hugo/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>创业|我在一家店贩卖健康</title>
+      <link>https://xieha.cn/posts/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/</link>
+      <pubDate>Tue, 12 Jul 2022 19:27:12 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/</guid>
+      <description>轻颜主义，享瘦人生。怀着这份梦想，我尝试人生中第一次的创业</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>成都|我在蓉城感受到人间的烟火气</title>
+      <link>https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/</link>
+      <pubDate>Mon, 25 Oct 2021 19:38:15 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/</guid>
+      <description>一年一度的旅游又开始了,这次的目的地是成都。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/featured.webp" />
+    </item>
+    
+    <item>
+      <title>2021年，你有什么想法？</title>
+      <link>https://xieha.cn/posts/2021%E5%B9%B4/</link>
+      <pubDate>Sat, 23 Jan 2021 16:15:55 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/2021%E5%B9%B4/</guid>
+      <description>2020年，糟糕的一年，终于过去呀。上年的目标，一个也没有实现，囧。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/2021%E5%B9%B4/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>2020年了，你过得还好吗？</title>
+      <link>https://xieha.cn/posts/2020%E5%B9%B4%E4%BA%86/</link>
+      <pubDate>Mon, 06 Jan 2020 00:07:21 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/2020%E5%B9%B4%E4%BA%86/</guid>
+      <description>2019年不知不觉已经结束了。2020年了，你过的还好吗？</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/2020%E5%B9%B4%E4%BA%86/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>武汉|一座风光秀丽人文气息浓厚的城市</title>
+      <link>https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/</link>
+      <pubDate>Tue, 05 Jun 2018 23:20:19 +0000</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/</guid>
+      <description>最近一直都想写武汉旅游的感想，也算是对自己一个旅程的回忆吧！</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>广西|桂林山水甲天下</title>
+      <link>https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/</link>
+      <pubDate>Thu, 01 Sep 2016 12:07:55 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/</guid>
+      <description>This is my third post on my site</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

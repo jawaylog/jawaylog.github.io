@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活录 on Welog</title>
+    <link>https://xieha.cn/en/categories/%E7%94%9F%E6%B4%BB%E5%BD%95/</link>
+    <description>Recent content in 生活录 on Welog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Welog</copyright>
+    <lastBuildDate>Tue, 12 Jul 2022 19:27:12 +0800</lastBuildDate><atom:link href="https://xieha.cn/en/categories/%E7%94%9F%E6%B4%BB%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创业|我在一家店贩卖健康</title>
+      <link>https://xieha.cn/en/posts/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/</link>
+      <pubDate>Tue, 12 Jul 2022 19:27:12 +0800</pubDate>
+      
+      <guid>https://xieha.cn/en/posts/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/</guid>
+      <description>轻颜主义，享瘦人生。怀着这份梦想，我尝试人生中第一次的创业</description>
+      
+    </item>
+    
+    <item>
+      <title>2021年，你有什么想法？</title>
+      <link>https://xieha.cn/en/posts/2021%E5%B9%B4/</link>
+      <pubDate>Sat, 23 Jan 2021 16:15:55 +0800</pubDate>
+      
+      <guid>https://xieha.cn/en/posts/2021%E5%B9%B4/</guid>
+      <description>2020年，糟糕的一年，终于过去呀。上年的目标，一个也没有实现，囧。</description>
+      
+    </item>
+    
+    <item>
+      <title>2020年了，你过得还好吗？</title>
+      <link>https://xieha.cn/en/posts/2020%E5%B9%B4%E4%BA%86/</link>
+      <pubDate>Mon, 06 Jan 2020 00:07:21 +0800</pubDate>
+      
+      <guid>https://xieha.cn/en/posts/2020%E5%B9%B4%E4%BA%86/</guid>
+      <description>2019年不知不觉已经结束了。2020年了，你过的还好吗？</description>
+      
+    </item>
+    
+  </channel>
+</rss>

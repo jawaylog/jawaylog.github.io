@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2021 on Welog</title>
+    <link>https://xieha.cn/en/tags/2021/</link>
+    <description>Recent content in 2021 on Welog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Welog</copyright>
+    <lastBuildDate>Sat, 23 Jan 2021 16:15:55 +0800</lastBuildDate><atom:link href="https://xieha.cn/en/tags/2021/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021年，你有什么想法？</title>
+      <link>https://xieha.cn/en/posts/2021%E5%B9%B4/</link>
+      <pubDate>Sat, 23 Jan 2021 16:15:55 +0800</pubDate>
+      
+      <guid>https://xieha.cn/en/posts/2021%E5%B9%B4/</guid>
+      <description>2020年，糟糕的一年，终于过去呀。上年的目标，一个也没有实现，囧。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

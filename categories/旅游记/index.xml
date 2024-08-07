@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>旅游记 on WeLog</title>
+    <link>https://xieha.cn/categories/%E6%97%85%E6%B8%B8%E8%AE%B0/</link>
+    <description>Recent content in 旅游记 on WeLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Welog</copyright>
+    <lastBuildDate>Mon, 25 Oct 2021 19:38:15 +0800</lastBuildDate><atom:link href="https://xieha.cn/categories/%E6%97%85%E6%B8%B8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>成都|我在蓉城感受到人间的烟火气</title>
+      <link>https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/</link>
+      <pubDate>Mon, 25 Oct 2021 19:38:15 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/</guid>
+      <description>一年一度的旅游又开始了,这次的目的地是成都。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E5%9B%9B%E5%B7%9D%E6%88%90%E9%83%BD/featured.webp" />
+    </item>
+    
+    <item>
+      <title>西安|我在长安回望着大唐盛世</title>
+      <link>https://xieha.cn/posts/%E9%95%BF%E5%AE%89%E6%A2%A6%E5%9B%9E%E5%A4%A7%E5%94%90/</link>
+      <pubDate>Fri, 02 Oct 2020 01:31:25 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E9%95%BF%E5%AE%89%E6%A2%A6%E5%9B%9E%E5%A4%A7%E5%94%90/</guid>
+      <description>趁着国庆小假期，去了一趟西安旅游,记录第一次坐飞机的体验。</description>
+      
+    </item>
+    
+    <item>
+      <title>武汉|一座风光秀丽人文气息浓厚的城市</title>
+      <link>https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/</link>
+      <pubDate>Tue, 05 Jun 2018 23:20:19 +0000</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/</guid>
+      <description>最近一直都想写武汉旅游的感想，也算是对自己一个旅程的回忆吧！</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E6%AD%A6%E6%B1%89/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>广西|桂林山水甲天下</title>
+      <link>https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/</link>
+      <pubDate>Thu, 01 Sep 2016 12:07:55 +0800</pubDate>
+      
+      <guid>https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/</guid>
+      <description>This is my third post on my site</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xieha.cn/posts/%E6%A1%82%E6%9E%97%E5%B1%B1%E6%B0%B4%E7%94%B2%E5%A4%A9%E4%B8%8B/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>
