@@ -1,0 +1,30 @@
+.post-archive {
+    position: relative;
+    padding: 20px;
+}
+
+.listing {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px; /* 为时间轴留出空间 */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db; /* 时间轴点的颜色 */
+    border-radius: 50%; /* 圆形 */
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #555; /* 日期颜色 */
+}

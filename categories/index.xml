@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 微影随行</title>
+    <link>https://xieha.cn/categories/</link>
+    <description>Recent content in Categories on 微影随行</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Sep 2024 00:36:01 +0800</lastBuildDate>
+    <atom:link href="https://xieha.cn/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>杂记篇</title>
+      <link>https://xieha.cn/categories/%E6%9D%82%E8%AE%B0%E7%AF%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/categories/%E6%9D%82%E8%AE%B0%E7%AF%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生活录</title>
+      <link>https://xieha.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>旅游记</title>
+      <link>https://xieha.cn/categories/%E6%97%85%E6%B8%B8%E8%AE%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/categories/%E6%97%85%E6%B8%B8%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

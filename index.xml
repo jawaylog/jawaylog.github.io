@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>微影随行</title>
+    <link>https://xieha.cn/</link>
+    <description>工作生活记录、折腾备忘, 同时分享下日常使用的软件、 观看的影视、喜欢的好物等~~</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Sep 2024 00:36:01 +0800</lastBuildDate><atom:link href="https://xieha.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>跳转</title>
+      <link>https://xieha.cn/tiaozhuan/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/tiaozhuan/</guid>
+      <description></description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="跳转" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>微文章</title>
+      <link>https://xieha.cn/posts/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/posts/</guid>
+      <description></description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="微文章" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>伙伴们</title>
+      <link>https://xieha.cn/users/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/users/</guid>
+      <description>一件称心的产品，从收到包裹那一刻就开始心潮澎湃，到日积月累逐步成为靠谱的伙伴，时刻让你的工作生活充满期待。</description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="伙伴们" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>项目</title>
+      <link>https://xieha.cn/Test/</link>
+      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/Test/</guid>
+      <description>一件称心的产品，从收到包裹那一刻就开始心潮澎湃，到日积月累逐步成为靠谱的伙伴，时刻让你的工作生活充满期待。</description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="项目" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>微言语</title>
+      <link>https://xieha.cn/welog/</link>
+      <pubDate>Sun, 08 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/welog/</guid>
+      <description>一款合适的软件，在工作中能成为很好的生产力工具，让工作事半功倍；在生活中能成为很好的消遣工具，让生活充满多姿多彩。</description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="微言语" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>我</title>
+      <link>https://xieha.cn/about/</link>
+      <pubDate>Fri, 06 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/about/</guid>
+      <description>出生成长在江西婺源，大学主修服装设计专业。毕业之后跟Eileen到了浙江杭州。为了孩子上学，2019年成为新杭州人，定居杭州~~</description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="https://img.koobai.com/article/writer.jpg" alt="我" />]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>https://xieha.cn/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xieha.cn/archive/</guid>
+      <description></description>
+      
+     <content:encoded><![CDATA[<img loading="lazy" decoding="async" src="/" alt="归档" />]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
