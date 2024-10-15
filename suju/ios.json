@@ -1,0 +1,23 @@
+{
+  "name": "微影随行",
+  "short_name": "welog",
+  "start_url": "/",
+
+  "display": "standalone",
+
+  "icons": [
+    {
+      "src": "https://img.xieha.cn/i/2024/10/15/670d611fd8de6.webp",
+      "sizes": "32x32",
+      "type": "image/webp"
+    }
+  ],
+  "splash_screen": [{
+    "media": "(prefers-color-scheme: light)",
+    "color": "#ffffff"
+  },
+  {
+    "media": "(prefers-color-scheme: dark)",
+    "color": "#1A1718"
+}]
+}
