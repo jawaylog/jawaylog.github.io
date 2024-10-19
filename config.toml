@@ -1,0 +1,51 @@
+baseURL = "https://xieha.cn"
+languageCode = "zh-cn"
+theme = "jingzhe_2"
+themesDir = "themes"
+title = "微影随行"
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+[permalinks]
+  posts = '/:slug/'
+
+[params.artalk]
+  server = 'https://a.xieha.cn'
+  site = '微影随行'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 1
+
+  [[menu.main]]
+    identifier = "welog"
+    name = "微言语"
+    url = "/welog"
+    weight = 4
+
+
+   [[menu.main]]
+    identifier = "archive"
+    name = "微分类"
+    url = "/archive"
+    weight = 3
+
+    

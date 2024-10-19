@@ -1,0 +1,16 @@
+
+<link href="https://a.xieha.cn/dist/Artalk.css" rel="stylesheet" />
+<script src="https://a.xieha.cn/dist/Artalk.js"></script>
+
+<div id="Comments"></div>
+
+<script>
+  Artalk.init({
+    el: '#Comments',
+    pageKey: '{{ .Permalink }}',
+    pageTitle: '{{ .Title }}',
+    server: '{{ $.Site.Params.artalk.server }}',
+    site: '{{ $.Site.Params.artalk.site }}',
+    // ...你的其他配置
+  })
+</script>

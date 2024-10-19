@@ -1,0 +1,165 @@
+{{ define "body_classes" }}page-users{{ end }}
+{{ define "main" }}
+<div class="pagetitle">在博客的广袤天地中，友情链接确实如同开启不同奇妙世界的钥匙。每个链接背后都可能隐藏着一个独特的故事、一种别样的视角或一份深邃的思考。</div>
+<style>
+    body {
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        margin: 0; /* 移除默认边距 */
+        padding: 0; /* 移除默认内边距 */
+    }
+
+    @media (min-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+    }
+
+    .container {
+        display: grid; /* 使用 CSS Grid 布局 */
+        grid-template-columns: repeat(2, 1fr); /* 手机端每行2列 */
+        gap: 10px; /* 卡片之间的间隙 */
+        margin: 0 auto;
+        max-width: 100%; /* 确保不超出屏幕 */
+        padding: 10px; /* 调整内边距 */
+        box-sizing: border-box; /* 包含内边距和边框 */
+    }
+
+    .card {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex; /* 使用flexbox布局 */
+        align-items: center; /* 垂直居中 */
+        text-align: left; /* 左对齐文本 */
+        transition: box-shadow 0.3s; /* 悬停效果 */
+        overflow: hidden; /* 防止内容溢出 */
+    }
+
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时添加阴影 */
+    }
+
+    .card img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .card a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    .card h3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* 控制显示行数 */
+        overflow: hidden;
+        text-overflow: ellipsis; /* 超出部分用省略号表示 */
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #6c757d;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            grid-template-columns: repeat(3, 1fr); /* 电脑端每行3列 */
+        }
+    }
+</style>
+<body>
+<div class="container">
+    <div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div><div class="card" title="访问微影随行">
+        <img src="https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D" alt="头像">
+        <div>
+            <h3>微影随行</h3>
+            <a href="https://xieha.cn">www.xieha.cn</a>
+        </div>
+    </div>
+    <div class="card" title="访问微言微语">
+        <img src="https://www.imaegoo.com/images/avatar.jpg" alt="头像">
+        <div>
+            <h3>微言微语</h3>
+            <a href="https://m.xieha.cn">m.xieha.cn</a>
+        </div>
+    </div>
+</div>
+</body>
+{{ end }}

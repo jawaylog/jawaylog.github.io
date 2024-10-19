@@ -1,0 +1,41 @@
+{{ define "body_classes" }}{{ end }}
+{{ define "main" }}
+
+<div class="pagetitle">生活就像一场微妙的旅程，每一个瞬间都在低语着它的哲理。</br>
+  用简简单单的话语，记录生活中的点点滴滴。</div>
+
+<script type="text/javascript">
+  var memosMyList = [
+    {
+      "creatorName" : "welog",
+      "website" : "https://xieha.cn",
+      "link" : "https://m.xieha.cn",
+      "creatorId" : "1",
+      "avatar" : "https://cravatar.cn/avatar/3E3BC01C43F82B99CEA396B8F97F686D",
+      "artalk" : "https://a.xieha.cn",
+      "artSite" : "微影随行"
+    }
+  ]
+</script> 
+<div id="memos"></div>
+<div id="memo-list"></div>
+<link rel="stylesheet" href="/memos/css/APlayer.min.css">
+<link rel="stylesheet" href="/memos/css/animate.min.css">
+<link rel="stylesheet" href="https://unpkg.com/artalk@2.9.1/dist/ArtalkLite.css">
+<link rel="stylesheet" href="/memos/css/grid.css">
+<link rel="stylesheet" href="/memos/css/memos.css">
+
+<script src="/memos/js/twikoo.min.js"></script>
+<script src="https://unpkg.com/artalk@2.9.1/dist/ArtalkLite.js"></script>
+<script src="/memos/js/marked.min.js"></script>
+<script src="/memos/js/APlayer.min.js"></script>
+<script>
+var meting_api='https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+</script>
+<script src="/memos/js/Meting.min.js"></script>
+<script src="/memos/js/lozad.min.js"></script>
+<script src="/memos/js/memos.js"></script>
+
+
+
+{{ end }}

@@ -1,0 +1,111 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .article {
+        margin: 20px;
+    }
+
+    .timeline {
+        position: relative;
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .timeline li {
+        position: relative;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        transition: background 0.3s;
+    }
+
+    .timeline li:hover {
+        background-color: #f0f8ff;
+    }
+
+    .timeline li::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #4169E1;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline li::after {
+        content: '';
+        position: absolute;
+        left: 13px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #ccc;
+        z-index: 0;
+    }
+
+    .timeline-date {
+        margin-left: 30px;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+        flex-grow: 1;
+    }
+
+    .archive-title {
+        color: #4169E1;
+        text-decoration: none;
+        font-size: 13pt; /* 缩小标题字体 */
+    }
+
+    .archive-title:hover {
+        text-decoration: underline;
+    }
+
+    .category-list {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-list h3 {
+        margin: 0 0 10px;
+        color: #000000;
+    }
+
+    .category-list ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category-list li {
+        flex: 1 1 calc(33.333% - 10px);
+        margin: 5px;
+    }
+
+    .category-list a {
+        color: #FF7F50;
+        text-decoration: none;
+    }
+
+    .category-list a:hover {
+        text-decoration: underline;
+    }
+</style>
