@@ -1,0 +1,42 @@
+/* 默认样式 */
+.menu-main-mobile {
+    display: none; /* 初始隐藏菜单 */
+}
+
+/* 移动端菜单触发按钮样式 */
+.menu-toggle {
+    display: none; /* 移动端显示按钮 */
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* 移动设备样式 */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* 仅在移动端显示按钮 */
+    }
+
+    .menu-main-mobile {
+        display: none; /* 默认仍然隐藏菜单 */
+    }
+
+    .menu-main-mobile ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu-main-mobile ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+}
+
+/* 当checkbox被选中时，显示菜单 */
+.menu-toggle:checked + .menu-main-mobile {
+    display: block;
+}
