@@ -1,0 +1,95 @@
+<style>
+/* archives.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.tag-list ul, .category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* 设置列表项之间的间距 */
+}
+
+.tag-list ul li, .category-list ul li {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000000; /* 黑色字体 */
+    flex: 4 1 calc(15% - 15px); /* 分类和标签列表项宽度 */
+    text-align: left; /* 文字居左 */
+}
+
+.tag-list ul li a, .category-list ul li a {
+    color: #0000FF; /* 蓝色字体 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+.tag-list ul li a:hover, .category-list ul li a:hover {
+    color: #0000FF; /* 鼠标悬停时的颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.category-list ul li span {
+    display: inline; /* 让分类名和数字在同一行显示 */
+    margin-left: 5px; /* 与分类名的间距 */
+    color: #424242; /* 黑色字体 */
+}
+
+.year-section {
+    margin-bottom: 10px; /* 年份之间的间距 */
+}
+
+.year-title, h3 {
+    color: #424242; /* 黑色字体 */
+    font-weight: bold; /* 加粗 */
+    margin-bottom: 10px; /* 标题与列表的间距 */
+}
+
+.year-card {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px; /* 文章之间的间距 */
+    position: relative;
+    color: #333;
+}
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed #ccc; /* 虚线分隔 */
+}
+
+.listing li::before {
+    content: '•'; /* 添加实心点 */
+    color: #aaa;
+    position: absolute;
+    left: 0;
+}
+
+.archive-title a {
+    color: #333; /* 默认链接颜色 */
+    text-decoration: none; /* 去除下划线 */
+}
+
+.archive-title a:hover {
+    color: #0000FF; /* 鼠标悬停时的颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    float: right; /* 将月份标题放在右上方 */
+}
+</style>

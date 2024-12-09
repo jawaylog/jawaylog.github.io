@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>Giscus评论系统简单配置 - 微影随行</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description"
+  content="Giscus评论系统简单配置" />
+
+
+<meta property="og:title" content="Giscus评论系统简单配置">
+<meta property="og:url" content="https://xieha.cn/post/gicus/">
+<meta property="og:image" content="https://static.fatesinger.com/2024/01/p6krrw3jrw3hu7nd.jpeg">
+<meta property="og:image" content="https://img.xieha.cn/i/2024/12/09/6755eef805c87.jpg"/>
+<meta property="og:description" content="Giscus评论系统简单配置">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="https://static.fatesinger.com/2024/01/p6krrw3jrw3hu7nd.jpeg">
+<meta name="twitter:title" content="Giscus评论系统简单配置">
+<meta name="twitter:description" content="Giscus评论系统简单配置">
+
+<link rel="stylesheet" href="/css/friends.css">
+<link rel="stylesheet" href="https://xieha.cn/scss/app.min.7e3aaaf1fe47319ce5b83a2c7636c9d70248ec6ec0a74a3cded8b25f65841e45.css" integrity="sha256-fjqq8f5HMZzluDosdjbJ1wJI7G7Ap0o83tiyX2WEHkU=" media="screen">
+<link rel="stylesheet" href="/css/archives.css">
+
+<link type="image/vnd.microsoft.icon" href="/images/favicon.ico" rel="shortcut icon">
+
+
+</head>
+
+<body class="">
+    <script>
+        window.DEFAULT_THEME = "";
+        if (localStorage.getItem("theme") == null) {
+            localStorage.setItem("theme", window.DEFAULT_THEME);
+        }
+        if (localStorage.getItem("theme") == "dark") {
+            document.querySelector("body").classList.add("dark");
+        }
+        if (localStorage.getItem("theme") == "auto") {
+            document.querySelector("body").classList.add("auto");
+        }
+
+    </script>
+    <div class="main">
+        <header class="site--header">
+	<a href="https://xieha.cn/" class="site--url">
+		<img src="/images/logo.png" class="avatar" />
+		<span class="u-xs-show">
+			微影随行
+		</span>
+	</a>
+	
+	<div class="site--header__center">
+		<div class="inner">
+			<nav>
+				<ul>
+					
+					
+					<li><a href="/archive/">微文章</a></li>
+					
+					
+					
+					<li><a href="/page/welog/">微言语</a></li>
+					
+					
+					
+					<li><a href="/page/friends/">伙伴们</a></li>
+					
+					
+					
+					<li><a href="/page/about/">关于</a></li>
+					
+					
+				</ul>
+			</nav>
+			<div class="search--area">
+				<form role="search" method="get" class="search-form" action="/search">
+					<label>
+						<input type="search" class="search-field" placeholder="Search …" value="" name="s"
+							autocomplete="off">
+					</label>
+					<input type="submit" class="search-submit" value="Search">
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	<svg class="svgIcon" width="25" height="25" data-action="show-search">
+		<path
+			d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
+		</path>
+	</svg>
+	
+</header>
+        
+<main class="site--main">
+    <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article"
+        data-id="5d8b5efee243605d488b423ae645bebb">
+        <div class="post--single__meta">
+            <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
+                <path
+                    d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z">
+                </path>
+            </svg>
+            <time datetime='2022-10-12 22:41:10' class="humane--time" itemprop="datePublished">October 12, 2022</time>
+            
+            <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
+                <path
+                    d="M408.551619 97.52381a73.142857 73.142857 0 0 1 51.736381 21.430857L539.306667 197.973333A73.142857 73.142857 0 0 0 591.067429 219.428571H804.571429a73.142857 73.142857 0 0 1 73.142857 73.142858v560.761904a73.142857 73.142857 0 0 1-73.142857 73.142857H219.428571a73.142857 73.142857 0 0 1-73.142857-73.142857V170.666667a73.142857 73.142857 0 0 1 73.142857-73.142857h189.123048z m0 73.142857H219.428571v682.666666h585.142858V292.571429h-213.504a146.285714 146.285714 0 0 1-98.499048-38.13181L487.619048 249.734095 408.551619 170.666667zM365.714286 633.904762v73.142857h-73.142857v-73.142857h73.142857z m365.714285 0v73.142857H414.47619v-73.142857h316.952381z m-365.714285-195.047619v73.142857h-73.142857v-73.142857h73.142857z m365.714285 0v73.142857H414.47619v-73.142857h316.952381z">
+                </path>
+            </svg>
+            
+            <a href="/categories/%E6%8A%98%E8%85%BE%E5%90%A7/">折腾吧</a>
+            
+            
+            
+        </div>
+        <h2 class="post--single__title">Giscus评论系统简单配置</h2>
+        <details class="toc" open>
+            <summary class="toc-title">目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一使用说明与介绍">一、使用说明与介绍</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#二安装与配置">二、安装与配置</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </details>
+        <div class="post--single__content graph" itemprop="articleBody">
+            <p>
+<img src="https://img.xieha.cn/i/2024/10/21/6716117612146.png" alt=""  />
+
+很早之前就想给博客弄个评论系统，又互动才更加有乐趣。看了其他的一些评论系统，就选择了Giscus评论系统，由于小白一个，弄了很久才搞明白怎么回事。</p>
+<h2 id="一使用说明与介绍">一、使用说明与介绍</h2>
+<h4 id="11-新建github项目">1.1 新建github项目</h4>
+<p>在github里面，我们需要新建一个项目仓库，用作giscus储存评论。</p>
+<h4 id="12-满足以下条件">1.2 满足以下条件：</h4>
+<ul>
+<li>此仓库是公开的，否则访客将无法查看 discussion。</li>
+<li>giscus app 已安装否则访客将无法评论和回应。</li>
+<li>Discussions功能已在你的仓库中启用。
+
+<img src="1.png" alt=""  />
+</li>
+</ul>
+<h2 id="二安装与配置">二、安装与配置</h2>
+<h4 id="21-寻找分类名与id">2.1 寻找分类名与id</h4>
+<p>在giscus官网找到这里，这是只要填写分类名，分类id就行了。</p>
+<pre tabindex="0"><code>&lt;script src=&#34;https://giscus.app/client.js&#34;
+        data-repo=&#34;[在此输入仓库]&#34;
+        data-repo-id=&#34;[在此输入仓库 ID]&#34;
+        data-category=&#34;[在此输入分类名]&#34;
+        data-category-id=&#34;[在此输入分类 ID]&#34;
+        data-mapping=&#34;pathname&#34;
+        data-strict=&#34;0&#34;
+        data-reactions-enabled=&#34;1&#34;
+        data-emit-metadata=&#34;0&#34;
+        data-input-position=&#34;bottom&#34;
+        data-theme=&#34;preferred_color_scheme&#34;
+        data-lang=&#34;zh-CN&#34;
+        crossorigin=&#34;anonymous&#34;
+        async&gt;
+&lt;/script&gt;
+</code></pre><p>
+<img src="3.png" alt=""  />
+</p>
+<p>其实看了上面的数值，我当时是有点懵的，查了下其他博主的说法。</p>
+<pre tabindex="0"><code>data-repo=&#34;[在此输入仓库]&#34;
+data-repo-id=&#34;[在此输入仓库 ID]&#34;
+</code></pre><p>如果上面的 仓库 名字设置显示成功，这两个数值我们是不用设置的。我们只需要设置分类名和分类ID就可以了。</p>
+<p>repo_id是托管博客的代码仓库的一个标识值，category是该仓库Issues里面对应的分类（或者说是主题）。一个仓库默认具有下面几个分类：Announcements、General、Ideas、Q&amp;A、Show and tell。这里我选择Announcements作为评论的分类。最后的category_id类似repo_id也是对该分类的一个标识值。</p>
+<p>那如何快速的获取这些数据呢，可以通过GitHub官方的<!-- raw HTML omitted -->GraphQL API Explorer<!-- raw HTML omitted -->查询到。这里把查询所用的语句进行记录。
+
+<img src="5.png" alt=""  />
+</p>
+<pre tabindex="0"><code>{
+ repository(owner:  &#34;jawaylog&#34;, name: &#34;giscus&#34;) {
+   id
+   discussionCategories (first: 5) {
+     nodes {
+       name
+       id
+     }
+   }
+ }
+}
+</code></pre><p>点击查询可得以下结果</p>
+<pre tabindex="0"><code>&#34;nodes&#34;: [
+         {
+           &#34;name&#34;: &#34;Announcements&#34;,
+           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kb&#34;
+         },
+         {
+           &#34;name&#34;: &#34;General&#34;,
+           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kc&#34;
+         },
+         {
+           &#34;name&#34;: &#34;Ideas&#34;,
+           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Ke&#34;
+         },
+         {
+           &#34;name&#34;: &#34;Polls&#34;,
+           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kg&#34;
+         },
+         {
+           &#34;name&#34;: &#34;Q&amp;A&#34;,
+           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kd&#34;
+         }
+       ]
+     }
+   }
+ }
+}
+</code></pre><p>配置完最终得到的代码是这样的：</p>
+<pre tabindex="0"><code>&lt;script src=&#34;https://giscus.app/client.js&#34;
+       data-repo=&#34;jawaylog/giscus&#34;
+       data-repo-id=&#34;R_kgDOIMxYZQ&#34;
+       data-category=&#34;Announcements&#34;
+       data-category-id=&#34;DIC_kwDOIMxYZc4CR8Kb&#34;
+       data-mapping=&#34;pathname&#34;
+       data-strict=&#34;0&#34;
+       data-reactions-enabled=&#34;1&#34;
+       data-emit-metadata=&#34;0&#34;
+       data-input-position=&#34;bottom&#34;
+       data-theme=&#34;preferred_color_scheme&#34;
+       data-lang=&#34;zh-CN&#34;
+       crossorigin=&#34;anonymous&#34;
+       async&gt;
+&lt;/script&gt;
+</code></pre><p>至于如何显示评论系统，需要根据各自的主题文档设置，又或者你可以尝试在_config.yml配置。
+
+<img src="featured.png" alt=""  />
+</p>
+
+        </div>
+        
+        <div class="tag--list">
+            
+            <a href="/tags/giscus/" class="artile--tag">Giscus</a>
+            
+            <a href="/tags/%E8%AF%84%E8%AE%BA/" class="artile--tag">评论</a>
+            
+        </div>
+        
+        
+<div class="category--card__list">
+    
+    <a href="/categories/%E6%8A%98%E8%85%BE%E5%90%A7/" class="category--card">
+        <div class="category--card__image"><img src="https://static.fatesinger.com/2023/08/unh9p5pbj4vk8rdr.jpg" /></div>
+        <div class="category--card__content">
+            <div class="category--card__title">折腾吧</div>
+            <div class="category--card__description">hiss</div>
+        </div>
+    </a>
+    
+</div>
+
+        
+
+        
+
+    </article>
+    
+    <nav class="navigation post-navigation is-active">
+        <div class="nav-links">
+            
+            <div class="nav-previous">
+                <a class="link-reverse" href="https://xieha.cn/post/%E5%B0%8F%E7%8B%AE%E8%B0%B7%E5%B1%8B/?ref=footer">
+                    <span class="meta-nav">Previous</span><span class="post-title">创业|我在一家店贩卖健康</span>
+                </a>
+            </div>
+            
+            
+            <div class="nav-next">
+                <a class="link-reverse" href="https://xieha.cn/post/gitalk/?ref=footer">
+                    <span class="meta-nav">Next</span><span class="post-title">Gitalk评论系统Error: Network Error</span>
+                </a>
+            </div>
+            
+        </div>
+    </nav>
+    
+
+
+<input type="checkbox" id="comments-toggle" class="comments-toggle" />
+
+
+<label for="comments-toggle" class="comments-button">评论一下...</label>
+
+
+<div id="comments" class="comments-hidden"><link href="https://a.xieha.cn/dist/Artalk.css" rel="stylesheet" />
+<script src="https://a.xieha.cn/dist/Artalk.js"></script>
+
+
+<div id="Comments"></div>
+
+<script>
+  Artalk.init({
+    el: '#Comments',
+    pageKey: 'https:\/\/xieha.cn\/post\/gicus\/',
+    pageTitle: 'Giscus评论系统简单配置',
+    server: 'https:\/\/a.xieha.cn\/',
+    site: '微影随行',
+    
+  })
+</script></div>   
+</main>
+
+
+        <footer class="site--footer">
+    <div class="site--footer__content">
+        
+       微影随行 💗<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024299131号</a>
+        
+        
+        <div class="copyright">
+            
+            © 版权所有
+            2024
+            
+            <svg class="icon icon--copryrights" viewBox="0 0 1040 1024" width="16" height="16">
+                <path
+                    d="M717.056236 383.936299l-51.226708 0c-28.2893 0-51.226708 22.936385-51.226708 51.225685l0 128.062678c0 28.2893 22.937408 51.225685 51.226708 51.225685l51.226708 0c28.2893 0 51.225685-22.936385 51.225685-51.225685L768.281921 435.161984C768.281921 406.872684 745.345536 383.936299 717.056236 383.936299zM717.056236 537.611308c0 14.158465-11.480472 25.612331-25.613354 25.612331-14.132882 0-25.612331-11.453866-25.612331-25.612331l0-76.835969c0-14.158465 11.480472-25.613354 25.612331-25.613354 14.133905 0 25.613354 11.453866 25.613354 25.613354L717.056236 537.611308zM1013.977739 426.580538 859.776751 165.30079c-8.888438-15.063067-22.294772-25.975605-37.57171-32.080649-32.708959-34.856879-79.187527-56.638975-130.762159-56.638975L332.862064 76.581166c-51.575656 0-98.0532 21.782096-130.761136 56.639998-15.276938 6.105045-28.683273 17.017582-37.572734 32.079626L10.327206 426.580538c-21.26021 36.069497-8.655124 82.217537 28.239158 103.028515l115.00836 64.967664 0 199.163015c0 99.024318 80.264045 153.678078 179.287339 153.678078l358.580818 0c99.024318 0 179.290409-80.266092 179.290409-179.290409L870.733291 594.575694l115.00836-64.966641C1022.63184 508.798075 1035.238972 462.650035 1013.977739 426.580538zM153.574724 536.518417l-67.058278-37.875632c-24.589025-13.907755-33.019021-44.647873-18.809391-68.684312l85.86767-145.555074L153.574724 536.518417zM646.620024 127.807874c0 56.5786-60.205197 102.45137-134.467551 102.45137-74.261331 0-134.466528-45.873794-134.466528-102.45137L646.620024 127.807874zM819.507606 742.515071c0 84.893482-68.810179 153.677055-153.678078 153.677055L358.475418 896.192126c-84.8679 0-153.675008-68.783573-153.675008-153.677055l0-461.030142c0-76.150354 55.402821-139.361001 128.093377-151.545508 1.332345 83.883479 81.06734 151.545508 179.258687 151.545508 98.19237 0 177.926342-67.662029 179.25971-151.545508 72.690556 12.183484 128.096447 75.394131 128.096447 151.545508L819.508629 742.515071zM937.791569 498.642784l-67.058278 37.875632 0-252.111948 85.86767 145.552004C970.807521 453.995935 962.377524 484.736053 937.791569 498.642784z"
+                    p-id="4007"></path>
+            </svg>
+        </div>
+    </div>
+
+</footer>
+
+<div class="backToTop">
+    <svg xmlns="http://www.w3.org/2000/svg" class="svgIcon" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+        <path
+            d="M7.50015 0.425011C7.42998 0.354396 7.34632 0.298622 7.25415 0.261011C7.07101 0.187003 6.86629 0.187003 6.68315 0.261011C6.59128 0.298643 6.50795 0.354423 6.43815 0.425011L0.728147 6.13201C0.595667 6.27419 0.523544 6.46223 0.526972 6.65653C0.530401 6.85084 0.609113 7.03622 0.746526 7.17363C0.883939 7.31105 1.06932 7.38976 1.26362 7.39319C1.45793 7.39661 1.64597 7.32449 1.78815 7.19201L6.21615 2.76501V13.024C6.21615 13.2229 6.29517 13.4137 6.43582 13.5543C6.57647 13.695 6.76724 13.774 6.96615 13.774C7.16506 13.774 7.35583 13.695 7.49648 13.5543C7.63713 13.4137 7.71615 13.2229 7.71615 13.024V2.76501L12.1441 7.19201C12.2868 7.32867 12.4766 7.40497 12.6741 7.40497C12.8717 7.40497 13.0615 7.32867 13.2041 7.19201C13.3444 7.05126 13.4231 6.86068 13.4231 6.66201C13.4231 6.46334 13.3444 6.27277 13.2041 6.13201L7.50015 0.425011Z">
+        </path>
+    </svg>
+</div>
+<script type="text/javascript">
+    window.timeFormat = {
+        second: '秒前',
+        seconds: '秒前',
+        minute: '',
+        minutes: '',
+        hour: '小时前',
+        hours: '小时前',
+        day: '天前',
+        days: '天前',
+        month: '月前',
+        months: '月前',
+    }
+</script>
+<script type="text/javascript">
+    window.WPD_TOKEN = "";
+    window.commentDomain = "";
+    window.actionDomain = "";
+    window.dbAPIBase = "";
+    window.zoom = "";
+</script>
+<script type="text/javascript" src="/ts/bundle.js" defer></script>
+
+    </div>
+</body>
+
+</html>

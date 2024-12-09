@@ -1,0 +1,84 @@
+<style>
+    /* 重置样式 */
+body {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* 媒体查询，当屏幕宽度大于或等于768px时 */
+@media (min-width: 768px) {
+    body {
+        font-size:16px;
+    }
+}
+
+/* 容器样式 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin:0 auto;
+    max-width:100%;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* 卡片悬浮效果 */
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 图片样式 */
+.card img {
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+/* 链接样式 */
+.card a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* 标题样式 */
+.card h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:0;
+    margin-bottom:10px;
+}
+
+/* 段落样式 */
+p {
+    color: #6c757d;
+    margin: 0;
+    margin-bottom:10px;
+}
+
+/* 媒体查询，当屏幕宽度大于或等于768px时 */
+@media (min-width:768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
