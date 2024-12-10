@@ -1,0 +1,117 @@
+<style>
+/* archives.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+}
+
+.tag-list ul, .category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* 设置列表项之间的间距 */
+}
+
+.tag-list ul li, .category-list ul li {
+    background-color: #f4f4f4;
+    padding: 10px 10px; /* 增加垂直方向的内边距以增加卡片高度 */
+    border-radius: 5px;
+    color: #000000; /* 黑色字体 */
+    flex: 1 1 calc(10% - 15px); /* 默认布局为1行4列 */
+    text-align: left; /* 文字居左 */
+}
+
+/* 为分类目录文本增加样式 */
+.category-list ul li span {
+    display: inline; /* 让分类名和数字在同一行显示 */
+    margin-left: 2px; /* 与分类名的间距 */
+    color: #424242; /* 深灰色字体 */
+    //*font-weight: bold; /* 字体加粗 */
+    //*text-transform: uppercase; /* 文本大写 */
+    letter-spacing: 0.5px; /* 字间距 */
+}
+
+/* 媒体查询，确保在手机端（小屏幕）布局为1行4列 */
+@media (max-width: 768px) {
+    .tag-list ul li, .category-list ul li {
+        flex: 1 1 calc(10% - 15px); /* 保持1行4列 */
+    }
+}
+
+.tag-list ul li a, .category-list ul li a {
+    color: #0000FF; /* 蓝色字体 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 16px; /* 设置链接字体大小 */
+    transition: color 0.3s ease; /* 平滑颜色变化 */
+}
+
+.tag-list ul li a:hover, .category-list ul li a:hover {
+    color: #0000FF; /* 鼠标悬停时的颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.year-section {
+    margin-bottom: 10px; /* 年份之间的间距 */
+}
+
+.year-title, h4 {
+    color: #424242; /* 黑色字体 */
+    font-weight: bold; /* 加粗 */
+    margin-bottom: 10px; /* 标题与列表的间距 */
+}
+
+.year-card {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px; /* 文章之间的间距 */
+    position: relative;
+    color: #333;
+}
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed #ccc; /* 虚线分隔 */
+}
+
+.listing li::before {
+    content: '•'; /* 添加实心点 */
+    color: #aaa;
+    position: absolute;
+    left: 0;
+}
+
+.archive-title, h3 {
+    color: #696969; /* 黑色字体 */
+    //*font-weight: bold; /* 加粗 */
+    margin-bottom: 5px; /* 标题与列表的间距 */
+}
+
+
+.archive-title a {
+    color: #333; /* 默认链接颜色 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 16px; /* 设置链接字体大小 */
+    transition: color 0.3s ease; /* 平滑颜色变化 */
+}
+
+.archive-title a:hover {
+    color: #0000FF; /* 鼠标悬停时的颜色 */
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    float: right; /* 将月份标题放在右上方 */
+}
+</style>

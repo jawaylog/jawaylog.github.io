@@ -1,0 +1,128 @@
+<style>
+    /* 基本样式设置 */
+    body {
+        font-family: Arial, sans-serif; /* 设置字体 */
+        background-color: #fff; /* 背景颜色为白色 */
+        color: #333; /* 字体颜色为深灰色 */
+        margin: 0; /* 去掉默认外边距 */
+        padding: 0; /* 去掉默认内边距 */
+    }
+
+    /* 文章容器样式 */
+    .article {
+        margin: 20px; /* 外边距 */
+    }
+
+    /* 时间轴样式 */
+    .timeline {
+        position: relative; /* 相对定位 */
+        list-style-type: none; /* 去掉默认列表样式 */
+        padding: 0; /* 去掉内边距 */
+        margin: 20px 0; /* 上下外边距 */
+    }
+
+    /* 时间轴每个条目样式 */
+    .timeline li {
+        position: relative; /* 相对定位 */
+        padding: 10px 0; /* 上下内边距 */
+        display: flex; /* 使用弹性布局 */
+        align-items: center; /* 垂直居中对齐 */
+        transition: background 0.3s; /* 背景颜色过渡效果 */
+    }
+
+    /* 鼠标悬停时的背景颜色 */
+    .timeline li:hover {
+        background-color: #f0f8ff; /* 悬停时背景颜色 */
+    }
+
+    /* 时间轴小圆点样式 */
+    .timeline li::before {
+        content: ''; /* 生成内容 */
+        position: absolute; /* 绝对定位 */
+        left: 10px; /* 左边距 */
+        top: 50%; /* 垂直居中 */
+        transform: translateY(-50%); /* 垂直居中调整 */
+        width: 8px; /* 圆点宽度 */
+        height: 8px; /* 圆点高度 */
+        background-color: #4169E1; /* 圆点颜色 */
+        border-radius: 50%; /* 圆形 */
+        z-index: 1; /* 确保在上层 */
+    }
+
+    /* 时间轴连接线样式 */
+    .timeline li::after {
+        content: ''; /* 生成内容 */
+        position: absolute; /* 绝对定位 */
+        left: 13px; /* 左边距 */
+        top: 0; /* 顶部对齐 */
+        bottom: 0; /* 底部对齐 */
+        width: 2px; /* 线的宽度 */
+        background-color: #ccc; /* 线的颜色 */
+        z-index: 0; /* 确保在下层 */
+    }
+
+    /* 时间轴日期样式 */
+    .timeline-date {
+        margin-left: 30px; /* 左边距 */
+        font-weight: bold; /* 粗体 */
+        color: #000; /* 字体颜色 */
+    }
+
+    /* 时间轴内容样式 */
+    .timeline-content {
+        margin-left: 20px; /* 左边距 */
+        flex-grow: 1; /* 自适应宽度 */
+    }
+
+    /* 归档标题样式 */
+    .archive-title {
+        color: #4169E1; /* 标题颜色 */
+        text-decoration: none; /* 去掉下划线 */
+        font-size: 13pt; /* 字体大小 */
+    }
+
+    /* 鼠标悬停时的标题样式 */
+    .archive-title:hover {
+        text-decoration: underline; /* 悬停时添加下划线 */
+    }
+
+    /* 分类列表样式 */
+    .category-list {
+        margin: 20px 0; /* 上下外边距 */
+        padding: 10px; /* 内边距 */
+        background-color: #FFFFFF; /* 背景颜色 */
+        border-radius: 5px; /* 圆角 */
+        //*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    }
+
+    /* 分类列表标题样式 */
+    .category-list h3 {
+        margin: 0 0 10px; /* 上下外边距 */
+        color: #000000; /* 字体颜色 */
+    }
+
+    /* 分类列表无序列表样式 */
+    .category-list ul {
+        list-style-type: none; /* 去掉默认列表样式 */
+        padding: 0; /* 去掉内边距 */
+        display: flex; /* 使用弹性布局 */
+        flex-wrap: wrap; /* 换行 */
+    }
+
+    /* 分类列表每个条目样式 - 修改为一行 6 个 */
+    .category-list li {
+        flex: 1 1 calc(16.666% - 10px); /* 自适应宽度，六列布局 */
+        margin: 5px; /* 外边距 */
+    }
+
+    /* 分类链接样式 */
+    .category-list a {
+        color: #FF7F50; /* 链接颜色 */
+        text-decoration: none; /* 去掉下划线 */
+    }
+
+    /* 鼠标悬停时的链接样式 */
+    .category-list a:hover {
+        text-decoration: underline; /* 悬停时添加下划线 */
+    }
+</style>
