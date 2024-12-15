@@ -1,0 +1,45 @@
+/* 移动端菜单触发按钮样式 */
+.menu-toggle {
+  display: none; /* 默认不显示 */
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 移动端菜单栏样式 */
+.menu-main-mobile {
+  display: none; /* 默认隐藏 */
+  position: absolute;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.menu-main-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-main-mobile ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* 移动设备样式 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* 移动端显示按钮 */
+  }
+
+  /* 显示移动端菜单栏 */
+  .menu-toggle:checked + .menu-main-mobile {
+    display: block;
+  }
+}
