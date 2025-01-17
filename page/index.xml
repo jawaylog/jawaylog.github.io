@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on 微影随行</title>
+    <link>https://xieha.cn/page/</link>
+    <description>Recent content in Pages on 微影随行</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Jun 2024 15:16:07 +0800</lastBuildDate>
+    <atom:link href="https://xieha.cn/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Now</title>
+      <link>https://xieha.cn/page/now/</link>
+      <pubDate>Sat, 15 Jun 2024 15:16:07 +0800</pubDate>
+      <guid>https://xieha.cn/page/now/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>https://xieha.cn/page/about/</link>
+      <pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate>
+      <guid>https://xieha.cn/page/about/</guid>
+      <description>&lt;p&gt;&#xA;&lt;img src=&#34;https://img.xieha.cn/i/2024/12/09/6755eef805c87.jpg&#34; alt=&#34;&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;h4 id=&#34;本站若无特殊说明其作品皆为原创转载请说明出处&#34;&gt;本站若无特殊说明，其作品皆为原创，转载请说明出处。&lt;/h4&gt;&#xA;&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;&#xA;&lt;p&gt;我叫微影随行，以照片与影像扑捉生活气息，记录与分享生活中的点点滴滴，&lt;/p&gt;&#xA;&lt;p&gt;这里主要以记录生活为主，分享平凡生活中的奇文趣事！&lt;/p&gt;&#xA;&lt;h2 id=&#34;个人之旅&#34;&gt;个人之旅&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;已不记得多久开始接触博客了，一直在折腾。&lt;/li&gt;&#xA;&lt;li&gt;最开始使用wordprss&amp;gt;emblog&amp;gt;typecho&amp;gt;hexo&amp;gt;hugo&lt;/li&gt;&#xA;&lt;li&gt;本站域名：xieha.cn&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GitHub：&#xA;&#xA;&#xA;&lt;a href=&#34;https://github.com/jawaylog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34; &gt;@jawaylog&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Email：&#xA;&#xA;&#xA;&lt;a href=&#34;https://xieha.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34; &gt;mail@xieha.cn&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;QQ：&#xA;&#xA;&#xA;&lt;a href=&#34;&#34; &gt;991391089&lt;/a&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;友情链接？&lt;/strong&gt; &#xA;&#xA;&#xA;&lt;a href=&#34;https://xieha.cn/page/friends/&#34; &gt;点击这里跳转&lt;/a&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>书影音游</title>
+      <link>https://xieha.cn/page/movies/</link>
+      <pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate>
+      <guid>https://xieha.cn/page/movies/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>搜索</title>
+      <link>https://xieha.cn/page/search/</link>
+      <pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate>
+      <guid>https://xieha.cn/page/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>文章列表</title>
+      <link>https://xieha.cn/archive/</link>
+      <pubDate>Sat, 06 Mar 2021 15:39:00 -0600</pubDate>
+      <guid>https://xieha.cn/archive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>友情链接</title>
+      <link>https://xieha.cn/page/friends/</link>
+      <pubDate>Sat, 06 Mar 2021 15:39:00 -0600</pubDate>
+      <guid>https://xieha.cn/page/friends/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>https://xieha.cn/page/welinks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/page/welinks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>设备</title>
+      <link>https://xieha.cn/page/gears/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/page/gears/</guid>
+      <description>&lt;p&gt;my gear&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>微言语</title>
+      <link>https://xieha.cn/page/welog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/page/welog/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

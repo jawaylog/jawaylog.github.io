@@ -1,0 +1,136 @@
+<style>
+/* archives.css */
+body {
+    background-color: #f4f4f4;
+    padding: 0;
+    font-family: "LXGW WenKai Screen", sans-serif;
+    
+}
+
+.tag-list ul, .category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: wrap;
+    gap: 10px;
+}
+
+.tag-list ul li, .category-list ul li {
+    background-color: var(--hera-background-gray-lightest);
+    padding: 15px;
+    border-radius: 8px;
+    color: #000000;
+    flex: 1 1 calc(24% - 20px);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.category-list ul li span {
+    display: inline;
+    margin-left: 2px;
+    color: #424242;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .tag-list ul li, .category-list ul li {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+.tag-list ul li a, .category-list ul li a {
+    color: #0000FF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.tag-list ul li a:hover, .category-list ul li a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.year-section {
+    margin-bottom: 20px;
+}
+
+.year-title, h3 {
+    color: #424242;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 24px; /* 增加年份标题的字体大小 */
+
+
+}
+
+.month-card {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.month-title {
+    color: #424242;
+    font-weight: bold;
+    margin-bottom: 5px;
+     text-align: right;
+     font-size: 20px; /* 增加月份标题的字体大小 */
+
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px;
+    position: relative;
+    color: #333;
+
+}
+
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed #ccc;
+}
+
+.archive-title a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    display: block; /* 使链接独占一行 */
+    max-width: calc(100% - 40px); /* 根据需要调整 */
+    white-space: normal; /* 允许空白符处换行 */
+    word-break: break-word; /* 允许长单词换行 */
+    overflow-wrap: break-word; /* 允许在单词内换行 */
+    text-overflow: ellipsis; /* 超出部分用省略号显示 */
+
+}
+
+.archive-title a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: none;
+
+
+}
+
+.listing li:first-child .month-indicator {
+    display: block;
+}
+
+</style>
