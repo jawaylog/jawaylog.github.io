@@ -1,0 +1,229 @@
+/* ====================== */
+/* 基础样式 */
+/* ====================== */
+body {
+    background-color: #f4f4f4;
+    padding: 0;
+    font-family: "LXGW WenKai Screen", sans-serif;
+}
+
+/* ====================== */
+/* 分类和标签列表 */
+/* ====================== */
+.tag-list ul,
+.category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list ul li,
+.category-list ul li {
+    background-color: var(--hera-background-gray-lightest);
+    padding: 15px;
+    border-radius: 8px;
+    color: #000000;
+    flex: 1 1 calc(24% - 20px);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.category-list ul li span {
+    display: inline;
+    margin-left: 2px;
+    color: #424242;
+    letter-spacing: 0.5px;
+}
+
+.tag-list ul li a,
+.category-list ul li a {
+    color: #0000FF;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.tag-list ul li a:hover,
+.category-list ul li a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .tag-list ul li,
+    .category-list ul li {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* ====================== */
+/* 归档内容 */
+/* ====================== */
+.year-section {
+    margin-bottom: 20px;
+}
+
+.year-title,
+h3 {
+    color: #424242;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.archive--title__year {
+    font-size: 22px !important; /* 确保年份标题的字体大小为22px */
+}
+
+.month-card {
+    background-color: var(--hera-background-gray-lightest);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.month-title {
+    color: #424242;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 20px; /* 月份标题的字体大小 */
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px;
+    position: relative;
+    color: #333;
+}
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed #ccc;
+}
+
+.archive-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.archive-title a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: normal; /* 允许标题换行 */
+    word-break: break-word; /* 在单词内换行 */
+    overflow-wrap: break-word; /* 允许在单词内换行 */
+    flex: 1; /* 占据剩余空间 */
+}
+
+.archive-date {
+    font-size: 15px;
+    color: #666;
+    margin-left: 10px; /* 确保日期与标题之间有间隔 */
+    white-space: nowrap; /* 日期不换行 */
+}
+
+.archive-title a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: none;
+}
+
+.listing li:first-child .month-indicator {
+    display: block;
+}
+
+/* ====================== */
+/* 归档列表 */
+/* ====================== */
+.archive {
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    &--title {
+        font-size: 18px;
+        line-height: 1.4;
+        height: 2.8em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+
+        &__year {
+            font-size: 24px;
+            font-weight: 900;
+            margin-top: 30px;
+        }
+    }
+
+    &--meta {
+        font-size: 12px;
+        color: var(--hera-text-gray);
+        margin-top: 5px;
+    }
+
+    &--item {
+        padding: 15px;
+        background-color: var(--hera-background-gray-lightest);
+        border-radius: 10px;
+        a {
+            &:hover {
+                color: var(--hera-main-color);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .archive {
+        &--list {
+            grid-gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        &--title {
+            font-size: 14px;
+        }
+
+        &--item {
+            padding: 10px;
+        }
+    }
+}
+
+.archive--tagList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.archive--tagItem {
+    margin: 10px;
+    background-color: var(--hera-background-gray-lightest);
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--hera-text-gray-light);
+}

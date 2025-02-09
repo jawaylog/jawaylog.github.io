@@ -1,0 +1,112 @@
+<style>
+    /* 重置样式 */
+    body {
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "LXGW WenKai Screen", sans-serif;
+
+    }
+
+    
+    /* 容器样式 */
+    .container {
+        display: grid;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        grid-template-columns: 1fr; /* 默认为一列布局 */
+    }
+
+    /* 卡片样式 */
+    .card {
+        background-color: none;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center; /* 保持垂直居中 */
+        text-align: left;
+        transition: box-shadow 0.3s;
+        overflow: hidden;
+        max-width: 1000px; /* 设置卡片的最大宽度 */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+    
+    }
+
+    /* 卡片悬浮效果 */
+    .card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 图片样式 */
+    .card-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    /* 内容样式 */
+    .card-content {
+        flex-grow: 1;
+    }
+
+    /* 链接样式 */
+    .card a {
+        text-decoration: none;
+        color: #FF0000;
+        display: block; /* 改为 block 布局 */
+        margin-top: 5px; /* 减少标题和链接之间的间距 */
+        
+    }
+
+    /* 标题样式 */
+    .card h3 {
+        margin: 0;
+        margin-bottom: 5px; /* 减少标题的底部外边距 */
+        word-break: break-word;
+        color: #007bff;
+        text-align: left;
+        font-weight: bold;
+        font-size: 18px;
+}
+    
+
+    /* 链接说明样式 */
+    .link-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; /* 限制为两行 */
+        overflow: hidden;
+        text-overflow: ellipsis; /* 超出部分用...表示 */
+        font-size: 15px; /* 调整说明字体大小 */
+        color: #696969; /* 说明文字颜色 */
+    }
+
+
+
+/* 媒体查询，当屏幕宽度大于或等于734px时 */
+    @media (min-width: 480px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr); /* 改为两列布局 */
+        }
+    }
+
+
+
+    /* 媒体查询，当屏幕宽度大于或等于768px时 */
+    @media (min-width: 768px) {
+        .container {
+            grid-template-columns: repeat(3, 1fr); /* 改为三列布局 */
+        }
+        
+        }
+        .card a {
+            font-size: 15px; /* 在大屏幕上调整链接字体大小 */
+        }
+    }
+</style>
