@@ -1,130 +1,104 @@
 {{ define "main" }}
 <style>
-/* 文章容器 */
-.container {
+  /* 文章列表容器 */
+  .article-list {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
+    font-family: Arial, sans-serif;
+  }
 
-/* 单篇文章样式 */
-.article {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  /* 单篇文章容器 */
+  .article-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: left; /* 头像和标题、发布时间垂直居中对齐 */
+  }
 
-.article h2 a {
-    color: #333;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    width: 600px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+  /* 文章图片（头像） */
+  .article-image {
+    width: 50px; /* 设置头像宽度 */
+    height: 50px; /* 设置头像高度 */
+    border-radius: 50%; /* 圆形头像 */
+    margin-right: 15px; /* 头像与内容之间的间距 */
+    flex-shrink: 0; /* 防止头像被压缩 */
+  }
 
-.article h2 a:hover {
-    color: #0073aa;
-}
+  /* 文章内容区域 */
+  .article-content {
+    flex: 1; /* 内容区域占据剩余空间 */
+  }
 
-.article-title a:hover {
-    color: #0073aa;
-}
-
-.meta {
-    display: flex;
-    align-items: center; /* 垂直居中对齐 */
-    justify-content: flex-start; /* 水平起始对齐 */
-    gap: 5px; /* 元素之间的间距 */
+  /* 文章元数据（站点名称和时间） */
+  .article-meta {
+    font-size: 1rem;
     color: #666;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
+    margin-bottom: 10px;
+    display: flex; /* 使用 Flexbox 布局 */
+    align-items: left; /* 站点名称和时间垂直居中对齐 */
+  }
 
-.meta img {
-    max-width: 32px;
-    height: auto;
-    border-radius: 50%; /* 圆形图标 */
-}
+  .article-meta .site-name {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px; /* 站点名称和时间之间的间距 */
+  }
 
-.meta .info {
-    display: flex;
-    align-items: center; /* 垂直居中对齐 */
-    gap: 5px; /* 元素之间的间距 */
-}
+  .article-meta .time {
+    color: #999;
+  }
 
-.meta .info span.site, .meta .info time {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px; /* 与前一个元素的间距 */
-}
+  /* 文章标题 */
+  .article-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
 
-.description {
+  .article-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .article-title a:hover {
+    text-decoration: underline;
+  }
+
+  /* 文章摘要 */
+  .article-summary {
+    font-size: 1rem;
     color: #444;
     line-height: 1.6;
-}
-
-.icon {
-    max-width: 36px;
-    height: auto;
-    margin-top: 10px;
-}
-
-.pagination {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.pagination a {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 0 4px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
-    background: #fff;
-}
-
-.pagination a.active {
-    background: #0073aa;
-    color: #fff;
-    border-color: #0073aa;
-}
-
-.pagination a:hover {
-    background: #f5f5f5;
-}
-
+  }
 </style>
 
-
-
-
 <div class="articleContainer">
-    <h1>订阅文章列表</h1>
-    {{ range .Site.Data.rss.articles }}
-    <article class="article">
-        <h2>
-            <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
-        </h2>
-        <div class="meta">
-            {{ if .icon }}
-            <img src="{{ .icon }}" alt="{{ .site_name }} 图标" class="icon">
-            {{ end }}
-            <div class="info">
-                <span class="site">{{ .site_name }}</span>
-                <time datetime="{{ .time }}">{{ .time }}</time>
-            </div>
+  <h1>订阅文章列表</h1>
+  <div class="article-list">
+    {{ range $.Site.Data.rss.articles }}
+      <div class="article-item">
+        {{ if .icon }}
+          <img src="{{ .icon }}" alt="{{ .title }}" class="article-image">
+        {{ end }}
+        <div class="article-content">
+          <div class="article-meta">
+            <span class="site-name">{{ .site_name }}</span>
+            <span class="site-name">发布了：<a href="{{ .link }}" target="_blank">{{ .title }}</a></span>
+          </div>
+          <div class="article-meta">
+           
+            <span class="time"><time datetime='{{ .time }}' class="humane--time">{{ .time }}</time></span>
+</time>
+          </div>
+          <div class="article-summary">
+            {{ .description }}
+          </div>
         </div>
-        <p class="description">{{ .description }}</p>
-    </article>
+      </div>
     {{ end }}
+  </div>
 </div>
 {{ end }}
