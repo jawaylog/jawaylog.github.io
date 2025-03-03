@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui,shrink-to-fit=no">
 <link rel="stylesheet" href="{{ "/css/archives.css" | relURL }}">
 <link rel="stylesheet" href="{{ "/css/friends.css" | relURL }}">
+<link rel="stylesheet" href="{{ "/css/rss.css" | relURL }}">
 {{ $styles := resources.Get "scss/app.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" integrity="{{ $styles.Data.Integrity }}" media="screen"> 
 {{ $favicon := resources.Get "images/favicon.ico" }}

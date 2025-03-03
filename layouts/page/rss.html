@@ -1,82 +1,5 @@
 {{ define "main" }}
-<style>
-  /* 文章列表容器 */
-  .article-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-
-  /* 单篇文章容器 */
-  .article-item {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    display: flex; /* 使用 Flexbox 布局 */
-    align-items: left; /* 头像和标题、发布时间垂直居中对齐 */
-  }
-
-  /* 文章图片（头像） */
-  .article-image {
-    width: 50px; /* 设置头像宽度 */
-    height: 50px; /* 设置头像高度 */
-    border-radius: 50%; /* 圆形头像 */
-    margin-right: 15px; /* 头像与内容之间的间距 */
-    flex-shrink: 0; /* 防止头像被压缩 */
-  }
-
-  /* 文章内容区域 */
-  .article-content {
-    flex: 1; /* 内容区域占据剩余空间 */
-  }
-
-  /* 文章元数据（站点名称和时间） */
-  .article-meta {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 10px;
-    display: flex; /* 使用 Flexbox 布局 */
-    align-items: left; /* 站点名称和时间垂直居中对齐 */
-  }
-
-  .article-meta .site-name {
-    font-weight: bold;
-    color: #333;
-    margin-right: 10px; /* 站点名称和时间之间的间距 */
-  }
-
-  .article-meta .time {
-    color: #999;
-  }
-
-  /* 文章标题 */
-  .article-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .article-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .article-title a:hover {
-    text-decoration: underline;
-  }
-
-  /* 文章摘要 */
-  .article-summary {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-  }
-</style>
-
 <div class="articleContainer">
-  <h1>订阅文章列表</h1>
   <div class="article-list">
     {{ range $.Site.Data.rss.articles }}
       <div class="article-item">
@@ -85,13 +8,11 @@
         {{ end }}
         <div class="article-content">
           <div class="article-meta">
-            <span class="site-name">{{ .site_name }}</span>
-            <span class="site-name">发布了：<a href="{{ .link }}" target="_blank">{{ .title }}</a></span>
+            <span class="site-name">{{ .site_name }} 发布了：</span>
+            <a href="{{ .link }}" target="_blank" class="article-title">{{ .title }}</a>
           </div>
           <div class="article-meta">
-           
             <span class="time"><time datetime='{{ .time }}' class="humane--time">{{ .time }}</time></span>
-</time>
           </div>
           <div class="article-summary">
             {{ .description }}

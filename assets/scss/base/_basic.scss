@@ -168,8 +168,8 @@ textarea {
 
 .sidebar {
     position: fixed;
-    top: 80%;
-    right: 52px; /* 距离右侧20px */
+    top: 75%;
+    right: 55px; /* 距离右侧20px */
     transform: translateY(-50%); /* 垂直居中 */
     z-index: 1000; /* 确保在最上层 */
 }
@@ -213,7 +213,7 @@ textarea {
 
     .sidebar {
 
-    right: 25px; /* 距离右侧20px */
+    right: 29px; /* 距离右侧20px */
     
 }
 }

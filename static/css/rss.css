@@ -1,72 +1,107 @@
-/* 文章容器 */
-.container {
+<style>
+  /* 文章列表容器 */
+  .article-list {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
+  }
 
-/* 单篇文章样式 */
-.article {
-    margin-bottom: 40px;
+  /* 单篇文章容器 */
+  .article-item {
+    border: none; /* 1px solid #eaeaea */
+    border-radius: 12px;
     padding: 20px;
-    border: 1px solid #eee;
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-bottom: 1px solid #eee; /* 添加分隔线 */
+  }
+
+  /* 移除最后一个文章项的分隔线 */
+  .article-item:last-child {
+    border-bottom: none;
+  }
+
+  .article-item:hover {
+    border: 1px solid #666666; /* 悬停时显示边框 */
+  }
+
+  /* 文章图片（头像） */
+  .article-image {
+    width: 48px;
+    height: 48px;
     border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    flex-shrink: 0;
+  }
 
-.article h2 a {
-    color: #333;
-    text-decoration: none;
-}
+  /* 文章内容区域 */
+  .article-content {
+    flex: 1;
+    min-width: 0;
+  }
 
-.article h2 a:hover {
-    color: #0073aa;
-}
+  /* 文章元数据（站点名称和时间） */
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 确保标题和站点名称之间有间隔 */
+    flex-wrap: wrap; /* 允许整个标题换行 */
+  }
 
-.meta {
-    color: #666;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
-
-.meta time {
-    margin-left: 15px;
-}
-
-.description {
-    color: #444;
+.article-meta .time {
+    color: #666666;
+    font-size: 15px;
     line-height: 1.6;
+  }
+
+  .site-name {
+    white-space: nowrap; /* 站点名称不换行 */
+    flex-shrink: 0; /* 防止站点名称压缩 */
+  }
+
+  /* 文章标题 */
+  .article-title {
+    display: -webkit-box; /* 使用 WebKit 的 box 模型 */
+    -webkit-line-clamp: 1; /* 限制最多两行 */
+    -webkit-box-orient: vertical; /* 垂直排列内容 */
+    overflow: hidden; /* 隐藏超出部分 */
+    text-overflow: ellipsis; /* 显示省略号 */
+    max-width: 100%; /* 确保标题宽度不超过容器 */
+    white-space: normal; /* 允许正常换行 */
+    word-wrap: break-word; /* 长单词可以换行 */
+    text-decoration: underline; /* 添加下划线 */
+    
+  }
+
+  .article-title:hover {
+    text-decoration: none; /* 鼠标悬停时移除下划线 */
+    color: #2271b1; /* 保持原有的悬停颜色 */
 }
 
-.icon {
-    max-width: 32px;
-    height: auto;
-    margin-top: 10px;
-}
+  /* 文章摘要 */
+  .article-summary {
+    color: #4A4A4A;
+    font-size: 16px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 8px;
+  }
 
-.pagination {
-    margin: 20px 0;
-    text-align: center;
-}
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .article-item {
+        gap: 16px;
+    }
 
-.pagination a {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 0 4px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
-    background: #fff;
-}
-
-.pagination a.active {
-    background: #0073aa;
-    color: #fff;
-    border-color: #0073aa;
-}
-
-.pagination a:hover {
-    background: #f5f5f5;
-}
+    .article-image {
+        width: 40px;
+        height: 40px;
+    }
+  }
+</style>
