@@ -98,8 +98,15 @@
         line-height: 1.3;
     }
 
+    .site--nav {
+            font-size: 18px;
+        }
+
     padding-top: 50px;
 }
+
+
+
 
 @media (max-width: 1280px) {
     .navbar {
@@ -190,6 +197,39 @@
         }
     }
 }
+
+.close--icon {
+    display: none; /* 默认隐藏 */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--hera-text-color);
+    cursor: pointer;
+}
+
+.site--nav.is-active .close--icon {
+    display: block; /* 菜单激活时显示 */
+}
+
+.mask {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.menu--actived .mask {
+    display: block; /* 菜单激活时显示 */
+}
+
+
 
 @media (max-width: 720px) {
     .widget--links {
@@ -326,7 +366,7 @@
         line-height: 1.3;
         justify-content: flex-start;
         align-items: flex-start;
-        font-size: 16px;
+        font-size: 18px;
         position: relative;
         background-color: #fff;
         transform: translate3d(105%, 0, 0);
@@ -377,3 +417,4 @@
         justify-content: space-between;
     }
 }
+

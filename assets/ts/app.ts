@@ -24,17 +24,27 @@ class noteBase {
     constructor() {
         this.initThemeSwitch();
         this.initBack2Top();
-        // this.initMenu();
+        this.initMenu();
     }
 
     initMenu() {
+        // 点击 menu--icon 切换菜单
         if (document.querySelector(".menu--icon")) {
             document.querySelector(".menu--icon")!.addEventListener("click", () => {
-                document.querySelector(".site--nav")!.classList.add("is-active");
-                document.querySelector("body")!.classList.add("menu--actived");
+                document.querySelector(".site--nav")!.classList.toggle("is-active");
+                document.querySelector("body")!.classList.toggle("menu--actived");
             });
         }
 
+        // 点击 close--icon 关闭菜单
+        if (document.querySelector(".close--icon")) {
+            document.querySelector(".close--icon")!.addEventListener("click", () => {
+                document.querySelector(".site--nav")!.classList.remove("is-active");
+                document.querySelector("body")!.classList.remove("menu--actived");
+            });
+        }
+
+        // 点击 mask 关闭菜单
         if (document.querySelector(".mask")) {
             document.querySelector(".mask")!.addEventListener("touchstart", () => {
                 document.querySelector(".site--nav")!.classList.remove("is-active");
@@ -121,22 +131,8 @@ if (window.zoom) {
     new imgZoom();
 }
 
-if (document.querySelector(".menu--icon")) {
-    document.querySelector(".menu--icon")!.addEventListener("click", () => {
-        document.querySelector(".site--nav")!.classList.add("is-active");
-        document.querySelector("body")!.classList.add("menu--actived");
-    });
-}
-
 if (document.querySelector(".search--icon")) {
     document.querySelector(".search--icon")!.addEventListener("click", () => {
         document.querySelector("body")!.classList.toggle("search--actived");
-    });
-}
-
-if (document.querySelector(".mask")) {
-    document.querySelector(".mask")!.addEventListener("touchstart", () => {
-        document.querySelector(".site--nav")!.classList.remove("is-active");
-        document.querySelector("body")!.classList.remove("menu--actived");
     });
 }

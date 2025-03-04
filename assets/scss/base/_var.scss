@@ -14,10 +14,10 @@
     --hera-article-width: 828px;
     --hera-header-width: 25%;
 
-    --hera-basic-font-size: 17px;
+    --hera-basic-font-size: 16px;
     --hera-text-color: rgba(0, 0, 0, 0.86);
     --hera-text-light: rgba(0, 0, 0, 0.68);
-    --hera-text-gray: rgba(0, 0, 0, 0.6);
+    --hera-text-gray:   rgba(28, 28, 28, 0.80);
     --hera-text-gray-lightest: rgba(0, 0, 0, 0.55);
 
     --hera-border-color: rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
     --hera-thumbnail-width: 96px;
     --hera-thumbnail-height: 96px;
 
-    --hera-font-size-smallest: 14px;
+    --hera-font-size-smallest: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
