@@ -58,6 +58,10 @@
     color: #333;
   }
 
+  .friends-title:hover {
+    color: #2271b1; /* 保持原有的悬停颜色 */
+}
+
   /* 装饰性... */
   .friends-more {
     position: absolute;
@@ -158,4 +162,5 @@
       font-size: 14px; /* 移动端字体更小 */
     }
   }
+
 

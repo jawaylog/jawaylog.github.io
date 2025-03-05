@@ -18,7 +18,7 @@
         <!-- 装饰性... -->
         <a href="{{ .RelPermalink }}" class="friends-more">•••</a>
       </div>
-      <span class="friends-title">{{ .Title | truncate 30 }}</span>
+      <span class="friends-title"><a href="{{ .RelPermalink }}">{{ .Title | truncate 30 }}</a></span>
       <!-- 内容 -->
       <div class="friends-content">
         {{ .Content | plainify | truncate 55 }}
