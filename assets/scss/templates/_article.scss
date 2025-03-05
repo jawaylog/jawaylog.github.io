@@ -114,6 +114,13 @@
         &--body {
         font-size: 17px;
     }
+
+    &--tags {
+    flex-wrap: wrap; /* 允许换行 */
+      gap: 5px;
+
+    
+}
     }
 }
 

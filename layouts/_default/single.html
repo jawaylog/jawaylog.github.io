@@ -3,11 +3,7 @@
     <div class="article" data-id="{{ .File.UniqueID}}">
         <header class="article--header">
             <h2 class="article--headline">{{ .Title }}</h2>
-            {{ if .Params.description }}
-            <div class="article--subline">
-                {{ .Params.description }}
-            </div>
-            {{end}}
+            
             <div class="article--meta">
                 <time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{
                     .Date.Format "2006-01-02 15:04:01" }}</time>
