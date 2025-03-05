@@ -1,0 +1,206 @@
+{{ define "main" }}
+<style>
+  /* 朋友圈容器 */
+  .friends-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* 单条朋友圈 */
+  .friends-post {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee; /* 添加分隔线 */
+  }
+
+  /* 头像和昵称 */
+  .friends-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    position: relative; /* 用于定位... */
+  }
+
+  .friends-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .friends-author {
+    font-size: 16px;
+    font-weight: normal; /* 取消加粗效果 */
+    color: #333;
+  }
+
+  /* 标题 */
+  .friends-title {
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-top: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 限制为一行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  /* 装饰性... */
+  .friends-more {
+    position: absolute;
+    right: 0;
+    top: 0; /* 与作者昵称同一水平线 */
+    font-size: 16px; /* 与作者昵称字体大小一致 */
+    color: #666;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .friends-more:hover {
+    color: #2271b1;
+  }
+
+  /* 作者和时间 */
+  .friends-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    ont-size: 15px; 
+    flex: 1; /* 让 meta 区域占据剩余空间 */
+  }
+
+  .friends-time {
+    font-size: 14px;
+    color: #666;
+  }
+
+  /* 内容 */
+  .friends-content {
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* 图片 */
+  .friends-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .friends-images img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* 操作 */
+  .friends-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .friends-actions a {
+    color: #666;
+    text-decoration: none;
+  }
+
+  .friends-actions a:hover {
+    color: #2271b1;
+  }
+
+  .sep {
+    margin: 0 4px;
+    color: #ccc;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .friends-container {
+      padding: 10px;
+    }
+
+    .friends-post {
+      padding: 16px;
+    }
+
+    .friends-avatar {
+      width: 40px;
+      height: 40px;
+    }
+
+    .friends-content {
+      font-size: 15px;
+    }
+
+    .friends-images {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+  }
+</style>
+
+<div class="friends-container">
+  {{ range .Pages }}
+    <div class="friends-post">
+      <!-- 头像和昵称 -->
+      <div class="friends-header">
+        {{ if .Params.avatar }}
+          <img src="{{ .Params.avatar }}" alt="{{ .Params.author }}" class="friends-avatar">
+        {{ else }}
+          <img src="/images/avatar.jpeg" alt="Avatar" class="friends-avatar">
+        {{ end }}
+        <div class="friends-meta">
+          <span class="friends-author">{{ .Params.author | default "Welog" }}</span>
+          <span class="friends-time"><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}'>{{ .Date | time.Format ":date_long" }}</time></span>
+        </div>
+        <!-- 装饰性... -->
+        <a href="{{ .RelPermalink }}" class="friends-more">•••</a>
+      </div>
+      <span class="friends-title">{{ .Title | truncate 30 }}</span>
+      <!-- 内容 -->
+      <div class="friends-content">
+        {{ .Content | plainify | truncate 70 }}
+      </div>
+
+      <!-- 图片 -->
+      {{ if .Params.images }}
+        <div class="friends-images">
+          {{ range .Params.images }}
+            <img src="{{ . }}" alt="Post Image">
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <!-- 操作 -->
+      <div class="friends-actions">
+        <!-- 分类 -->
+        {{ if .Params.categories }}
+          {{ range (.GetTerms "categories") }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          {{ end }}
+        {{ end }}
+
+        <!-- 标签 -->
+        {{ $tags := (.GetTerms "tags") }}
+        {{ if gt (len $tags) 2 }}
+          {{ range (first 2 $tags) }}
+            <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+          {{ end }}
+        {{ else }}
+          {{ range $tags }}
+            <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}
