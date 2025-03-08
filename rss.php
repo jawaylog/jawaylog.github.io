@@ -85,7 +85,7 @@ class FreshRSSClient {
     }
 
     /**
-     * 分页获取单个订阅源的文章
+     * 分页获取单个订阅源的文章，并只保留最新的3篇
      */
     private function getArticlesForSubscription($subscriptionId) {
         $articles = [];
@@ -102,7 +102,13 @@ class FreshRSSClient {
             
             if (empty($data['items'])) break;
             
+            // 合并文章并按发布时间排序
             $articles = array_merge($articles, $data['items']);
+            usort($articles, fn($a, $b) => ($b['published'] ?? 0) - ($a['published'] ?? 0));
+            
+            // 只保留最新的3篇文章
+            $articles = array_slice($articles, 0, 3);
+            
             $continuationToken = $data['continuation'] ?? null;
             $page++;
         } while ($continuationToken);
