@@ -1,10 +1,19 @@
 /* ====================== */
 /* 基础样式 */
 /* ====================== */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #0000FF;
+    --gray-light: #ccc;
+    --gray-dark: #666;
+    --font-family: "LXGW WenKai Screen", sans-serif;
+}
+
 body {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding: 0;
-    font-family: "LXGW WenKai Screen", sans-serif;
+    font-family: var(--font-family);
 }
 
 /* ====================== */
@@ -21,10 +30,10 @@ body {
 
 .tag-list ul li,
 .category-list ul li {
-    background-color: var(--hera-background-gray-lightest);
+    background-color: var(--background-color);
     padding: 15px;
     border-radius: 8px;
-    color: #000000;
+    color: var(--text-color);
     flex: 1 1 calc(24% - 20px);
     text-align: left;
     box-sizing: border-box;
@@ -33,13 +42,13 @@ body {
 .category-list ul li span {
     display: inline;
     margin-left: 2px;
-    color: #424242;
+    color: var(--gray-dark);
     letter-spacing: 0.5px;
 }
 
 .tag-list ul li a,
 .category-list ul li a {
-    color: #0000FF;
+    color: var(--link-color);
     text-decoration: none;
     font-size: 17px;
     transition: color 0.3s ease;
@@ -47,7 +56,6 @@ body {
 
 .tag-list ul li a:hover,
 .category-list ul li a:hover {
-    color: #0000FF;
     text-decoration: underline;
 }
 
@@ -68,28 +76,28 @@ body {
 
 .year-title,
 h3 {
-    color: #424242;
+    color: var(--gray-dark);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .archive--title__year {
-    font-size: 22px !important; /* 确保年份标题的字体大小为22px */
+    font-size: 22px !important;
 }
 
 .month-card {
-    background-color: var(--hera-background-gray-lightest);
+    background-color: var(--background-color);
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 .month-title {
-    color: #424242;
+    color: var(--gray-dark);
     font-weight: bold;
     margin-bottom: 5px;
     text-align: right;
-    font-size: 20px; /* 月份标题的字体大小 */
+    font-size: 20px;
 }
 
 .listing {
@@ -100,42 +108,42 @@ h3 {
 .listing li {
     padding: 8px 15px;
     position: relative;
-    color: #333;
+    color: var(--text-color);
 }
 
 .listing li:not(:last-child) {
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed var(--gray-light);
 }
 
 .archive-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 17px;
     transition: color 0.3s ease;
 }
 
 .archive-title a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
-    white-space: normal; /* 允许标题换行 */
-    word-break: break-word; /* 在单词内换行 */
-    overflow-wrap: break-word; /* 允许在单词内换行 */
-    flex: 1; /* 占据剩余空间 */
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
 }
 
 .archive-date {
     font-size: 15px;
-    color: #666;
-    margin-left: 10px; /* 确保日期与标题之间有间隔 */
-    white-space: nowrap; /* 日期不换行 */
+    color: var(--gray-dark);
+    margin-left: 15px;
+    white-space: nowrap;
 }
 
 .archive-title a:hover {
-    color: #0000FF;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -155,63 +163,43 @@ h3 {
 /* ====================== */
 /* 归档列表 */
 /* ====================== */
-.archive {
-    &--list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 15px;
-        margin-bottom: 30px;
-        margin-top: 10px;
-    }
-
-    &--title {
-        font-size: 18px;
-        line-height: 1.4;
-        height: 2.8em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-
-        &__year {
-            font-size: 24px;
-            font-weight: 900;
-            margin-top: 30px;
-        }
-    }
-
-    &--meta {
-        font-size: 12px;
-        color: var(--hera-text-gray);
-        margin-top: 5px;
-    }
-
-    &--item {
-        padding: 15px;
-        background-color: var(--hera-background-gray-lightest);
-        border-radius: 10px;
-        a {
-            &:hover {
-                color: var(--hera-main-color);
-            }
-        }
-    }
+.archive--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .archive {
-        &--list {
-            grid-gap: 10px;
-            margin-bottom: 25px;
-        }
+.archive--title {
+    font-size: 18px;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
 
-        &--title {
-            font-size: 14px;
-        }
+.archive--title__year {
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 30px;
+}
 
-        &--item {
-            padding: 10px;
-        }
-    }
+.archive--meta {
+    font-size: 12px;
+    color: var(--gray-dark);
+    margin-top: 5px;
+}
+
+.archive--item {
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.archive--item a:hover {
+    color: var(--link-color);
 }
 
 .archive--tagList {
@@ -221,9 +209,24 @@ h3 {
 
 .archive--tagItem {
     margin: 10px;
-    background-color: var(--hera-background-gray-lightest);
+    background-color: var(--background-color);
     padding: 3px 12px;
     border-radius: 4px;
     font-size: 14px;
-    color: var(--hera-text-gray-light);
+    color: var(--gray-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .archive--list {
+        grid-gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .archive--title {
+        font-size: 14px;
+    }
+
+    .archive--item {
+        padding: 10px;
+    }
 }

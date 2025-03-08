@@ -68,28 +68,31 @@
 </div>
 
 <div class="mobile-only">
-    {{ $years := (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
-    {{ range $year := $years }}
-    <div class="year-section">
-        <h3 class="year-title">{{ $year.Key }}</h3>
-        {{ $month := (where $year.Pages "Type" "post").GroupByDate "01月" }}
-        {{ range $month }}
-        <div class="month-card">
-            
-            <ul class="listing">
-                {{ range .Pages }}
-                <li>
-                     <div class="month-indicator">{{ .Date.Format "01月" }}</div>
-                    <div class="archive-title">
-                        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                    </div>
-                </li>
-                {{ end }}
-            </ul>
+    
+
+    <!-- 文章归档 -->
+    <section class="page--archive">
+        {{ range .Pages.ByPublishDate.Reverse.GroupByDate "2006" }}
+        <div class="year-section">
+            <h2 class="archive--title__year">{{ .Key }}</h2>
+            {{ range .Pages.ByPublishDate.Reverse.GroupByDate "1月" }}
+            <article class="month-card">
+                
+                <ul class="listing">
+                    {{ range .Pages }}
+                    <li>
+                        <div class="archive-title">
+                            <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                            <span class="archive-date">{{ .Date.Format "01月" }}</span>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </article>
+            {{ end }}
         </div>
         {{ end }}
-    </div>
-    {{ end }}
+    </section>
 </div>
 </div>
 
