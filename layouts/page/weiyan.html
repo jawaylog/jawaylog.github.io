@@ -1,0 +1,39 @@
+<script>
+  const memosAPI = "https://m.xieha.cn/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=1";
+
+  fetch(memosAPI)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.length > 0) {
+        const memo = data[0];
+        document.getElementById("memo-content").innerHTML = memo.content;
+        document.getElementById("memo-time").innerText = `发布时间：${new Date(memo.createdTs * 1000).toLocaleString()}`;
+      } else {
+        document.getElementById("memo-content").innerText = "暂无 Memos 数据。";
+      }
+    })
+    .catch(error => {
+      console.error("获取 Memos 数据失败：", error);
+      document.getElementById("memo-content").innerText = "无法加载 Memos 数据。";
+    });
+</script>
+  <style>/* assets/css/custom.css */
+#memos-container {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#memo-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+#memo-time {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+</style> 

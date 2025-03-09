@@ -107,7 +107,7 @@ class FreshRSSClient {
             usort($articles, fn($a, $b) => ($b['published'] ?? 0) - ($a['published'] ?? 0));
             
             // 只保留最新的3篇文章
-            $articles = array_slice($articles, 0, 3);
+            $articles = array_slice($articles, 0, 2);
             
             $continuationToken = $data['continuation'] ?? null;
             $page++;

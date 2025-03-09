@@ -27,13 +27,17 @@ dataDir = "data"
  subtitle = '用文字与照片记录生活点滴'
  
 
-  
+  memosAPI = "https://m.xieha.cn/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=2"
+
 
   showAuthor = true
   authorName = 'welog'
   authorDescription = 'computer loser'
   authorAvatar = 'https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&d=mm&r=g'
 
+
+[markup.goldmark.renderer]
+  unsafe = true  # 允许原始 HTML
 
 [Params.artalk]
   server = 'https://a.xieha.cn/'

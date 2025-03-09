@@ -1,89 +1,62 @@
 {{ define "main" }}
-<style type="text/css">
-    .friends-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.friends-post {
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.friends-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.friends-header img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.friends-content {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.friends-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 5px;
-  margin-bottom: 10px;
-}
-
-.friends-images img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.friends-footer {
-  font-size: 12px;
-  color: #999;
-  display: flex;
-  justify-content: space-between;
-}
-</style>
-<div class="friends-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
-  {{ range .Pages }}
-    <div class="friends-post" style="background: #fff; border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-      <!-- 用户头像和昵称 -->
-      <div class="friends-header" style="display: flex; align-items: center; margin-bottom: 10px;">
-        <img src="{{ .Params.avatar | default "/images/default-avatar.jpg" }}" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
-        <span style="font-weight: bold; font-size: 16px;">{{ .Params.author | default "Anonymous" }}</span>
-      </div>
-
-      <!-- 内容 -->
-      <div class="friends-content" style="font-size: 14px; color: #333; margin-bottom: 10px;">
-        {{ .Content }}
-      </div>
-
-      <!-- 图片 -->
-      {{ if .Params.images }}
-        <div class="friends-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 5px; margin-bottom: 10px;">
-          {{ range .Params.images }}
-            <img src="{{ . }}" alt="Post Image" style="width: 100%; border-radius: 5px;">
-          {{ end }}
-        </div>
-      {{ end }}
-
-      <!-- 时间和操作 -->
-      <div class="friends-footer" style="font-size: 12px; color: #999; display: flex; justify-content: space-between;">
-        <span>{{ .Date.Format "2006-01-02 15:04" }}</span>
-        <div>
-          <a href="#" style="color: #999; margin-right: 10px;">Like</a>
-          <a href="#" style="color: #999;">Comment</a>
-        </div>
-      </div>
-    </div>
-  {{ end }}
-</div>
+<div id="bber-talk"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var e = document.querySelector("#bber-talk");
+    e && (fetchAndRenderMemos(), moment.locale("zh-CN"));
+    function fetchAndRenderMemos() {
+        var url = "https://m.xieha.cn/api/v1/memos?pageSize=5&filter=visibilities%20==%20[%27PUBLIC%27]%20%26%26%20creator%20==%20%27users/1%27";
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                var memosList = data.memos;
+                var contentHTML = memosList.map(memo => {
+                    var createTime = memo.createTime;
+                    var timeFromNow = moment(createTime).fromNow();
+                    var content = memo.content;
+                    var uid = memo.uid;
+                    // Process content strings
+                    var processedContent = content.replace(/!\[.*?\]\((.*?)\)/g, function(match, imageUrl) {
+                        var cleanUrl = imageUrl.split(/[?#]/)[0];
+                        return `<a href="${cleanUrl}" target="_blank">🌅</a>`;
+                    }).replace(/\[(.*?)\]\((.*?)\)/g, function(match, linkText, url) {
+                        var extension = url.split('.').pop().split(/[?#]/)[0];
+                        var cleanUrl = url.split(/[?#]/)[0];
+                        return /(jpg|jpeg|png|gif|bmp|webp|svg)/i.test(extension)
+                            ? `<a href="${cleanUrl}" target="_blank">🌅</a>`
+                            : `<a href="${url}" target="_blank">${linkText} 🔗</a>`;
+                    });
+                    // Add externalLink from resources if it's an image
+                    if (memo.resources) {
+                        memo.resources.forEach(resource => {
+                            if (resource.externalLink) {
+                                var cleanExternalLink = resource.externalLink.split(/[?#]/)[0];
+                                if (/(jpg|jpeg|png|gif|bmp|webp|svg)/i.test(cleanExternalLink.split('.').pop())) {
+                                    processedContent += ` <a href="${cleanExternalLink}" target="_blank">🌅</a>`;
+                                }
+                            }
+                        });
+                    }
+                    return `<li class="item">💬 <a href="https://m.xieha.cn/m/${uid}" target="_blank"><span class="datetime">${timeFromNow}</span>：${processedContent}</a></li>`;
+                }).join('');
+                var finalHTML = `<div class="talk-wrap"><ul class="talk-list">${contentHTML}</ul></div>`;
+                e && (e.innerHTML = finalHTML);
+                // Regularly move the first item to the end
+                setInterval(function() {
+                    var itemList = document.querySelector(".talk-list");
+                    if (itemList) {
+                        var items = itemList.querySelectorAll(".item");
+                        if (items.length > 0) {
+                            itemList.appendChild(items[0]);
+                        }
+                    }
+                }, 2000);
+            })
+            .catch(error => console.error('Error fetching memos:', error));
+    }
+});
+</script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js></script>
+<style>.talk-list .item{display:none}.talk-list .item:nth-child(1){display:block}</style>
+<script src=https://momentjs.cn/downloads/moment-with-locales.js></script>
 {{ end }}
