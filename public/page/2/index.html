@@ -119,172 +119,124 @@
                 </form>
             </div>
             
-
-<script>
-  const memosAPI = "https://m.xieha.cn/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=1";
+<div class="post--list">
+    <div class="block--list">
+      <script>
 
   fetch(memosAPI)
     .then(response => response.json())
     .then(data => {
       if (data && data.length > 0) {
-        const memo = data[0];
-        document.getElementById("memo-content").innerHTML = memo.content;
-        document.getElementById("memo-time").innerText = `发布时间：${new Date(memo.createdTs * 1000).toLocaleString()}`;
+        const memoList = document.getElementById("memo-list");
+        memoList.innerHTML = "";
+
+        data.forEach((memo, index) => {
+          const memoDiv = document.createElement("div");
+          memoDiv.classList.add("memo-item");
+
+          const contentDiv = document.createElement("div");
+          contentDiv.id = `memo-content-${index}`;
+          contentDiv.innerHTML = memo.content;
+          memoDiv.appendChild(contentDiv);
+
+          const date = new Date(memo.createdTs * 1000);
+          const formattedDate = `${date.getFullYear()}年${String(date.getMonth() + 1).padStart(2, '0')}月${String(date.getDate()).padStart(2, '0')}号`;
+          const timeDiv = document.createElement("div");
+          timeDiv.id = `memo-time-${index}`;
+          timeDiv.innerText = `发布时间：${formattedDate}`;
+          memoDiv.appendChild(timeDiv);
+
+          memoList.appendChild(memoDiv);
+        });
       } else {
-        document.getElementById("memo-content").innerText = "暂无 Memos 数据。";
+        document.getElementById("memo-list").innerHTML = "暂无 Memos 数据。";
       }
     })
     .catch(error => {
       console.error("获取 Memos 数据失败：", error);
-      document.getElementById("memo-content").innerText = "无法加载 Memos 数据。";
+      document.getElementById("memo-list").innerHTML = "无法加载 Memos 数据。";
     });
 </script>
-  <style> 
- 
-.block--item__status {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.status--icon svg {
-  width: 24px;
-  height: 24px;
-  fill: #757575;
-}
-
-.block--snippet {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #333;
-}
-
-.block--meta {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #666;
-}
-
-.status--link svg {
-  width: 12px;
-  height: 12px;
-  fill: #757575;
-
-
-.humane--time {
-  font-size: 0.9em;
-  color: #666;
-}
-}
-</style> 
-
-
-
-
-
-
-
-
-  
-    <article class="block--item block--item__status" itemtype="http://schema.org/Article" itemscope="itemscope"
-      data-id="memo-0">
-      <div class="status--icon">
-        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
-          </path>
-        </svg>
-      </div>
-      <div class="block--addon">
-        <div class="meta">
-          <div class="block--snippet" itemprop="about">
-            昨晚脑子一热，入手了k80，发现好像作用不大。今天到手，真香，可能新手机新乐趣吧😂
-          </div>
-          <div class="block--meta">
-            
-            <time class="humane--time" data-timestamp="1.741520368e&#43;09">
-              1.741520368e&#43;09 
-            </time>
-            <a class="status--link" href="#memo-0" itemprop="datePublished">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12" data-settings-arrow="true">
-                <path fill="#757575"
-                  d="M.646 10.646a.5.5 0 0 0 .708.708zM11 1h.5a.5.5 0 0 0-.5-.5zm-.5 7a.5.5 0 0 0 1 0zM4 .5a.5.5 0 0 0 0 1zM1.354 11.354l10-10-.708-.708-10 10zM10.5 1v7h1V1zM4 1.5h7v-1H4z">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-  
-    <article class="block--item block--item__status" itemtype="http://schema.org/Article" itemscope="itemscope"
-      data-id="memo-1">
-      <div class="status--icon">
-        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z">
-          </path>
-        </svg>
-      </div>
-      <div class="block--addon">
-        <div class="meta">
-          <div class="block--snippet" itemprop="about">
-            改改改，终于弄了个自己还算满意的样式，朋友圈功能也算是跟上潮流了，采用了Jeffer大佬的朋友圈的css样式，接下来是移动端的样式。
-          </div>
-          <div class="block--meta">
-            
-            <time class="humane--time" data-timestamp="1.74110561e&#43;09">
-              1.74110561e&#43;09 
-            </time>
-            <a class="status--link" href="#memo-1" itemprop="datePublished">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12" data-settings-arrow="true">
-                <path fill="#757575"
-                  d="M.646 10.646a.5.5 0 0 0 .708.708zM11 1h.5a.5.5 0 0 0-.5-.5zm-.5 7a.5.5 0 0 0 1 0zM4 .5a.5.5 0 0 0 0 1zM1.354 11.354l10-10-.708-.708-10 10zM10.5 1v7h1V1zM4 1.5h7v-1H4z">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </article>
-  
-
-
 <script>
-  function formatTimeDiff(timestamp) {
-    const now = Math.floor(Date.now() / 1000); 
-    const diff = now - timestamp;
+document.addEventListener('DOMContentLoaded', function() {
+  const relativeTimeElements = document.querySelectorAll('.memos-container .scoped-relative-time');
+  
+  relativeTimeElements.forEach(element => {
+    const timestamp = parseInt(element.dataset.timestamp);
+    const date = new Date(timestamp * 1000);
+    const now = new Date();
+    const timeDiff = now - date;
+    
+    const units = [
+      { unit: '年', factor: 31536000000 },
+      { unit: '个月', factor: 2628000000 },
+      { unit: '天', factor: 86400000 },
+      { unit: '小时', factor: 3600000 },
+      { unit: '分钟', factor: 60000 },
+      { unit: '秒', factor: 1000 }
+    ];
 
-    if (diff < 60) {
-      return `${diff} 秒前`;
-    } else if (diff < 3600) {
-      return `${Math.floor(diff / 60)} 分钟前`;
-    } else if (diff < 86400) {
-      return `${Math.floor(diff / 3600)} 小时前`;
-    } else {
-      return `${Math.floor(diff / 86400)} 天前`;
-    }
-  }
+    let result = '刚刚';
+    units.some(({ unit, factor }) => {
+      if (timeDiff >= factor) {
+        const value = Math.floor(timeDiff / factor);
+        result = `${value}${unit}前`;
+        return true;
+      }
+      return false;
+    });
 
-  document.querySelectorAll('.humane--time[data-timestamp]').forEach(el => {
-    const timestamp = parseInt(el.dataset.timestamp, 10);
-    el.textContent = formatTimeDiff(timestamp);
+    element.textContent = result;
   });
+});
 </script>
 
-<script>
-  
-  document.querySelectorAll('.humane--time[data-timestamp]').forEach(element => {
-    const timestamp = parseInt(element.dataset.timestamp, 10); 
-    const date = new Date(timestamp * 1000); 
-    element.textContent = date.toLocaleString(); 
-  });
-</script>
-<div class="desktop-only">
-<div class="post--list">
-    <div class="block--list">
+
+
+    
+    
+    
+        <div class="memos-container">
+            
+            <article class="block--item block--item__status" itemtype="http://schema.org/Article" itemscope="itemscope"
+              data-id="memo-0">
+                <div class="status--icon">
+                    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path>
+                    </svg>
+                </div>
+                <div class="block--addon">
+                    <div class="meta">
+                        <div class="block--snippet" itemprop="about">
+                            昨晚脑子一热，入手了k80，发现好像作用不大。今天到手，真香，可能新手机新乐趣吧😂
+                        </div>
+                        <div class="block--meta">
+                            
+                            
+                            
+                            <time 
+                                datetime="2025-03-09T19:39:28&#43;08:00"
+                                class="scoped-relative-time"
+                                data-timestamp="1741520368"
+                            >
+                                
+                                2025年03月09日 19:39
+                            </time><span class="sep"></span>动态
+                            <a class="status--link" href="#memo-0" itemprop="datePublished">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12" data-settings-arrow="true">
+                                    <path fill="#757575" d="M.646 10.646a.5.5 0 0 0 .708.708zM11 1h.5a.5.5 0 0 0-.5-.5zm-.5 7a.5.5 0 0 0 1 0zM4 .5a.5.5 0 0 0 0 1zM1.354 11.354l10-10-.708-.708-10 10zM10.5 1v7h1V1zM4 1.5h7v-1H4z"></path>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        </div>
+    
+
+      <div class="desktop-only">
         
         
         
@@ -393,12 +345,8 @@
         
         
     </div>
-</div>
-</div>
-
-<div class="mobile-only">
-<div class="post--list">
-    <div class="block--list">
+    
+      <div class="mobile-only">
         
         
         
