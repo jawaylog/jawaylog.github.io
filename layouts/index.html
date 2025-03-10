@@ -1,38 +1,38 @@
 {{ define "main" }}
 <div class="post--list">
-    <div class="block--list">
-      {{ partial "weiyan.html" . }}
-      <div class="desktop-only">
-        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-        {{ $paginator := .Paginate ($pages) }}
-        {{ range $paginator.Pages }}
-        {{ if eq .Type "memo" }}
-        {{ partial "memo.html" . }}
-        {{ else }}
-        {{ partial "post.html" . }}
-        {{ end }}
-        {{ end }}
-    </div>
-    
-      <div class="mobile-only">
-        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-        {{ $paginator := .Paginate ($pages) }}
-        {{ range $paginator.Pages }}
-        {{ if eq .Type "memo" }}
-        {{ partial "memo.html" . }}
-        {{ else }}
-        {{ partial "mobile.html" . }}
-        {{ end }}
-        {{ end }}
-    </div>
-</div>
-</div>
-
-<nav class="navigation ">
-    <div class="nav-links">
-        {{ range $paginator.Pagers }}
-        <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
-        {{ end }}
-    </div>
-</nav>
+         <div class="block--list">
+            {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+            {{ $filteredPages := where $pages "Type" "in" (slice "post" "memo") }}
+            {{ $paginator := .Paginate ($filteredPages) }}
+            {{ if eq .Paginator.PageNumber 1 }}
+               {{ partial "weiyan.html" . }}
+            {{ end }}
+   <div class="desktop-only">   
+            {{ range $paginator.Pages }}
+               {{ if eq .Type "memo" }}
+                  {{ partial "memo.html" . }}
+               {{ else }}
+                  {{ partial "post.html" . }}
+               {{ end }}
+            {{ end }}
+         </div>
+ 
+   <div class="mobile-only">  
+            {{ range $paginator.Pages }}
+               {{ if eq .Type "memo" }}
+                  {{ partial "memo.html" . }}
+               {{ else }}
+                  {{ partial "mobile.html" . }}
+               {{ end }}
+            {{ end }}
+         </div>
+      </div>
+   </div>
+   <nav class="navigation">
+      <div class="nav-links">
+         {{ range .Paginator.Pagers }}
+            <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+         {{ end }}
+      </div>
+   </nav>
 {{ end }}
