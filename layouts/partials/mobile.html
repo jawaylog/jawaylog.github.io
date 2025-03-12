@@ -1,5 +1,5 @@
 <div class="friends-container">
-    <div class="friends-post">
+        <div class="friends-post">      
       <!-- 头像和昵称 -->
       <div class="friends-header">
         {{ if .Params.avatar }}
@@ -19,24 +19,17 @@
         <a href="{{ .RelPermalink }}" class="friends-more">•••</a>
       </div>
 
-
-      <span class="friends-title"><a href="{{ .RelPermalink }}">{{ .Title | truncate 30 }}</a></span>
-      <!-- 内容 -->
-
-       <!-- 图片 -->
+      <!-- 图片
        {{ $cover := .Params.image | default "/images/1.jpg" }}
         <div class="friends-images">
-          <img src="{{ $cover | relURL }}" class="" itemprop="image" alt="{{ .Title }}" loading="lazy">
-            
-          
-        </div>
+          <img src="{{ $cover | relURL }}" class="cover" itemprop="image" alt="{{ .Title }}" loading="lazy">
+        </div> -->
+         
+      <span class="friends-title"><a href="{{ .RelPermalink }}">{{ .Title | truncate 30 }}</a></span>
+      <!-- 内容 -->
       <div class="friends-content">
         {{ .Content | plainify | truncate 55 }}
       </div>
-
-     
-      
-
       <!-- 操作 -->
       <div class="friends-actions">
         <!-- 分类 -->
@@ -45,7 +38,6 @@
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           {{ end }}
         {{ end }}
-
         <!-- 标签 -->
         {{ $tags := (.GetTerms "tags") }}
         {{ if gt (len $tags) 2 }}
@@ -58,6 +50,5 @@
           {{ end }}
         {{ end }}
       </div>
-    </div>
-  
+    </div> 
 </div>

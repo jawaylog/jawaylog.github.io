@@ -5,6 +5,22 @@
     padding-bottom: 20px;
     padding-top: 20px;
 }
+   .cover--link {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+
+    .cover {
+  width: 100%; /* 横向填充容器 */
+  height: auto; /* 纵向自适应 */
+  border-radius: 12px 12px 0 0;
+        margin-bottom: 12px;
+  max-width: 100%; /* 防止溢出父容器 */
+  object-fit: cover; /* 保持比例填充容器 */
+  aspect-ratio: 60/36; /* 预设宽高比 */
+}
 
 @media screen and (max-width: 768px) {
     .post--cards {
@@ -24,17 +40,7 @@
         transform: none;
         transform-origin: 50% 50% 0px;
     }
-    .cover--link {
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    .cover {
-        border-radius: 12px 12px 0 0;
-        margin-bottom: 12px;
-        object-fit: cover;
-        aspect-ratio: 60/36;
-    }
+
     .post--title {
         font-size: 20px;
         font-weight: bold;

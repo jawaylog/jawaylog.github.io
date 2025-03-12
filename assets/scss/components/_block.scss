@@ -4,7 +4,7 @@
     }
 
     &--snippet {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.6;
         color: var(--hera-text-gray);
         max-height: 4.8em;
@@ -105,9 +105,9 @@
         }
 
         &--snippet {
-            font-size: 16px;
+            font-size: 15px;
             display: -webkit-box;
-            -webkit-line-clamp: 2.5; /* 控制行数 */
+            -webkit-line-clamp: 3; /* 控制行数 */
             -webkit-box-orient: vertical;
             overflow: hidden;
             max-width: 45ch; /* 字符数限制 */

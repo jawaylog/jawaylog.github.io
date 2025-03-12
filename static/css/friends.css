@@ -5,41 +5,39 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "LXGW WenKai Screen", sans-serif;
-
+        line-height: 1.6; /* 提高可读性 */
     }
 
-    
     /* 容器样式 */
     .container {
         display: grid;
-        gap: 10px;
+        gap: 15px; /* 增加间距 */
         margin: 0 auto;
         width: 100%;
-        padding: 5px;
+        padding: 10px;
         box-sizing: border-box;
         grid-template-columns: 1fr; /* 默认为一列布局 */
     }
 
     /* 卡片样式 */
     .card {
-        background-color: none;
-        border-radius: 5px;
-        padding: 10px;
+        background-color: none; /* 添加背景色 */
+        border-radius: 10px; /* 圆角更大 */
+        padding: 15px;
         box-sizing: border-box;
         display: flex;
-        align-items: center; /* 保持垂直居中 */
+        align-items: center;
         text-align: left;
-        transition: box-shadow 0.3s;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         overflow: hidden;
-        max-width: 1000px; /* 设置卡片的最大宽度 */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
-    
+        max-width: 1000px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
     }
 
     /* 卡片悬浮效果 */
     .card:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px); /* 悬浮时上移 */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 悬浮时阴影加深 */
     }
 
     /* 图片样式 */
@@ -47,7 +45,8 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        margin-right: 10px;
+        margin-right: 15px; /* 增加间距 */
+        object-fit: cover; /* 确保图片不变形 */
     }
 
     /* 内容样式 */
@@ -59,54 +58,60 @@
     .card a {
         text-decoration: none;
         color: #FF0000;
-        display: block; /* 改为 block 布局 */
-        margin-top: 5px; /* 减少标题和链接之间的间距 */
-        
+        display: block;
+        margin-top: 5px;
+        transition: color 0.3s ease; /* 添加颜色过渡效果 */
+    }
+
+    .card a:hover {
+        color: #0056b3; /* 悬浮时改变颜色 */
     }
 
     /* 标题样式 */
     .card h3 {
         margin: 0;
-        margin-bottom: 5px; /* 减少标题的底部外边距 */
+        margin-bottom: 5px;
         word-break: break-word;
-        color: #007bff;
+        color: #e67e22;
         text-align: left;
         font-weight: bold;
         font-size: 18px;
-}
-    
+    }
 
     /* 链接说明样式 */
     .link-description {
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1; /* 限制为两行 */
+        -webkit-line-clamp: 2; /* 限制为两行 */
         overflow: hidden;
-        text-overflow: ellipsis; /* 超出部分用...表示 */
-        font-size: 15px; /* 调整说明字体大小 */
-        color: #696969; /* 说明文字颜色 */
+        text-overflow: ellipsis;
+        font-size: 14px; /* 稍微减小字体大小 */
+        color: #696969;
+        line-height: 1.4; /* 提高可读性 */
     }
 
-
-
-/* 媒体查询，当屏幕宽度大于或等于734px时 */
+    /* 媒体查询，当屏幕宽度大于或等于480px时 */
     @media (min-width: 480px) {
         .container {
             grid-template-columns: repeat(2, 1fr); /* 改为两列布局 */
         }
     }
 
-
-
     /* 媒体查询，当屏幕宽度大于或等于768px时 */
     @media (min-width: 768px) {
         .container {
             grid-template-columns: repeat(3, 1fr); /* 改为三列布局 */
         }
-        
-        }
+
         .card a {
-            font-size: 15px; /* 在大屏幕上调整链接字体大小 */
+            font-size: 16px; /* 在大屏幕上调整链接字体大小 */
+        }
+    }
+
+    /* 媒体查询，当屏幕宽度大于或等于1024px时 */
+    @media (min-width: 1440px) {
+        .container {
+            grid-template-columns: repeat(4, 1fr); /* 改为四列布局 */
         }
     }
 </style>
