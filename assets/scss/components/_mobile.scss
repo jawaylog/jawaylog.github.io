@@ -44,7 +44,7 @@
 
   /* 标题 */
   .friends-title {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 8px; /* 增加标题与内容之间的间距 */
     margin-top: 0; /* 移除顶部间距 */
     display: -webkit-box;
@@ -86,13 +86,13 @@
   }
 
   .friends-time {
-    font-size: 13px; /* 移动端时间字体稍小 */
+    font-size: 14px; /* 移动端时间字体稍小 */
     color: #666;
   }
 
   /* 内容 */
   .friends-content {
-    font-size: 15px; /* 移动端字体稍小 */
+    font-size: 16px; /* 移动端字体稍小 */
     color: #4A4A4A;
     line-height: 1.6;
     margin-bottom: 12px;
@@ -116,7 +116,7 @@
     display: flex;
     gap: 12px;
     align-items: center;
-    font-size: 14px; /* 移动端字体稍小 */
+    font-size: 15px; /* 移动端字体稍小 */
     padding-top: 8px; /* 增加操作按钮与内容之间的间距 */
     border-top: 1px solid #eee; /* 添加分隔线 */
   }
@@ -142,25 +142,30 @@
     }
 
     .friends-avatar {
-      width: 36px; /* 移动端头像更小 */
-      height: 36px;
+      width: 42px; /* 移动端头像更小 */
+      height: 42px;
     }
 
     .friends-author {
-      font-size: 15px; /* 移动端字体更小 */
+      font-size: 16px; /* 移动端字体更小 */
     }
 
     .friends-title {
-      font-size: 17px; /* 移动端标题字体稍小 */
+      font-size: 18px; /* 移动端标题字体稍小 */
     }
 
     .friends-content {
-      font-size: 15px; /* 移动端字体更小 */
+      font-size: 16px; /* 移动端字体更小 */
     }
 
     .friends-actions {
-      font-size: 14px; /* 移动端字体更小 */
+      font-size: 15px; /* 移动端字体更小 */
     }
+
+    .friends-time {
+    font-size: 14px; /* 移动端时间字体稍小 */
+    color: #666;
+  }
   }
 
 

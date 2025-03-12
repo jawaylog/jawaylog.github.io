@@ -18,20 +18,24 @@
         <!-- 装饰性... -->
         <a href="{{ .RelPermalink }}" class="friends-more">•••</a>
       </div>
+
+
       <span class="friends-title"><a href="{{ .RelPermalink }}">{{ .Title | truncate 30 }}</a></span>
       <!-- 内容 -->
+
+       <!-- 图片 -->
+       {{ $cover := .Params.image | default "/images/1.jpg" }}
+        <div class="friends-images">
+          <img src="{{ $cover | relURL }}" class="" itemprop="image" alt="{{ .Title }}" loading="lazy">
+            
+          
+        </div>
       <div class="friends-content">
         {{ .Content | plainify | truncate 55 }}
       </div>
 
-      <!-- 图片 -->
-      {{ if .Params.images }}
-        <div class="friends-images">
-          {{ range .Params.images }}
-            <img src="{{ . }}" alt="Post Image">
-          {{ end }}
-        </div>
-      {{ end }}
+     
+      
 
       <!-- 操作 -->
       <div class="friends-actions">
