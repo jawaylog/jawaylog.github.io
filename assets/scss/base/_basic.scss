@@ -206,6 +206,46 @@ textarea {
     display: block; /* 暗色模式下显示月亮图标 */
 }
 
+/* 默认隐藏评论容器 */
+    .comments-hidden {
+        display: none;
+    }
+
+/* 评论按钮隐藏样式 */
+.comments-button.hidden {
+    display: none;
+}
+
+    /* 评论按钮样式 */
+    .comments-button {
+        /* 您的按钮样式 */
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #DCDCDC;
+        color: #424242;
+        border: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    /* 评论按钮悬停效果 */
+    .comments-button:hover {
+        background-color: #A9A9A9;
+    }
+
+    /* 当checkbox被选中时，显示评论容器 */
+    .comments-toggle:checked + .comments-button + #comments {
+        display: block;
+    }
+    
+/* 当checkbox被选中时，隐藏按钮 */
+    .comments-toggle:checked + .comments-button {
+        display: none;
+    }
+
+
+
 @media (max-width: 768px) {
     .notice--wrapper {
         width: 80%;

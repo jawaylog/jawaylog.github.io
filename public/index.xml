@@ -6,15 +6,8 @@
     <description>Recent content on 微影随行</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Mar 2025 00:36:01 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2025 01:45:29 +0800</lastBuildDate>
     <atom:link href="https://xieha.cn/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>折腾博客记20240912</title>
-      <link>https://xieha.cn/post/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912---%E5%89%AF%E6%9C%AC/</link>
-      <pubDate>Wed, 12 Mar 2025 00:36:01 +0800</pubDate>
-      <guid>https://xieha.cn/post/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912---%E5%89%AF%E6%9C%AC/</guid>
-      <description>&lt;p&gt;最近一直在不断的折腾博客，整合memos到博客里面，安装artalk以及同步GitHub仓库文件。糟糕的是，memos已经搞好了，安装artalk遇到了很多麻烦，弄好才发现原来这么简单。因为一开始就配置错误，域名这块错误了。导致后面的很多问题出现，试过重装卸载多次，发表留言询问别人。后来还是重装的时候，留意到博客示例，填下看看，才成功。&lt;/p&gt;&#xA;&lt;p&gt;问题1&#xA;Failed to load comments&#xA;TypeError: Failed to fetch&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;img src=&#34;https://img.xieha.cn/i/2024/10/21/6716144ec2620.png&#34; alt=&#34;&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;第一是安装的时候没有正确填写自己博客地址。而我就是那种了。以为安装地址链接是填写这artalk域名地址。正确是你要嵌入的地址。比如你要把评论嵌入你的博客地址，那么你就是填写你的博客地址。后续artalk地址可以通过反向代理ip地址就行了。其实是官方一开始的给的例子就可以看出了。可能当时比较马大哈，哈哈。&lt;/p&gt;&#xA;&lt;p&gt;还有其他的情况是要在artalk后台加入域名白名单。官方好像说过的api问题也会这样。&lt;/p&gt;&#xA;&lt;p&gt;关于memos这方面。由于官方经常迭代升级，改变很多东西。具体啥的我也不太清楚。如果经常升级的话。会导致其他大佬给的js用不了。这个我是深有体会。目前我的版本是0.18.2。不太想升级了，也不敢升级。不然有一堆问题。咱又不会解决。只能跟随大佬们的脚步。&lt;/p&gt;&#xA;&lt;p&gt;目前还在折腾怎么本地博客更新同步服务器上。坎坷呀&lt;/p&gt;&#xA;&lt;p&gt;哈哈，最重要的是，文章内容不怎么更新，功能却要有，实在是有点搞笑了。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>20250225</title>
       <link>https://xieha.cn/memo/20250225/</link>
@@ -23,10 +16,24 @@
       <description>&lt;p&gt;哈哈哈，搞鼓了这么久朋友圈，终于可以了，顺带服务器也可以自动同步了。之前一直deepseek，deepseek，发现越弄越麻烦与复杂，后面干脆不用deepseep,自己在那缕清下思路，后面一下子就弄出来，啊啊啊啊啊啊！！！剩下就是美化了。还是动态博客好，我用wordprss一下子就可以搞出来了，还有有个大佬jeffer弄了个朋友圈插件，更方便了。&lt;/p&gt;</description>
     </item>
     <item>
+      <title>20250225</title>
+      <link>https://xieha.cn/page/memos/20250225/</link>
+      <pubDate>Tue, 25 Feb 2025 01:45:29 +0800</pubDate>
+      <guid>https://xieha.cn/page/memos/20250225/</guid>
+      <description>&lt;p&gt;哈哈哈，搞鼓了这么久朋友圈，终于可以了，顺带服务器也可以自动同步了。之前一直deepseek，deepseek，发现越弄越麻烦与复杂，后面干脆不用deepseep,自己在那缕清下思路，后面一下子就弄出来，啊啊啊啊啊啊！！！剩下就是美化了。还是动态博客好，我用wordprss一下子就可以搞出来了，还有有个大佬jeffer弄了个朋友圈插件，更方便了。&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>20250207</title>
       <link>https://xieha.cn/memo/20250207/</link>
       <pubDate>Fri, 07 Feb 2025 01:37:47 +0800</pubDate>
       <guid>https://xieha.cn/memo/20250207/</guid>
+      <description>&lt;p&gt;这么久以来，都在折腾各样各种的主题。最近折腾大神发哥的hera，修修改改，搞一个令自己满意点的样式。然而，折腾发哥主题的三件套，弄了半天，还是没弄出来，后来发现，好像自己也没必要要这个功能，索性也就停止下来不弄了，最主要还是没弄出来，囧。或者有空再来研究研究吧，累了。还是每次更新一些页面或者功能，本地部署后，总要上传到github，再从github下载代码上传到服务器。这样每次搞得都很麻烦，有必要搞个服务器和github同步了功能了。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>20250207</title>
+      <link>https://xieha.cn/page/memos/20250207/</link>
+      <pubDate>Fri, 07 Feb 2025 01:37:47 +0800</pubDate>
+      <guid>https://xieha.cn/page/memos/20250207/</guid>
       <description>&lt;p&gt;这么久以来，都在折腾各样各种的主题。最近折腾大神发哥的hera，修修改改，搞一个令自己满意点的样式。然而，折腾发哥主题的三件套，弄了半天，还是没弄出来，后来发现，好像自己也没必要要这个功能，索性也就停止下来不弄了，最主要还是没弄出来，囧。或者有空再来研究研究吧，累了。还是每次更新一些页面或者功能，本地部署后，总要上传到github，再从github下载代码上传到服务器。这样每次搞得都很麻烦，有必要搞个服务器和github同步了功能了。&lt;/p&gt;</description>
     </item>
     <item>
@@ -161,6 +168,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://xieha.cn/page/gears/</guid>
       <description>&lt;p&gt;my gear&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>微言语</title>
+      <link>https://xieha.cn/page/welog---%E5%89%AF%E6%9C%AC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://xieha.cn/page/welog---%E5%89%AF%E6%9C%AC/</guid>
+      <description></description>
     </item>
     <item>
       <title>微言语</title>

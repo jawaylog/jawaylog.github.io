@@ -2,31 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xieha.cn/tags/memos/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/tags/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/categories/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/tags/%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/categories/%E6%8A%98%E8%85%BE%E5%90%A7/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
-    <loc>https://xieha.cn/post/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912---%E5%89%AF%E6%9C%AC/</loc>
-    <lastmod>2025-03-12T00:36:01+08:00</lastmod>
-  </url><url>
     <loc>https://xieha.cn/memo/20250225/</loc>
     <lastmod>2025-02-25T01:45:29+08:00</lastmod>
   </url><url>
+    <loc>https://xieha.cn/page/memos/20250225/</loc>
+    <lastmod>2025-02-25T01:45:29+08:00</lastmod>
+  </url><url>
     <loc>https://xieha.cn/memo/</loc>
+    <lastmod>2025-02-25T01:45:29+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/categories/memo/</loc>
+    <lastmod>2025-02-25T01:45:29+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/page/</loc>
+    <lastmod>2025-02-25T01:45:29+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/categories/</loc>
+    <lastmod>2025-02-25T01:45:29+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/</loc>
     <lastmod>2025-02-25T01:45:29+08:00</lastmod>
   </url><url>
     <loc>https://xieha.cn/categories/%E6%9D%82%E8%AE%B0%E7%AF%87/</loc>
@@ -35,7 +29,13 @@
     <loc>https://xieha.cn/memo/20250207/</loc>
     <lastmod>2025-02-07T01:37:47+08:00</lastmod>
   </url><url>
+    <loc>https://xieha.cn/page/memos/20250207/</loc>
+    <lastmod>2025-02-07T01:37:47+08:00</lastmod>
+  </url><url>
     <loc>https://xieha.cn/tags/hera/</loc>
+    <lastmod>2025-02-07T01:37:47+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/tags/</loc>
     <lastmod>2025-02-07T01:37:47+08:00</lastmod>
   </url><url>
     <loc>https://xieha.cn/tags/2024/</loc>
@@ -50,14 +50,23 @@
     <loc>https://xieha.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%95/</loc>
     <lastmod>2024-12-12T01:59:59+08:00</lastmod>
   </url><url>
+    <loc>https://xieha.cn/tags/memos/</loc>
+    <lastmod>2024-09-12T00:36:01+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/tags/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2024-09-12T00:36:01+08:00</lastmod>
+  </url><url>
+    <loc>https://xieha.cn/categories/%E6%8A%98%E8%85%BE%E5%90%A7/</loc>
+    <lastmod>2024-09-12T00:36:01+08:00</lastmod>
+  </url><url>
     <loc>https://xieha.cn/post/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912/</loc>
     <lastmod>2024-09-12T00:36:01+08:00</lastmod>
   </url><url>
     <loc>https://xieha.cn/page/now/</loc>
     <lastmod>2024-06-15T15:16:07+08:00</lastmod>
   </url><url>
-    <loc>https://xieha.cn/page/</loc>
-    <lastmod>2024-06-15T15:16:07+08:00</lastmod>
+    <loc>https://xieha.cn/page/memos/</loc>
+    <lastmod>2024-02-01T21:25:36-08:00</lastmod>
   </url><url>
     <loc>https://xieha.cn/post/</loc>
     <lastmod>2024-02-01T21:25:36-08:00</lastmod>
@@ -188,6 +197,8 @@
     <loc>https://xieha.cn/tags/mini/</loc>
   </url><url>
     <loc>https://xieha.cn/page/gears/</loc>
+  </url><url>
+    <loc>https://xieha.cn/page/welog---%E5%89%AF%E6%9C%AC/</loc>
   </url><url>
     <loc>https://xieha.cn/page/welog/</loc>
   </url>

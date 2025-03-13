@@ -4,9 +4,14 @@
 <div class="category-list">
     <ul>
         {{- range $taxonomy := .Site.Taxonomies.categories -}}
-        <li>
-            <a href="/categories/{{ $taxonomy.Page.Title | urlize }}"><span>#{{ $taxonomy.Page.Title }}</span><span>({{ $taxonomy.Count }})</span></a>
-        </li>
+            {{ if ne .Page.Title "Memo" }} <!-- 过滤掉分类名称为 "memo" 的分类 -->
+                <li>
+                    <a href="/categories/{{ $taxonomy.Page.Title | urlize }}">
+                        <span>#{{ $taxonomy.Page.Title }}</span>
+                        <span>({{ $taxonomy.Count }})</span>
+                    </a>
+                </li>
+            {{ end }}
         {{- end -}}
     </ul>
 </div>
