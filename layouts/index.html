@@ -1,38 +1,54 @@
 {{ define "main" }}
 <div class="post--list">
-         <div class="block--list">
-            {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-            {{ $filteredPages := where $pages "Type" "in" (slice "post" "memo") }}
-            {{ $paginator := .Paginate ($filteredPages) }}
-            {{ if eq .Paginator.PageNumber 1 }}
-               {{ partial "weiyan.html" . }}
-            {{ end }}
-   <div class="desktop-only">   
-            {{ range $paginator.Pages }}
-               {{ if eq .Type "memo" }}
-                  {{ partial "memo.html" . }}
-               {{ else }}
-                  {{ partial "post.html" . }}
-               {{ end }}
-            {{ end }}
-         </div>
- 
-   <div class="mobile-only">  
-            {{ range $paginator.Pages }}
-               {{ if eq .Type "memo" }}
-                  {{ partial "memo.html" . }}
-               {{ else }}
-                  {{ partial "mobile.html" . }}
-               {{ end }}
-            {{ end }}
-         </div>
-      </div>
-   </div>
-   <nav class="navigation">
-      <div class="nav-links">
-         {{ range .Paginator.Pagers }}
-            <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
-         {{ end }}
-      </div>
-   </nav>
+  <div class="block--list">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $filteredPages := where $pages "Type" "in" (slice "post" "memo") }}
+    {{ $paginator := .Paginate ($filteredPages) }}
+    
+    {{ if eq .Paginator.PageNumber 1 }}
+      <!-- 微言模块 -->
+      <section class="weiyan-container">
+        {{ partial "weiyan.html" . }}
+      </section>
+    {{ end }}
+
+    <div class="desktop-only">   
+      {{ range $paginator.Pages }}
+        {{ if eq .Type "memo" }}
+          {{ partial "memo.html" . }}
+        {{ else }}
+          {{ partial "post.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="mobile-only">  
+      {{ range $paginator.Pages }}
+        {{ if eq .Type "memo" }}
+          {{ partial "memo.html" . }} 
+        {{ else }}
+          {{ partial "mobile.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  
+  <nav class="pagination">
+    <div class="nav-links">
+      {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="prev">上一页</a>
+      {{ end }}
+      {{ range $paginator.Pagers }}
+        <a href="{{ .URL }}" class="{{ if eq . $paginator }}current{{ end }}">{{ .PageNumber }}</a>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="next">下一页</a>
+      {{ end }}
+    </div>
+  </nav>
+</div>
+
+<!-- 资源加载 -->
+{{ $js := resources.Get "js/memo.js" | minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}"></script>
 {{ end }}
