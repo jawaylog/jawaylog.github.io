@@ -33,20 +33,13 @@
     </div>
   </div>
   
-  <nav class="pagination">
+  <nav class="navigation ">
     <div class="nav-links">
-      {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" class="prev">上一页</a>
-      {{ end }}
-      {{ range $paginator.Pagers }}
-        <a href="{{ .URL }}" class="{{ if eq . $paginator }}current{{ end }}">{{ .PageNumber }}</a>
-      {{ end }}
-      {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}" class="next">下一页</a>
-      {{ end }}
+        {{ range $paginator.Pagers }}
+        <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }}
     </div>
-  </nav>
-</div>
+</nav>
 
 <!-- 资源加载 -->
 {{ $js := resources.Get "js/memo.js" | minify | fingerprint }}
