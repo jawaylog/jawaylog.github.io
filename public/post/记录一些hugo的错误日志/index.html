@@ -2,7 +2,7 @@
 <html lang="zh-cn" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <title>文章列表 - 微影随行</title>
+    <title>记录一些Hugo的错误日志 - 微影随行</title>
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui,shrink-to-fit=no">
@@ -15,14 +15,14 @@
 <link type="image/vnd.microsoft.icon" href="/images/favicon.ico" rel="shortcut icon">
 <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="print" onload="this.media='all'">
 
-<meta property="og:title" content="文章列表">
-<meta property="og:url" content="https://xieha.cn/archive/">
-<meta property="og:image" content="">
+<meta property="og:title" content="记录一些Hugo的错误日志">
+<meta property="og:url" content="https://xieha.cn/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/">
+<meta property="og:image" content="https://static.fatesinger.com/2024/01/p6krrw3jrw3hu7nd.jpeg">
 <meta property="og:description" content="">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:src" content="">
-<meta name="twitter:title" content="文章列表">
+<meta name="twitter:image:src" content="https://static.fatesinger.com/2024/01/p6krrw3jrw3hu7nd.jpeg">
+<meta name="twitter:title" content="记录一些Hugo的错误日志">
 <meta name="twitter:description" content="">
 
 
@@ -124,44 +124,102 @@
             </div>
             
 <div class="articleContainer">
-    
-    <h2 class="archive--title__year">文章列表</h2>
-    <h4 class="archive-title">共计 11 篇日志</h4>
+    <div class="article" data-id="29df7eb7db6c2ac70eec26785a8aadff">
+        <header class="article--header">
+            <h2 class="article--headline">记录一些Hugo的错误日志</h2>
+            
+            <div class="article--meta">
+                <time datetime='2022-10-03 16:07:10' class="humane--time">2022-10-03 16:07:10</time>
+                
+                <span class="sep"></span>
+                
+                <a href="/categories/%E6%8A%98%E8%85%BE%E5%90%A7/">折腾吧</a>
+                
+                
+                
+            </div>
+        </header>
+        <details class="toc">
+            <summary class="toc-title">目录</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#问题1">问题1</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </details>
+        <div class="article--body grap">
+            <p><strong>注意：</strong> 这里记录的是hugo运行过程中发生的错误与解决方法。</p>
+<p>运营之中，难免会发生各种各样的问题，也经常要搜索各种问题答案，归档起来，也方便些。</p>
+<h3 id="问题1">问题1</h3>
+<pre tabindex="0"><code>fatal: unable to access &#39;https://github.com/nunocoracao/blowfish.git/&#39;: OpenSSL SSL_read: Connection was reset, errno 10054 
+</code></pre><p>
+<figure class="grap--figure">
+    <img src="1.jpg" alt="Featured Blowfish image"  />
+    <figcaption class="imageCaption">Featured Blowfish image</figcaption>
+</figure>
+</p>
+<p>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错
+参考网上解决办法：解除ssl验证后，再上传就OK了</p>
+<pre tabindex="0"><code>git config --global http.sslVerify &#34;false&#34;
+</code></pre>
+        </div>
+        
+        <div class="post--single__action">
+            <button class="button--like like-btn" aria-label="like the post">
+                <svg class="icon--active" viewBox="0 0 1024 1024" width="32" height="32">
+                    <path
+                        d="M780.8 204.8c-83.2-44.8-179.2-19.2-243.2 44.8L512 275.2 486.4 249.6c-64-64-166.4-83.2-243.2-44.8C108.8 275.2 89.6 441.6 185.6 537.6l32 32 153.6 153.6 102.4 102.4c25.6 25.6 57.6 25.6 83.2 0l102.4-102.4 153.6-153.6 32-32C934.4 441.6 915.2 275.2 780.8 204.8z">
+                    </path>
+                </svg>
+                <svg class="icon--default" viewBox="0 0 1024 1024" width="32" height="32">
+                    <path
+                        d="M332.8 249.6c38.4 0 83.2 19.2 108.8 44.8L467.2 320 512 364.8 556.8 320l25.6-25.6c32-32 70.4-44.8 108.8-44.8 19.2 0 38.4 6.4 57.6 12.8 44.8 25.6 70.4 57.6 76.8 108.8 6.4 44.8-6.4 89.6-38.4 121.6L512 774.4 236.8 492.8C204.8 460.8 185.6 416 192 371.2c6.4-44.8 38.4-83.2 76.8-108.8C288 256 313.6 249.6 332.8 249.6L332.8 249.6M332.8 185.6C300.8 185.6 268.8 192 243.2 204.8 108.8 275.2 89.6 441.6 185.6 537.6l281.6 281.6C480 832 499.2 838.4 512 838.4s32-6.4 38.4-19.2l281.6-281.6c96-96 76.8-262.4-57.6-332.8-25.6-12.8-57.6-19.2-89.6-19.2-57.6 0-115.2 25.6-153.6 64L512 275.2 486.4 249.6C448 211.2 390.4 185.6 332.8 185.6L332.8 185.6z">
+                    </path>
+                </svg>
+                <span class="count"></span>
+            </button>
+        </div>
+        
+        <div class="article--tags u-paddingTop20">
+            
+            <a href="/tags/hugo/" class="artile--tag"><span>#</span>Hugo</a>
+            
+        </div>
+        
+        
+        
 
-    
-    <div class="category-list">
-        <ul><li>
-                <a href="/categories/memo">
-                    <span>#Memo</span>
-                    <span>(2)</span>
-                </a>
-            </li><li>
-                <a href="/categories/%E6%8A%98%E8%85%BE%E5%90%A7">
-                    <span>#折腾吧</span>
-                    <span>(4)</span>
-                </a>
-            </li><li>
-                <a href="/categories/%E6%97%85%E6%B8%B8%E8%AE%B0">
-                    <span>#旅游记</span>
-                    <span>(3)</span>
-                </a>
-            </li><li>
-                <a href="/categories/%E6%9D%82%E8%AE%B0%E7%AF%87">
-                    <span>#杂记篇</span>
-                    <span>(3)</span>
-                </a>
-            </li><li>
-                <a href="/categories/%E7%94%9F%E6%B4%BB%E5%BD%95">
-                    <span>#生活录</span>
-                    <span>(3)</span>
-                </a>
-            </li></ul>
-    </div>
-
-    
-    <div class="page--archive">
         
     </div>
+
+
+    
+<input type="checkbox" id="comments-toggle" class="comments-toggle" />
+
+
+<label for="comments-toggle" class="comments-button">评论一下...</label>
+
+
+<div id="comments" class="comments-hidden"><link href="https://a.xieha.cn/dist/Artalk.css" rel="stylesheet" />
+<script src="https://a.xieha.cn/dist/Artalk.js"></script>
+
+
+<div id="Comments"></div>
+
+<script>
+  Artalk.init({
+    el: '#Comments',
+    pageKey: 'https:\/\/xieha.cn\/post\/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97\/',
+    pageTitle: '记录一些Hugo的错误日志',
+    server: 'https:\/\/a.xieha.cn\/',
+    site: '微影随行',
+    
+  })
+</script></div>   
 </div>
 
             <footer class="site--footer u-textAligncenter">

@@ -29,5 +29,12 @@
       <guid>https://xieha.cn/post/gicus/</guid>
       <description>给博客弄个评论系统，有互动才更加有乐趣。 看了其他的一些评论系统，就选择了Giscus评论系统。</description>
     </item>
+    <item>
+      <title>记录一些Hugo的错误日志</title>
+      <link>https://xieha.cn/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 03 Oct 2022 16:07:16 +0800</pubDate>
+      <guid>https://xieha.cn/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt; 这里记录的是hugo运行过程中发生的错误与解决方法。&lt;/p&gt;&#xA;&lt;p&gt;运营之中，难免会发生各种各样的问题，也经常要搜索各种问题答案，归档起来，也方便些。&lt;/p&gt;&#xA;&lt;h3 id=&#34;问题1&#34;&gt;问题1&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fatal: unable to access &amp;#39;https://github.com/nunocoracao/blowfish.git/&amp;#39;: OpenSSL SSL_read: Connection was reset, errno 10054 &#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&#xA;&lt;figure class=&#34;grap--figure&#34;&gt;&#xA;    &lt;img src=&#34;1.jpg&#34; alt=&#34;Featured Blowfish image&#34;  /&gt;&#xA;    &lt;figcaption class=&#34;imageCaption&#34;&gt;Featured Blowfish image&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错&#xA;参考网上解决办法：解除ssl验证后，再上传就OK了&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
