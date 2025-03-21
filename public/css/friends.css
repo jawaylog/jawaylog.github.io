@@ -73,7 +73,7 @@ body {
     margin: 0 0 5px;
     color: #e67e22;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .link-description {
@@ -88,7 +88,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     .link-item h3 {
-    font-size: 18px;
+    font-size: 16px;
 }
 }
 
