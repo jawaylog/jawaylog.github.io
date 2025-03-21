@@ -6,6 +6,7 @@
             每个链接背后都可能隐藏着一个独特的故事、一种别样的视角或一份深邃的思考。</p>
         </h4>
     </header>
+    
     {{ $friendlinks := .Site.Data.links.friendlinks.friendlinks }}
     {{ $categories := slice }}
     {{ range $friendlinks }}
@@ -18,9 +19,9 @@
             <h2 class="category-title">{{ . }}</h2>
             <div class="container">
                 {{ range where $friendlinks "category" . }}
-                    <div class="card" title="{{ .description }}">
-                        <img src="{{ .pre }}" alt="{{ .name }}" class="card-img">
-                        <div class="card-content">
+                    <div class="link-item">
+                        <img src="{{ .pre }}" alt="{{ .name }}" class="link-img">
+                        <div class="link-content">
                             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
                                 <h3>{{ .name }}</h3>
                             </a>
@@ -31,17 +32,12 @@
             </div>
         </div>
     {{ end }}
-    <!-- 隐藏的checkbox用于控制评论显示 -->
-<input type="checkbox" id="comments-toggle" class="comments-toggle" />
 
-<!-- 评论展开按钮 -->
-<label for="comments-toggle" class="comments-button"> 评论一下...</label>
-
-<!-- 评论容器 -->
-<div id="comments" class="comments-hidden">
-    {{- partial "comment/artalk" . -}}
-</div>   
+    <!-- 评论模块 -->
+    <input type="checkbox" id="comments-toggle" class="comments-toggle" />
+    <label for="comments-toggle" class="comments-button"> 评论一下...</label>
+    <div id="comments" class="comments-hidden">
+        {{- partial "comment/artalk" . -}}
+    </div>
 </div>
-
-
 {{ end }}

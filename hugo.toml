@@ -48,14 +48,19 @@ dataDir = "data"
     weight = 1
 
   [[menu.main]]
+    name = "随笔记"
+    url = "/memo/"
+    weight = 2
+
+   [[menu.main]]
     name = "微言语"
     url = "/page/welog/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     name = "朋友圈"
     url = "/page/rss/"
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     name = "伙伴们"
