@@ -48,7 +48,7 @@ dataDir = "data"
     weight = 1
 
   [[menu.main]]
-    name = "随笔记"
+    name = "随笔录"
     url = "/memo/"
     weight = 2
 
