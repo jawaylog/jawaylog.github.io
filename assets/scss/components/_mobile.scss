@@ -1,171 +1,134 @@
-
-  /* 朋友圈容器 */
-  .friends-container {
-    max-width: 100%; /* 移动端宽度占满屏幕 */
-    margin: 0 auto;
-    padding: 0; /* 移除容器内边距 */
-  }
-
-  /* 单条朋友圈 */
-  .friends-post {
-    background: none;
-    border-radius: 12px;
-    padding: 16px 12px; /* 调整卡片内边距 */
-    margin-bottom: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease;
-  }
-
-  .friends-post:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  /* 头像和昵称 */
-  .friends-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    position: relative; /* 用于定位... */
-  }
-
-  .friends-avatar {
-    width: 40px; /* 移动端头像稍小 */
-    height: 40px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .friends-author {
-    font-size: 15px; /* 移动端字体稍小 */
-    font-weight: normal; /* 取消加粗效果 */
-    color: #333;
-  }
-
-  /* 标题 */
-  .friends-title {
-    font-size: 18px;
-    margin-bottom: 8px; /* 增加标题与内容之间的间距 */
-    margin-top: 0; /* 移除顶部间距 */
-    display: -webkit-box;
-    -webkit-line-clamp: 1; /* 限制为一行 */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-  }
-
-  .friends-title:hover {
-    color: #2271b1; /* 保持原有的悬停颜色 */
+/* 朋友圈容器 */
+.friends-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
-  /* 装饰性... */
-  .friends-more {
-    position: absolute;
-    right: 12px; /* 与卡片右侧对齐 */
-    top: 0; /* 与作者昵称同一水平线 */
-    font-size: 16px; /* 与作者昵称字体大小一致 */
-    color: #666;
-    cursor: pointer;
-    text-decoration: none;
-  }
+/* 单条朋友圈卡片 */
+.friends-post {
+  background: none;
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
 
-  .friends-more:hover {
-    color: #2271b1;
-  }
+/* 头部信息 */
+.friends-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  position: relative;
+}
 
-  /* 作者和时间 */
-  .friends-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex: 1; /* 让 meta 区域占据剩余空间 */
-  }
+.friends-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-  .friends-time {
-    font-size: 14px; /* 移动端时间字体稍小 */
-    color: #666;
-  }
+.friends-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
 
-  /* 内容 */
-  .friends-content {
-    font-size: 16px; /* 移动端字体稍小 */
-    color: #4A4A4A;
-    line-height: 1.6;
-    margin-bottom: 12px;
-  }
+.friends-author {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.2px;
+}
 
-  /* 图片 */
-  .friends-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 8px;
-    margin-bottom: 12px;
-  }
+.friends-time {
+  font-size: 14px;
+  color: #888;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
 
-  .friends-images img {
-    width: 100%;
-    border-radius: 8px;
-  }
+.friends-more {
+  position: absolute;
+  right: 16px;
+  top: 0;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-  /* 操作 */
-  .friends-actions {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    font-size: 15px; /* 移动端字体稍小 */
-    padding-top: 8px; /* 增加操作按钮与内容之间的间距 */
-    border-top: 1px solid #eee; /* 添加分隔线 */
-  }
+/* 文章标题 */
+.friends-title {
+  font-size: 21px;
+  margin: 8px 0;
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
 
-  .friends-actions a {
-    color: #666;
-    text-decoration: none;
-  }
+/* 内容区域 */
+.friends-body {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+}
 
-  .friends-actions a:hover {
-    color: #2271b1;
-  }
+.friends-thumbnail {
+  flex: 0 0 120px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-  .sep {
-    margin: 0 4px;
-    color: #ccc;
-  }
+.friends-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-    .friends-post {
-      padding: 12px; /* 移动端内边距更小 */
-    }
+.friends-content {
+  flex: 1;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-    .friends-avatar {
-      width: 42px; /* 移动端头像更小 */
-      height: 42px;
-    }
+/* 底部操作栏 */
+.friends-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
 
-    .friends-author {
-      font-size: 16px; /* 移动端字体更小 */
-    }
+.friends-actions a {
+  color: #777;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
 
-    .friends-title {
-      font-size: 18px; /* 移动端标题字体稍小 */
-    }
+.friends-actions a:hover {
+  color: #2271b1;
+}
 
-    .friends-content {
-      font-size: 16px; /* 移动端字体更小 */
-    }
-
-    .friends-actions {
-      font-size: 15px; /* 移动端字体更小 */
-    }
-
-    .friends-time {
-    font-size: 14px; /* 移动端时间字体稍小 */
-    color: #666;
-  }
-  }
-
-
+.sep {
+  margin: 0 6px;
+  color: #e0e0e0;
+}
