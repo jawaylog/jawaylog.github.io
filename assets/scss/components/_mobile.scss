@@ -95,33 +95,49 @@
   object-fit: cover;
 }
 
+/* 修改后的内容区域 - 确保不被分割线遮挡 */
 .friends-content {
   flex: 1;
   font-size: 16px;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7; /* 增加行高 */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 16px; /* 增加下边距 */
+  padding-bottom: 8px; /* 增加内边距 */
 }
 
-/* 底部操作栏 */
+/* 优化后的底部操作栏 - 使用伪元素方案 */
 .friends-actions {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
-  font-size: 16px;
-  padding-top: 12px;
-  border-top: 1px solid #f0f0f0;
+  font-size: 15px;
+  padding-top: 10px;
+  position: relative;
+  margin-top: 4px;
+  border-top: none;
+}
+
+.friends-actions::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #f0f0f0;
+  transform: translateY(-6px);
 }
 
 .friends-actions a {
   color: #777;
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 3px 6px; /* 略微减小按钮内边距 */
+  border-radius: 4px;
 }
 
 .friends-actions a:hover {
