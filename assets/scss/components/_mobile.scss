@@ -109,7 +109,6 @@
 .friends-content {
   font-size: 14px;         /* 更紧凑的字号 */
   line-height: 1.6;        /* 15*1.6=24px/行 */
-  min-height: 67px;        /* 3行高度保障：24*3=72px */
   margin-bottom: 4px;     /* 增大与操作栏间距 */
   padding: 0 4px 4px 0;    /* 右/底部内边距 */
 }
@@ -124,7 +123,7 @@
 /* 缩略图 - 适当缩小 */
 .friends-thumbnail {
   flex: 0 0 100px; /* 宽度从120px缩小到100px */
-  height: 75px;    /* 高度从90px缩小到75px */
+  height: auto;    /* 高度从90px缩小到75px */
 }
 
 /* 底部操作栏 */
