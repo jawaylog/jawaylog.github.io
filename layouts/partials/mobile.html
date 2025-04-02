@@ -1,55 +1,52 @@
 <div class="friends-container">
   <div class="friends-post">      
-    <!-- 头像和昵称 -->
-    <div class="friends-header">
-      {{ if .Params.avatar }}
-        <img src="{{ .Params.avatar }}" alt="{{ .Params.author }}" class="friends-avatar">
-      {{ else }}
-        <img src="/images/avatar.jpeg" alt="Avatar" class="friends-avatar">
-      {{ end }}
-      <div class="friends-meta">
-        <span class="friends-author">{{ .Params.author | default "Welog" }}</span>
-        <span class="friends-time"><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time></span>
-      </div>
-      <a href="{{ .RelPermalink }}" class="friends-more">•••</a>
-    </div>
-
     <!-- 文章标题 -->
     <a href="{{ .RelPermalink }}" class="friends-title">{{ .Title | truncate 30 }}</a>
 
     <!-- 内容区域 -->
     <div class="friends-body">
-      <!-- 左侧缩略图 -->
       <div class="friends-thumbnail">
         {{ $cover := .Params.image | default "/images/1.jpg" }}
-        <img src="{{ $cover | relURL }}" alt="{{ .Title }}" loading="lazy">
+        <img src="{{ $cover | relURL }}" alt="{{ .Title }}" loading="lazy" width="120" height="90">
       </div>
-      
-      <!-- 右侧内容 -->
       <div class="friends-content">
-        {{ .Content | plainify | truncate 60 }}
+        {{ .Content | plainify | truncate 36 }}
       </div>
     </div>
 
-    <!-- 操作栏 -->
+    <!-- 底部操作栏 - 修正布局 -->
     <div class="friends-actions">
-      <!-- 分类 -->
-      {{ if .Params.categories }}
-        {{ range (.GetTerms "categories") }}
-          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <!-- 左侧：头像+时间 -->
+      <div class="friends-author-info">
+        {{ if .Params.avatar }}
+          <img src="{{ .Params.avatar }}" alt="{{ .Params.author }}" class="friends-avatar-sm">
+        {{ else }}
+          <img src="/images/avatar.jpeg" alt="Avatar" class="friends-avatar-sm">
         {{ end }}
-      {{ end }}
-      <!-- 标签 -->
-      {{ $tags := (.GetTerms "tags") }}
-      {{ if gt (len $tags) 2 }}
-        {{ range (first 2 $tags) }}
-          <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+        <span class="friends-time-sm">
+          <span class="">{{ .Params.author | default "Welog" }}</span>发表于:
+          <span class=""><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
+        </span>
+      </div>
+      
+      <!-- 右侧：标签 -->
+      <div class="friends-tags">
+        {{ if .Params.categories }}
+          {{ range (.GetTerms "categories") }}
+            <a href="{{ .RelPermalink }}" class="friends-tag">{{ .LinkTitle }}</a>
+          {{ end }}
         {{ end }}
-      {{ else }}
-        {{ range $tags }}
-          <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+        {{ $tags := (.GetTerms "tags") }}
+        {{ if gt (len $tags) 1 }}
+          {{ range (first 1 $tags) }}
+            <a href="{{ .RelPermalink }}" class="friends-tag">#{{ .LinkTitle }}</a>
+          {{ end }}
+        {{ else }}
+          {{ range $tags }}
+            <a href="{{ .RelPermalink }}" class="friends-tag">#{{ .LinkTitle }}</a>
+          {{ end }}
         {{ end }}
-      {{ end }}
+      </div>
     </div>
   </div> 
 </div>

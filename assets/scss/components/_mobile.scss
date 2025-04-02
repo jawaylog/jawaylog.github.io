@@ -2,91 +2,101 @@
 .friends-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0; /* 添加安全边距 */
 }
 
 /* 单条朋友圈卡片 */
 .friends-post {
-  background: none;
-  border-radius: 16px;
-  padding: 20px 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.friends-post:active {
+  transform: scale(0.98); /* 点击反馈 */
 }
 
 /* 头部信息 */
 .friends-header {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 14px;
   position: relative;
 }
 
 .friends-avatar {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   flex-shrink: 0;
-  border: 2px solid #f5f5f5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 2px solid #f8f8f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.friends-avatar:active {
+  transform: scale(0.95);
 }
 
 .friends-meta {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   flex: 1;
 }
 
 .friends-author {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #333;
-  letter-spacing: 0.2px;
 }
 
 .friends-time {
-  font-size: 14px;
-  color: #888;
-  font-weight: 300;
-  letter-spacing: 0.3px;
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
 }
 
 .friends-more {
   position: absolute;
-  right: 16px;
+  right: 0;
   top: 0;
-  font-size: 18px;
-  color: #999;
-  cursor: pointer;
-  text-decoration: none;
+  font-size: 16px;
+  color: #ccc;
+  padding: 8px;
 }
 
 /* 文章标题 */
 .friends-title {
-  font-size: 21px;
-  margin: 8px 0;
-  display: block;
-  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 0;
   font-weight: 600;
   color: #222;
   line-height: 1.4;
 }
 
+.friends-title:hover {
+  color: #2271b1;
+}
+
 /* 内容区域 */
 .friends-body {
   display: flex;
-  gap: 16px;
-  margin: 12px 0;
+  gap: 12px;
+  margin: 10px 0 14px;
 }
 
 .friends-thumbnail {
-  flex: 0 0 120px;
-  height: 90px;
-  border-radius: 8px;
+  flex: 0 0 100px;
+  height: 75px;
+  border-radius: 6px;
   overflow: hidden;
+  background: #f9f9f9;
 }
 
 .friends-thumbnail img {
@@ -95,56 +105,89 @@
   object-fit: cover;
 }
 
-/* 修改后的内容区域 - 确保不被分割线遮挡 */
+/* 内容文字 */
 .friends-content {
-  flex: 1;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.7; /* 增加行高 */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 16px; /* 增加下边距 */
-  padding-bottom: 8px; /* 增加内边距 */
+  font-size: 14px;         /* 更紧凑的字号 */
+  line-height: 1.6;        /* 15*1.6=24px/行 */
+  min-height: 67px;        /* 3行高度保障：24*3=72px */
+  margin-bottom: 4px;     /* 增大与操作栏间距 */
+  padding: 0 4px 4px 0;    /* 右/底部内边距 */
 }
 
-/* 优化后的底部操作栏 - 使用伪元素方案 */
+/* 底部操作栏 - 上移分割线 */
+.friends-actions::before {
+  transform: translateY(-2px);  /* 上移更多距离 */
+  height: 1px;
+  background: #e0e0e0;          /* 更醒目的颜色 */
+}
+
+/* 缩略图 - 适当缩小 */
+.friends-thumbnail {
+  flex: 0 0 100px; /* 宽度从120px缩小到100px */
+  height: 75px;    /* 高度从90px缩小到75px */
+}
+
+/* 底部操作栏 */
+/* 底部操作栏 - 水平布局 */
 .friends-actions {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center; /* 垂直居中 */
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 左侧作者信息 */
+.friends-author-info {
+  display: flex;
   align-items: center;
-  font-size: 15px;
-  padding-top: 10px;
-  position: relative;
-  margin-top: 4px;
-  border-top: none;
+  gap: 8px;
 }
 
-.friends-actions::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: #f0f0f0;
-  transform: translateY(-6px);
+.friends-avatar-sm {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
 }
 
-.friends-actions a {
-  color: #777;
+.friends-time-sm {
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap; /* 防止时间换行 */
+}
+
+/* 右侧标签 */
+.friends-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.friends-tag {
+  font-size: 12px;
+  color: #666;
+  padding: 3px 8px;
+  background: #f5f5f5;
+  border-radius: 12px;
   text-decoration: none;
-  padding: 3px 6px; /* 略微减小按钮内边距 */
-  border-radius: 4px;
+  white-space: nowrap;
 }
 
-.friends-actions a:hover {
+.friends-tag:hover {
   color: #2271b1;
+  background: #eef5fb;
 }
 
-.sep {
-  margin: 0 6px;
-  color: #e0e0e0;
+/* 小屏幕适配 */
+@media (max-width: 480px) {
+  .friends-tags {
+    gap: 4px;
+  }
+  .friends-tag {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
 }
