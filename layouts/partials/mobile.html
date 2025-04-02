@@ -10,7 +10,7 @@
         <img src="{{ $cover | relURL }}" alt="{{ .Title }}" loading="lazy" width="120" height="90">
       </div>
       <div class="friends-content">
-        {{ .Content | plainify | truncate 36 }}
+        {{ .Content | plainify | truncate 50 }}
       </div>
     </div>
 
@@ -18,14 +18,10 @@
     <div class="friends-actions">
       <!-- 左侧：头像+时间 -->
       <div class="friends-author-info">
-        {{ if .Params.avatar }}
-          <img src="{{ .Params.avatar }}" alt="{{ .Params.author }}" class="friends-avatar-sm">
-        {{ else }}
-          <img src="/images/avatar.jpeg" alt="Avatar" class="friends-avatar-sm">
-        {{ end }}
+        
         <span class="friends-time-sm">
-          <span class="">{{ .Params.author | default "Welog" }}</span>发表于:
-          <span class=""><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
+          <span class="friends-author">{{ .Params.author | default "Welog" }}</span>
+          <span class="friends-author">发布于:<time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
         </span>
       </div>
       
