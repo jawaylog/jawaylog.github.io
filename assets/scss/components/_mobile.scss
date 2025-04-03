@@ -51,13 +51,13 @@
 }
 
 .friends-author {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: #666;
 }
 
 .friends-time {
-  font-size: 13px;
+  font-size: 14px;
   color: #999;
   font-weight: 400;
 }
@@ -105,13 +105,17 @@
   object-fit: cover;
 }
 
-/* 内容文字 */
 .friends-content {
-  font-size: 14px;         /* 更紧凑的字号 */
-  line-height: 1.6;        /* 15*1.6=24px/行 */
-  margin-bottom: 4px;     /* 增大与操作栏间距 */
-  padding: 0 4px 4px 0;    /* 右/底部内边距 */
-}
+  font-size: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* 控制行数 */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-width: 55ch; /* 字符数限制 */
+            display: -moz-box;
+            -moz-box-orient: vertical;
+            -moz-line-clamp: 3;
+ }           
 
 /* 底部操作栏 - 上移分割线 */
 .friends-actions::before {
@@ -152,7 +156,7 @@
 }
 
 .friends-time-sm {
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
   white-space: nowrap; /* 防止时间换行 */
 }
@@ -166,7 +170,7 @@
 }
 
 .friends-tag {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
   padding: 3px 8px;
   background: #f5f5f5;
@@ -187,6 +191,6 @@
   }
   .friends-tag {
     padding: 2px 6px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }

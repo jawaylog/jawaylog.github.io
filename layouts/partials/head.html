@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="{{ $styles.Permalink | relURL }}" integrity="{{ $styles.Data.Integrity }}" media="screen"> 
 {{ $favicon := resources.Get "images/favicon.ico" }}
 <link type="image/vnd.microsoft.icon" href="{{ $favicon.RelPermalink }}" rel="shortcut icon">
-<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="print" onload="this.media='all'">
 {{ if .IsPage }}
 <meta property="og:title" content="{{ .Page.Title }}">
 <meta property="og:url" content="{{ .Page.Permalink }}">
