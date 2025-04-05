@@ -1,8 +1,7 @@
-<!-- 将这段代码放在页面底部 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // 1. 定义核心参数
-  const memoAPI = "{{ .Site.Params.memosAPI }}&limit=1"; // 强制只取一条
+  // 1. 修改API参数获取2条
+  const memoAPI = "{{ .Site.Params.memosAPI }}&limit=2"; // 获取两条
   const memoContainer = document.getElementById('memo-list');
 
   // 2. 动态更新函数
@@ -11,9 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => res.json())
       .then(data => {
         if (data.length > 0) {
-          const memo = data[0];
-          // 3. 清空容器并插入新内容
-          memoContainer.innerHTML = `
+          // 3. 清空容器并插入所有内容（最多2条）
+          memoContainer.innerHTML = data.map(memo => `
             <article class="block--item block--item__status">
               <div class="status--icon">
                 <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
               </div>
             </article>
-          `;
+          `).join(''); // 用 map+join 拼接多条
         }
       })
       .catch(() => {
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   };
 
-  // 4. 相对时间计算函数
+  // 4. 相对时间计算函数（保持不变）
   const calcTime = (timestamp) => {
     const diff = Date.now() - timestamp * 1000;
     const units = [
@@ -63,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 5. 初始加载 + 每10分钟更新
   updateMemo();
-  setInterval(updateMemo, 60000); // 10分钟更新
+  setInterval(updateMemo, 600000); // 10分钟更新
 });
 </script>
 
-<!-- 删除原有后端模板代码，只保留容器 -->
+<!-- 容器保持不变 -->
 <div class="memos-container" id="memo-list"></div>

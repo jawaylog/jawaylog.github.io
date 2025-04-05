@@ -2,7 +2,12 @@
   <div class="friends-post">      
     <!-- 文章标题 -->
     <a href="{{ .RelPermalink }}" class="friends-title">{{ .Title | truncate 30 }}</a>
-
+    <div class="friends-author-info">
+      <span class="friends-time-sm"> 
+      <span class="friends-author">发布于：<time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
+        </span>
+       </span>
+       </div> 
     <!-- 内容区域 -->
     <div class="friends-body">
       <div class="friends-thumbnail">
@@ -17,24 +22,16 @@
     <!-- 底部操作栏 - 修正布局 -->
     <div class="friends-actions">
       <!-- 左侧：头像+时间 -->
-      <div class="friends-author-info">
-        
-        <span class="friends-time-sm">
-          <span class="friends-author">{{ .Params.author | default "Welog" }}</span>
-          <span class="friends-author">发布于:<time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
-        </span>
-      </div>
-      
-      <!-- 右侧：标签 -->
-      <div class="friends-tags">
-        {{ if .Params.categories }}
+      <div class="friends-author-info">   
+       <span class="friends-time-sm">     
+           {{ if .Params.categories }}
           {{ range (.GetTerms "categories") }}
             <a href="{{ .RelPermalink }}" class="friends-tag">{{ .LinkTitle }}</a>
           {{ end }}
         {{ end }}
         {{ $tags := (.GetTerms "tags") }}
-        {{ if gt (len $tags) 1 }}
-          {{ range (first 1 $tags) }}
+        {{ if gt (len $tags) 3 }}
+          {{ range (first 3 $tags) }}
             <a href="{{ .RelPermalink }}" class="friends-tag">#{{ .LinkTitle }}</a>
           {{ end }}
         {{ else }}
@@ -45,4 +42,9 @@
       </div>
     </div>
   </div> 
-</div>
+      </div>
+      
+      <!-- 右侧：标签 
+      <div class="friends-tags">
+       
+</div> -->

@@ -24,7 +24,7 @@ dataDir = "data"
   mainSections = ['post','memo']
   showMobile = true
   subtitle = '用文字与照片记录生活点滴'
-  memosAPI = "https://m.xieha.cn/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=1"
+  memosAPI = "https://m.xieha.cn/api/v1/memo?creatorId=1&rowStatus=NORMAL&limit=2"
   showAuthor = true
   authorName = 'welog'
   authorDescription = 'computer loser'
