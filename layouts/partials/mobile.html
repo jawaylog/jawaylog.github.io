@@ -4,7 +4,7 @@
     <a href="{{ .RelPermalink }}" class="friends-title">{{ .Title | truncate 30 }}</a>
     <div class="friends-author-info">
       <span class="friends-time-sm"> 
-      <span class="friends-author">发布于：<time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
+      <span class="friends-author"><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format ":date_long" }}</time>
         </span>
        </span>
        </div> 
