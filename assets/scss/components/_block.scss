@@ -4,7 +4,7 @@
     }
 
     &--snippet {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
         color: var(--hera-text-gray);
         max-height: 4.8em;
@@ -99,26 +99,13 @@
                 padding: 12px;
             }
         }
-         
+
         &--title {
             font-size: 18px;
         }
 
         &--snippet {
-            font-size: 15px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3; /* 控制行数 */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            max-width: 55ch; /* 字符数限制 */
-            display: -moz-box;
-            -moz-box-orient: vertical;
-            -moz-line-clamp: 3;
-
-        }
-
-       &--meta {      
-              font-size: 14px;       
+            font-size: 13px;
         }
 
         &--cover {
@@ -128,6 +115,5 @@
                 --hera-thumbnail-height: 72px;
             }
         }
-
     }
 }
