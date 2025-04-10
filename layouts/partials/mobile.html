@@ -11,11 +11,24 @@
     <!-- 内容区域 -->
     <div class="friends-body">
       <div class="friends-thumbnail">
-        {{ $cover := .Params.image | default "/images/1.jpg" }}
-        <img src="{{ $cover | relURL }}" alt="{{ .Title }}" loading="lazy" width="120" height="90">
-      </div>
+  {{ $cover := .Params.image | default "/images/1.jpg" }}
+  {{ with .Resources.GetMatch (replaceRE "^/" "" $cover) }}
+    {{ $thumbnail := .Fill "90x60 Center" }} <!-- Hugo图片处理 -->
+    <img src="{{ $thumbnail.RelPermalink }}" 
+         alt="{{ .Title }}" 
+         loading="lazy"
+         width="90"
+         height="60">
+  {{ else }}
+    <img src="{{ $cover | relURL }}" 
+         alt="{{ .Title }}" 
+         loading="lazy"
+         width="90"
+         height="60">
+  {{ end }}
+</div>
       <div class="friends-content">
-        {{ .Content | plainify | truncate 45 }}
+        {{ .Content | plainify | truncate 65 }}
       </div>
     </div>
 
