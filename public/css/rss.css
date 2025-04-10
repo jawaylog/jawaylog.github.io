@@ -1,107 +1,158 @@
-<style>
-  /* 文章列表容器 */
-  .article-list {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  /* 单篇文章容器 */
-  .article-item {
-    border: none; /* 1px solid #eaeaea */
-    border-radius: 12px;
-    padding: 20px;
-    transition: all 0.2s ease;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    background: #ffffff;
-    border-bottom: 1px solid #eee; /* 添加分隔线 */
-  }
-
-  /* 移除最后一个文章项的分隔线 */
-  .article-item:last-child {
-    border-bottom: none;
-  }
-
-  .article-item:hover {
-    border: 1px solid #666666; /* 悬停时显示边框 */
-  }
-
-  /* 文章图片（头像） */
-  .article-image {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
-    flex-shrink: 0;
-  }
-
-  /* 文章内容区域 */
-  .article-content {
-    flex: 1;
-    min-width: 0;
-  }
-
-  /* 文章元数据（站点名称和时间） */
-  .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* 确保标题和站点名称之间有间隔 */
-    flex-wrap: wrap; /* 允许整个标题换行 */
-  }
-
-.article-meta .time {
-    color: #666666;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .site-name {
-    white-space: nowrap; /* 站点名称不换行 */
-    flex-shrink: 0; /* 防止站点名称压缩 */
-  }
-
-  /* 文章标题 */
-  .article-title {
-    display: -webkit-box; /* 使用 WebKit 的 box 模型 */
-    -webkit-line-clamp: 1; /* 限制最多两行 */
-    -webkit-box-orient: vertical; /* 垂直排列内容 */
-    overflow: hidden; /* 隐藏超出部分 */
-    text-overflow: ellipsis; /* 显示省略号 */
-    max-width: 100%; /* 确保标题宽度不超过容器 */
-    white-space: normal; /* 允许正常换行 */
-    word-wrap: break-word; /* 长单词可以换行 */
-    text-decoration: underline; /* 添加下划线 */
-    
-  }
-
-  .article-title:hover {
-    text-decoration: none; /* 鼠标悬停时移除下划线 */
-    color: #2271b1; /* 保持原有的悬停颜色 */
+/* 文章列表容器 - 使用主题变量 */
+.article-list {
+  max-width: var(--hera-article-width);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--hera-background-white);
 }
 
-  /* 文章摘要 */
-  .article-summary {
-    color: #4A4A4A;
+/* 单篇文章容器 - 使用主题变量 */
+.article-item {
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--hera-background-white);
+  border-bottom: 1px solid var(--hera-border-color-light);
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-item:hover {
+  border: 1px solid var(--hera-border-color);
+  box-shadow: 0 2px 8px var(--hera-border-color-light);
+}
+
+/* 文章图片（头像） */
+.article-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--hera-border-color-light);
+  background: var(--hera-background-gray-lightest);
+}
+
+/* 文章内容区域 */
+.article-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 文章元数据（站点名称和时间） */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.article-meta .time {
+  color: var(--hera-text-gray-lightest);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.site-name {
+  white-space: nowrap;
+  flex-shrink: 0;
+  color: var(--hera-text-gray);
+}
+
+/* 文章标题 - 使用主题变量 */
+.article-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  text-decoration: underline;
+  color: var(--hera-text-color);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.article-title:hover {
+  text-decoration: none;
+  color: var(--hera-main-color);
+}
+
+/* 文章摘要 - 使用主题变量 */
+.article-summary {
+  color: var(--hera-text-light);
+  font-size: var(--hera-font-size-smallest);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .article-item {
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .article-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .article-title {
     font-size: 16px;
-    line-height: 1.6;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-top: 8px;
   }
+}
 
-  /* 响应式设计 */
-  @media (max-width: 768px) {
-    .article-item {
-        gap: 16px;
-    }
-
-    .article-image {
-        width: 40px;
-        height: 40px;
-    }
+/* 夜间模式适配 */
+@media (prefers-color-scheme: dark) {
+  .article-item {
+    background: var(--hera-background-gray-lightest);
+    border-bottom-color: var(--hera-border-color);
   }
-</style>
+  
+  .article-item:hover {
+    border-color: var(--hera-border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .article-image {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--hera-border-color);
+  }
+  
+  .site-name {
+    color: var(--hera-text-gray);
+  }
+}
+
+/* 手动夜间模式类 */
+.dark .article-item {
+  background: var(--hera-background-gray-lightest);
+  border-bottom-color: var(--hera-border-color);
+}
+
+.dark .article-item:hover {
+  border-color: var(--hera-border-color);
+}
+
+.dark .article-image {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--hera-border-color);
+}
+
+.dark .site-name {
+  color: var(--hera-text-gray);
+}
