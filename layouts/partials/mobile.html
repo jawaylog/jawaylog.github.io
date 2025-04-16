@@ -31,11 +31,7 @@
         {{ .Content | plainify | truncate 65 }}
       </div>
     </div>
-
-    <!-- 底部操作栏 - 修正布局 -->
-    <div class="friends-actions">
-      <!-- 左侧：头像+时间 -->
-      <div class="friends-author-info">   
+<div class="friends-author-info">   
        <span class="friends-time-sm">     
            {{ if .Params.categories }}
           {{ range (.GetTerms "categories") }}
@@ -43,8 +39,8 @@
           {{ end }}
         {{ end }}
         {{ $tags := (.GetTerms "tags") }}
-        {{ if gt (len $tags) 3 }}
-          {{ range (first 3 $tags) }}
+        {{ if gt (len $tags) 4 }}
+          {{ range (first 4 $tags) }}
             <a href="{{ .RelPermalink }}" class="friends-tag">#{{ .LinkTitle }}</a>
           {{ end }}
         {{ else }}
@@ -53,10 +49,27 @@
           {{ end }}
         {{ end }}
       </div>
-    </div>
+   
+
+
+
+    <!-- 底部操作栏 - 修正布局 -->
+    <div class="friends-actions">
+      <!-- 左侧：头像+时间 -->
+     
+{{ $content := .Plain }}
+{{ $chineseCount := len (findRE "[\u4e00-\u9fa5]" $content) }}
+{{ $englishWords := len (split (replaceRE "[^a-zA-Z ]" "" $content) " ") }}
+{{ $totalWords := add $chineseCount $englishWords }}
+{{ $readingTime := div $totalWords 300 | math.Ceil }}
+
+
+    📝 共 {{ $totalWords }} 字
+    |⏱️ 约 {{ $readingTime }} 分钟
+
   </div> 
       </div>
-      
+       </div>
       <!-- 右侧：标签 
       <div class="friends-tags">
        

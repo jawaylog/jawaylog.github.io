@@ -30,6 +30,8 @@ dataDir = "data"
   authorDescription = 'computer loser'
   authorAvatar = 'https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&d=mm&r=g'
 
+enableGitInfo = true  # 让 Hugo 从 Git 提交记录获取最后修改时间
+
 [markup.goldmark.renderer]
   unsafe = true  # 允许原始 HTML
 
