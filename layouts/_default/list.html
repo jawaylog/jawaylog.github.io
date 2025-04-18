@@ -51,6 +51,8 @@
     </div>
     </div> 
 </div>
+
+
         <!-- 检查文章是否有缩略图，如果没有则使用默认图片 -->
         {{ if .Params.image }}
         <img src="{{ .Params.image | relURL }}" class="block--cover" itemprop="image" alt="{{ .Title }}">

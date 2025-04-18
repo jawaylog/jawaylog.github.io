@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="post--list">
+    {{ $author := . }}
+    {{ if $author.Content }}
+        <header class="term--header">
+            <div class="author--avatar">
+                {{ with $author.Params.avatar }}
+                    <img src="{{ . }}" alt="{{ $author.Title }}" class="avatar">
+                {{ else }}
+                    <!-- 默认头像或占位符 -->
+                    <div class="avatar-placeholder">{{ substr $author.Title 0 1 }}</div>
+                {{ end }}
+            </div>
+            <div class="author--bio">
+                <h3>{{ $author.Title }}</h3>
+                <p>{{ $author.Content }}</p>
+            </div>
+        </header>
+    {{ end }}
+
+    <div class="block--list">
+        {{ range .Pages }}
+            {{ if eq .Type "post" }}
+                {{ partial "content-author" . }}
+            {{ end }}
+        {{ end }}
+    </div>
+
+  
+</div>
+{{ end }}

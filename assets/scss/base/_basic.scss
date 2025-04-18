@@ -305,6 +305,17 @@ textarea {
     color: #c92a2a;
 }
 
+.author-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.author-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .notice--wrapper {
         width: 80%;

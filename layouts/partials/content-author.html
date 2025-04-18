@@ -1,0 +1,10 @@
+<article class="post-card">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        {{ with .Params.author }} | 作者: {{ . }}{{ end }}
+    </div>
+    <div class="post-excerpt">
+        {{ .Summary }}
+    </div>
+</article>
