@@ -11,69 +11,58 @@
     <div class="post--cards">
         {{- range $index, $page := $paginator.Pages }}
         <article class="post--card">
-            
-
-            <!-- 检查文章是否有浓缩图，如果没有则使用默认图片 -->
-    {{ if .Params.image }}
-    <a href="{{ .Permalink }}" class="cover--link"><img src="{{ .Params.image | relURL }}"
-                class="cover" /></a>  
-    {{ else }}
-    <a href="{{ .Permalink }}" class="cover--link"><img src="{{ "/images/1.jpg" | absURL }}"
-                    class="cover" /></a>
-    {{ end }}
+            <!-- 封面图片 -->
+            {{ if .Params.image }}
+            <a href="{{ .Permalink }}" class="cover--link"><img src="{{ .Params.image | relURL }}" class="cover" /></a>  
+            {{ else }}
+            <a href="{{ .Permalink }}" class="cover--link"><img src="{{ "/images/1.jpg" | absURL }}" class="cover" /></a>
+            {{ end }}
 
             <div class="card--content">
                 <h2 class="post--title">
-                    <a href="{{ .Permalink }}">
-                        {{ .Title }}
-                    </a>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </h2>
                 <div class="description">{{ .Summary | plainify | truncate 45 }}</div>
                 <div class="meta">
-                    <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
-                        <path
-                            d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z">
-                        </path>
-                    </svg>
-                    <time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date | time.Format
-                        ":date_long"
-                        }}</time>
-       <!-- 作者信息（带头像） -->
-    <span class="sep"></span>
-        <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
-                <path d="M669.013333 596.21181l194.389334 226.791619A77.433905 77.433905 0 0 1 804.59581 950.857143H212.016762a77.433905 77.433905 0 0 1-58.782476-127.853714l194.413714-226.791619c22.918095 13.897143 47.737905 24.941714 74.044952 32.597333l-209.67619 244.614095h592.579048l-209.676191-244.614095a308.102095 308.102095 0 0 0 74.069333-32.597333zM508.294095 73.142857c142.57981 0 258.145524 115.565714 258.145524 258.145524 0 142.57981-115.565714 258.145524-258.145524 258.145524-142.57981 0-258.145524-115.565714-258.145524-258.145524C250.148571 188.732952 365.714286 73.142857 508.318476 73.142857z m0 77.433905a180.711619 180.711619 0 1 0 0 361.423238 180.711619 180.711619 0 0 0 0-361.423238z"></path>
-            </svg>
-       {{ .Params.author | default .Site.Params.authorName }}
-  
-                    <!-- 阅读量 -->
-                    {{ if .Site.Params.post_view }}
+                    
+                        <!-- 日期 -->
+                        <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
+                            <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
+                        </svg>
+                        <time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">
+                            {{ .Date | time.Format ":date_long" }}
+                        </time>
+                        
+                        <!-- 作者信息（带头像） -->
+                        <span class="sep"></span>
+                        <span class="author-info">
+                            <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
+                                <path d="M669.013333 596.21181l194.389334 226.791619A77.433905 77.433905 0 0 1 804.59581 950.857143H212.016762a77.433905 77.433905 0 0 1-58.782476-127.853714l194.413714-226.791619c22.918095 13.897143 47.737905 24.941714 74.044952 32.597333l-209.67619 244.614095h592.579048l-209.676191-244.614095a308.102095 308.102095 0 0 0 74.069333-32.597333zM508.294095 73.142857c142.57981 0 258.145524 115.565714 258.145524 258.145524 0 142.57981-115.565714 258.145524-258.145524 258.145524-142.57981 0-258.145524-115.565714-258.145524-258.145524C250.148571 188.732952 365.714286 73.142857 508.318476 73.142857z m0 77.433905a180.711619 180.711619 0 1 0 0 361.423238 180.711619 180.711619 0 0 0 0-361.423238z"></path>
+                            </svg></span>
+                            {{ .Params.author | default .Site.Params.authorName }}
+                        
+
+                        <!-- 阅读量 -->
+                        {{ if .Site.Params.post_view }}
                         <span class="sep"></span>
                         <span class="article--views"></span>
-                    {{ end }}
+                        {{ end }}
 
-                    <!-- 标签 
-                    {{ $tags := (.GetTerms "tags") }}
-                    {{ if gt (len $tags) 2 }}
-                        {{ range (first 2 $tags) }}
-                            <span class="sep"></span>#<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                        {{ end }}
-                    {{ else }}
-                        {{ range $tags }}
-                            <span class="sep"></span>#<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                        {{ end }}
-                    {{ end }}
-                     -->
-            <!-- 图片统计（自动正则匹配） -->
-           <span class="sep"></span>
-          {{ $imageCount := len (findRE `<img [^>]+>` .Content) }}
-          <span>  📷 {{ $imageCount }} 张图</span> 
-          </div>
+                        <!-- 图片统计 -->
+                        <span class="sep"></span>
+                        <span>
+                            {{ $imageCount := len (findRE `<img [^>]+>` .Content) }}
+                            📷 {{ $imageCount }} 张图
+                        </span>
+                    
+                </div>
             </div>
         </article>
         {{ end }}
     </div>
-    {{ $paginator := .Paginate (where .Pages "Type" "post") }}
-    <nav class="navigation ">
+    
+    <!-- 分页 -->
+    <nav class="navigation">
         <div class="nav-links">
             {{ range $paginator.Pagers }}
             <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>

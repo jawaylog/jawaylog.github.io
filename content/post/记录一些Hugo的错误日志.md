@@ -3,6 +3,7 @@ title: "记录一些Hugo的错误日志"
 date: 2022-10-03T16:07:16+08:00
 tags: [hugo]
 categories: [折腾吧]
+featured: true
 ---
 
 **注意：** 这里记录的是hugo运行过程中发生的错误与解决方法。

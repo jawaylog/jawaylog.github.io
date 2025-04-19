@@ -316,6 +316,27 @@ textarea {
   object-fit: cover;
 }
 
+.featured-post {
+  position: relative;
+  border-left: 3px solid #ffcc00;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 204, 0, 0.05);
+}
+
+.featured-post::before {
+  content: "置顶";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffcc00;
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+
 @media (max-width: 768px) {
     .notice--wrapper {
         width: 80%;

@@ -6,12 +6,21 @@
     {{ $paginator := .Paginate ($filteredPages) }}
     
     {{ if eq .Paginator.PageNumber 1 }}
-      <!-- 微言模块 -->
+      <!-- 1. 置顶文章（仅post类型） -->
+      {{ $featured := where (where $pages "Type" "post") "Params.featured" true }}
+      {{ range $featured }}
+        <div class="featured-post">
+          {{ partial "post.html" . }}
+        </div>
+      {{ end }}
+
+      <!-- 2. 微言模块 -->
       <section class="weiyan-container">
         {{ partial "weiyan.html" . }}
       </section>
     {{ end }}
 
+    <!-- 3. 常规文章列表（保持原过滤逻辑） -->
     <div class="desktop-only">   
       {{ range $paginator.Pages }}
         {{ if eq .Type "memo" }}
@@ -33,15 +42,14 @@
     </div>
   </div>
   
-  <nav class="navigation ">
+  <nav class="navigation">
     <div class="nav-links">
-        {{ range $paginator.Pagers }}
+      {{ range $paginator.Pagers }}
         <a class="page-numbers{{ if eq . $paginator }} current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
-        {{ end }}
+      {{ end }}
     </div>
-</nav>
+  </nav>
 
-<!-- 资源加载 -->
-{{ $js := resources.Get "js/memo.js" | minify | fingerprint }}
-<script defer src="{{ $js.RelPermalink }}"></script>
+  {{ $js := resources.Get "js/memo.js" | minify | fingerprint }}
+  <script defer src="{{ $js.RelPermalink }}"></script>
 {{ end }}
