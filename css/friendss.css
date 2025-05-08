@@ -1,0 +1,131 @@
+/* 重置样式 */
+body {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6; /* 提高可读性 */
+}
+
+/* 分类区块样式 */
+.category-section {
+    margin-bottom: 30px; /* 分类之间的间距 */
+}
+
+/* 分类标题样式 */
+.category-title {
+    font-size: 24px; /* 标题字体大小 */
+    color: #333; /* 标题颜色 */
+    margin-top: 20px; /* 与上一分类的间距 */
+    margin-bottom: 15px; /* 与卡片的间距 */
+    padding-bottom: 10px; /* 下边距 */
+    border-bottom: 2px solid #e67e22; /* 下划线 */
+    font-weight: bold; /* 加粗 */
+}
+
+/* 容器样式 */
+.container {
+    display: grid;
+    gap: 15px; /* 增加间距 */
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr; /* 默认为一列布局 */
+}
+
+/* 卡片样式 */
+.card {
+    background-color: none; /* 添加背景色 */
+    border-radius: 10px; /* 圆角更大 */
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    max-width: 1000px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
+}
+
+/* 卡片悬浮效果 */
+.card:hover {
+    transform: translateY(-5px); /* 悬浮时上移 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 悬浮时阴影加深 */
+}
+
+/* 图片样式 */
+.card-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px; /* 增加间距 */
+    object-fit: cover; /* 确保图片不变形 */
+}
+
+/* 内容样式 */
+.card-content {
+    flex-grow: 1;
+}
+
+/* 链接样式 */
+.card a {
+    text-decoration: none;
+    color: #FF0000;
+    display: block;
+    margin-top: 5px;
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.card a:hover {
+    color: #e67e22; /* 悬浮时改变颜色 */
+}
+
+/* 标题样式 */
+.card h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    word-break: break-word;
+    color: #e67e22;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 链接说明样式 */
+.link-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 限制为两行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px; /* 稍微减小字体大小 */
+    color: #696969;
+    line-height: 1.4; /* 提高可读性 */
+}
+
+/* 媒体查询，当屏幕宽度大于或等于480px时 */
+@media (min-width: 480px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 改为两列布局 */
+    }
+}
+
+/* 媒体查询，当屏幕宽度大于或等于768px时 */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* 改为三列布局 */
+    }
+
+    .card a {
+        font-size: 16px; /* 在大屏幕上调整链接字体大小 */
+    }
+}
+
+/* 媒体查询，当屏幕宽度大于或等于1024px时 */
+@media (min-width: 1440px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 改为四列布局 */
+    }
+}

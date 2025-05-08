@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on 微影随行</title><link>https://xieha.cn/tags/hugo/</link><description>Recent content in Hugo on 微影随行</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 26 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xieha.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Gitalk评论系统Error: Network Error</title><link>https://xieha.cn/posts/gitalk/</link><pubDate>Sat, 26 Nov 2022 15:22:45 +0800</pubDate><guid>https://xieha.cn/posts/gitalk/</guid><description>收集一些gitalk评论系统出现的一些问题，方便以后查询并解决</description></item><item><title>记录一些Hugo的错误日志</title><link>https://xieha.cn/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 03 Oct 2022 16:07:16 +0800</pubDate><guid>https://xieha.cn/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</guid><description>&lt;p>&lt;strong>注意：&lt;/strong> 这里记录的是hugo运行过程中发生的错误与解决方法。&lt;/p>
+&lt;p>运营之中，难免会发生各种各样的问题，也经常要搜索各种问题答案，归档起来，也方便些。&lt;/p>
+&lt;h3 id="问题1">问题1&lt;/h3>
+&lt;pre tabindex="0">&lt;code>fatal: unable to access &amp;#39;https://github.com/nunocoracao/blowfish.git/&amp;#39;: OpenSSL SSL_read: Connection was reset, errno 10054 
+&lt;/code>&lt;/pre>&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="1.jpg" alt="Featured Blowfish image" />
+ &lt;figcaption class="imageCaption">Featured Blowfish image&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错
+参考网上解决办法：解除ssl验证后，再上传就OK了&lt;/p></description></item></channel></rss>
