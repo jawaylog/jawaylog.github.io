@@ -1,0 +1,515 @@
+/* ====================== */
+/* 基础样式 */
+/* ====================== */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #0000FF;
+    --gray-light: #ccc;
+    --gray-dark: #666;
+    --font-family: "LXGW WenKai Screen", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+/* ====================== */
+/* memo页面样式 */
+/* ====================== */
+
+ 
+    /* 通用样式 */
+    .memo {
+        box-shadow: rgb(203, 208, 218) 0px 2px, rgba(48, 52, 63, 0.2) 0px 3px, rgba(48, 52, 63, 0.2) 0px 7px 7px, rgb(255, 255, 255) 0px 0px 0px 1px inset;
+        width: 800px;
+        margin: 50px auto 0;
+        background: var(--white);
+    }
+
+    /* 头部图片样式 - 参考文章详情页样式 */
+    .memo_thumb {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .memo_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .memo_header {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        padding: 30px;
+        color: white;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .memo_header h1 {
+        font-size: 2.5rem;
+        margin: 10px 0;
+    }
+
+    .memo_meta {
+        display: flex;
+        gap: 15px;
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    /* 返回按钮样式 - 修改为长方形 */
+    .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 3;
+        background: white;
+        color: #000;
+        padding: 8px 15px;
+        border-radius: 4px; /* 减小圆角使其更接近长方形 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .back-button:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: scale(1.05);
+    }
+
+    /* 确保导航栏显示 */
+    .navbar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 50;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    /* 卡片样式 */
+    .memocard {
+        position: relative;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        padding: 42px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        max-width: 700px;
+        margin: 50px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .memocard::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 32px;
+        width: 26px;
+        height: 26px;
+        background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="%23333" d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path></svg>');
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .memocard:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+
+    .memo_preview {
+        margin-bottom: 1rem;
+    }
+
+    .memo_content_wrapper p {
+        margin: 0;
+        line-height: 1.6;
+        color: #333;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card_meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 1rem;
+    }
+
+    .memo-date {
+        font-weight: 500;
+    }
+
+    /* 移动端头部图片样式 */
+    .m .memo_thumb {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        margin-top: 70px; /* 为导航栏留出空间 */
+    }
+
+    .m .memo_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .m .memo_header {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        padding: 20px;
+        color: white;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .m .memo_header h1 {
+        font-size: 2rem;
+        margin: 10px 0;
+        color: white;
+    }
+
+    .m .memo_meta {
+        display: flex;
+        gap: 10px;
+        font-size: 0.85rem;
+        margin-top: 8px;
+    }
+
+    /* 移动端返回按钮样式 */
+    .m .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .memo {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .pc {
+            display: none;
+        }
+        
+        .memo_thumb {
+            height: 300px;
+        }
+        
+        .memo_header {
+            padding: 20px;
+        }
+        
+        .memo_header h1 {
+            font-size: 2rem;
+        }
+        
+        .memocard {
+            width: 90%;
+            margin: 25px auto;
+            padding: 32px;
+        }
+        
+        .memocard::before {
+            top: 8px;
+            left: 32px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .card_meta {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .memo_content_wrapper p {
+            -webkit-line-clamp: 3;
+        }
+        
+        .card_meta span:last-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 40%;
+        }
+        
+        .card_meta span:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 60%;
+        }
+        
+        .back-button {
+            top: 15px;
+            left: 15px;
+            padding: 6px 12px;
+            font-size: 13px;
+        }
+        
+        /* 隐藏移动端旧标题 */
+        .m .memo_info {
+            display: none;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .m {
+            display: none;
+        }
+    }
+
+
+
+
+/* ====================== */
+/* 分类和标签列表 */
+/* ====================== */
+.tag-list ul,
+.category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list ul li,
+.category-list ul li {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--text-color);
+    flex: 1 1 calc(24% - 20px);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.category-list ul li span {
+    display: inline;
+    margin-left: 2px;
+    color: var(--gray-dark);
+    letter-spacing: 0.5px;
+}
+
+.tag-list ul li a,
+.category-list ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.tag-list ul li a:hover,
+.category-list ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .tag-list ul li,
+    .category-list ul li {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* ====================== */
+/* 归档内容 */
+/* ====================== */
+.year-section {
+    margin-bottom: 20px;
+}
+
+.year-title,
+h3 {
+    color: var(--gray-dark);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.archive--title__year {
+    font-size: 22px !important;
+}
+
+.month-card {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.month-title {
+    color: var(--gray-dark);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px;
+    position: relative;
+    color: var(--text-color);
+}
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed var(--gray-light);
+}
+
+.archive-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.archive-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+}
+
+.archive-date {
+    font-size: 15px;
+    color: var(--gray-dark);
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.archive-title a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: none;
+}
+
+.listing li:first-child .month-indicator {
+    display: block;
+}
+
+/* ====================== */
+/* 归档列表 */
+/* ====================== */
+.archive--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.archive--title {
+    font-size: 18px;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.archive--title__year {
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.archive--meta {
+    font-size: 12px;
+    color: var(--gray-dark);
+    margin-top: 5px;
+}
+
+.archive--item {
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.archive--item a:hover {
+    color: var(--link-color);
+}
+
+.archive--tagList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.archive--tagItem {
+    margin: 10px;
+    background-color: var(--background-color);
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--gray-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .archive--list {
+        grid-gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .archive--title {
+        font-size: 14px;
+    }
+
+    .archive--item {
+        padding: 10px;
+    }
+}

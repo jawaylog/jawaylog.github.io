@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Memos on 微影随行</title><link>https://xieha.cn/tags/memos/</link><description>Recent content in Memos on 微影随行</description><generator>Hugo</generator><language>zh-CN</language><copyright>© 2024 我的博客. All rights reserved.</copyright><lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xieha.cn/tags/memos/index.xml" rel="self" type="application/rss+xml"/><item><title>折腾博客记20240912</title><link>https://xieha.cn/posts/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912/</link><pubDate>Thu, 12 Sep 2024 00:36:01 +0800</pubDate><guid>https://xieha.cn/posts/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912/</guid><description>&lt;p>最近一直在不断的折腾博客，整合memos到博客里面，安装artalk以及同步GitHub仓库文件。糟糕的是，memos已经搞好了，安装artalk遇到了很多麻烦，弄好才发现原来这么简单。因为一开始就配置错误，域名这块错误了。导致后面的很多问题出现，试过重装卸载多次，发表留言询问别人。后来还是重装的时候，留意到博客示例，填下看看，才成功。&lt;/p>
+&lt;p>问题1
+Failed to load comments
+TypeError: Failed to fetch&lt;/p>
+&lt;p>&lt;img src="https://img.xieha.cn/i/2024/10/21/6716144ec2620.png" alt="">&lt;/p>
+&lt;p>第一是安装的时候没有正确填写自己博客地址。而我就是那种了。以为安装地址链接是填写这artalk域名地址。正确是你要嵌入的地址。比如你要把评论嵌入你的博客地址，那么你就是填写你的博客地址。后续artalk地址可以通过反向代理ip地址就行了。其实是官方一开始的给的例子就可以看出了。可能当时比较马大哈，哈哈。&lt;/p>
+&lt;p>还有其他的情况是要在artalk后台加入域名白名单。官方好像说过的api问题也会这样。&lt;/p>
+&lt;p>关于memos这方面。由于官方经常迭代升级，改变很多东西。具体啥的我也不太清楚。如果经常升级的话。会导致其他大佬给的js用不了。这个我是深有体会。目前我的版本是0.18.2。不太想升级了，也不敢升级。不然有一堆问题。咱又不会解决。只能跟随大佬们的脚步。&lt;/p>
+&lt;p>目前还在折腾怎么本地博客更新同步服务器上。坎坷呀&lt;/p>
+&lt;p>哈哈，最重要的是，文章内容不怎么更新，功能却要有，实在是有点搞笑了。&lt;/p></description></item></channel></rss>

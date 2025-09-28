@@ -1,0 +1,138 @@
+<!doctype html><html><head><meta name=viewport content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,width=device-width"><meta charset=utf-8><link rel=dns-prefetch href=https://at.alicdn.com><link rel=dns-prefetch href=https://weavatar.com><title>Gitalk评论系统Error: Network Error - 微影随行
+</title><link href=/sdk/animate.compat.css rel=stylesheet><link href=//at.alicdn.com/t/c/font_3940454_drimor4umam.css rel=stylesheet><link rel=stylesheet href=/sdk/fancybox3/jquery.fancybox.min.css><link href=/css/main.css rel=stylesheet><link href=/css/m.css rel=stylesheet><link href=/css/app.css rel=stylesheet><link href=/css/archives.css rel=stylesheet><link href=/css/rss.css rel=stylesheet><style>:root{--theme-color:#ff5050}</style><meta property="og:description" content="收集一些gitalk评论系统出现的一些问题，方便以后查询并解决"><meta property="og:image" content="/img/bg.jpg"><meta name=image content="/img/bg.jpg"><link rel=apple-touch-icon-precomposed href=/img/bg.jpg><meta name=msapplication-TileImage content="/img/bg.jpg"><script>var logoUrl="/img/logo.png",logoWhiteUrl="/img/logo.png",bannerSwitch="on";(function(){var e=document.cookie.replace(/(?:(?:^|.*;\\s*)eyeProtectMode\\s*\\=\\s*([^;]*).*$)|^.*$/,"$1");e==="dark"&&document.documentElement.classList.add("night")})()</script></head><body><div class=main><div class=menu><div class="close m"><span id=close><i class="iconfont icon-cancel"></i></span></div><ul><li><a href=/><i class="iconfont icon-home"></i>首页</a></li><li><a href=/archives><i class="iconfont icon-archives"></i>微文章</a></li><li><a href=/memo><i class="iconfont icon-archives"></i>随笔录</a></li><li><a href=/welog><i class="iconfont icon-archives"></i>微言语</a></li><li class=pc><a href=javascript:void(0); onclick=openSearch()><i class="iconfont icon-search"></i>搜索</a></li></ul><div class="copyright m"><div class=switch>夜间模式<input type=checkbox id=night1 class=switchBtn><label for=night1 class=switchBtn></label></div><span>©2023-2025&nbsp;&nbsp;<a href=https://xieha.cn/>微影随行</a></span>
+<span>Theme by <a id=copyright-m href=https://oneblog.net/oneblog title=自豪地使用OneBlog主题 target=_blank>OneBlog</a></span></div></div><div class="header bg-white m"><i class="iconfont icon-nav"></i>
+<a class=logo id=logo href=https://xieha.cn/ style=background-image:url(/img/logo.png)></a><i id=search-btn class="iconfont icon-search"></i></div><div class=search-layer><button class="close-search pc"><i class="iconfont icon-cancel"></i></button><div class=search><h5 class=pc>搜索</h5><form autocomplete=off id=search action=https://xieha.cn/search method=get role=search class=search-form><input type=text name=q class=input placeholder=输入关键字搜索 required>
+<button type=submit class=search-icon>
+<span class=m>搜索</span>
+<i class="iconfont icon-search pc"></i></button></form></div><div class="tagscloud pc"><h5>标签</h5><a href=https://xieha.cn/tags/%E6%97%85%E6%B8%B8/>旅游(3)</a>
+<a href=https://xieha.cn/tags/2020/>2020(2)</a>
+<a href=https://xieha.cn/tags/hugo/>Hugo(2)</a>
+<a href=https://xieha.cn/tags/memo/>Memo(2)</a>
+<a href=https://xieha.cn/tags/%E5%9B%BD%E5%BA%86/>国庆(2)</a>
+<a href=https://xieha.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/>女朋友(2)</a>
+<a href=https://xieha.cn/tags/%E7%9B%AE%E6%A0%87/>目标(2)</a>
+<a href=https://xieha.cn/tags/2019/>2019(1)</a>
+<a href=https://xieha.cn/tags/2021/>2021(1)</a>
+<a href=https://xieha.cn/tags/2024/>2024(1)</a></div></div><div class="post_thumb blur"><div class="post_bg lazy-load" data-src=https://img.xieha.cn/i/2024/12/09/6755f2594b0b7.webp></div><div class=pc><i class="iconfont icon-nav menu-button"></i><div class="post_header padding animated fadeIn"><a href=/categories/%E6%8A%98%E8%85%BE%E5%90%A7>折腾吧</a><h1>Gitalk评论系统Error: Network Error</h1><div class=post_meta><span>2022.11.26</span>
+<span>/</span>
+<span>0&nbsp;阅读</span>
+<span>/</span>
+<span>0&nbsp;评论</span>
+<span>/</span>
+<span>283&nbsp;字</span></div></div></div></div><div class="m blur"><div class=category><a href=/categories/%E6%8A%98%E8%85%BE%E5%90%A7>折腾吧</a></div><div class=post_info><h1>Gitalk评论系统Error: Network Error</h1><span>阅读&nbsp;0</span>
+<span>0&nbsp;评论</span>
+<span>发表于2022.11.26</span></div></div><div class="post_content padding blur animated fadeIn"><p>收集gitalk评论系统出现的一些问题</p><ul><li><strong>Gitalk评论系统出现 Error: Network Erro</strong></li><li><strong>Gitalk评论系统出现 Error: Validation Failed</strong></li><li><strong>未找到相关的Issues进行评论，请联系XXX进行创建</strong></li></ul><p>本站采用的是评论系统是Giscus，之所以要用gitalk，是觉得它的UI挺不错的，一直都想弄个微言的页面，发现这挺适合的。</p><p>本来觉得嵌入gitalk应该很容易的，谁知道这货是坑完又坑呀，搜寻了许多方法，什么md5呀，改变其他的ID呀，一堆的解决方案，自己愣是没搞明白。参考这么多方案，记录下自己的方法，仅供参考。</p><p>我这里采用的博客程序是hugo系统+Github+NEtlify部署方案。</p><h3 id=一未找到相关的issues进行评论请联系xxx进行创建>一、未找到相关的Issues进行评论，请联系XXX进行创建</h3><p>看下Homepage URL和Authorization callback URL，是否填写正确，这两个是否加上一样的<strong>https://</strong></p><p>查找地址：登录github，点击头像的Settings ，最下面的Developer settings ，找到对应的OAuth Apps。</p><p>还有检查下gitalk配置文件是否正确。</p><p><img src=F:%5Cblog-koobai%5Cstatic%5Cimg%5C1.png data-fancybox=gallery alt></p><h3 id=二gitalk评论系统出现-error-network-erro>二、Gitalk评论系统出现 Error: Network Erro</h3><p><img src=2.png data-fancybox=gallery alt=2></p><p>这个错误蛮复杂的，F12查看，是由于https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token这个链接失效。换个代理链接就好了。</p><p>那去哪里弄代理链接呢？
+首先去Github ,Forked一个项目：<strong><a href=https://github.com/jawaylog/cors-server>cors-server</a></strong>,部署在Netlify。</p><p>路径是：登录Netlify，可以用github账号授权登录，新建项目（add new site>Import an existing project），选择github授权登录，之后再选择刚才Fored的项目**<a href=https://github.com/jawaylog/cors-server>cors-server</a>**。然后Deploy site。</p><p>成功了话会有个子域名地址，比如 ：<a href=https://xx.xx.netlify.app/>https://xx.xx.netlify.app</a></p><p>这就是代理地址了。如果你的主题程序自带程序gitalk评论系统的，就把Proxy地址换成这个代理地址就行了。</p><p>例如这样：proxy = &ldquo;<a href=https://xx.xx.netlify.app/github_access_token%22>https://xx.xx.netlify.app/github_access_token"</a></p><p>xx.xx是你的子域名。</p><p>那像我这种没有Gitalk评论系统程序的，又该怎样呢。</p><p>前面说了，我用的程序是hugo，没有带gitalk评论系统，所以需要嵌入个。</p><p>首先在你主题文件夹（themes\xxx\layouts\partials），partials文件下新建个gitalk.html，放入如下代码：</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">31
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span><span style=color:#f92672>&lt;</span>html<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>head<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>{{ <span style=color:#66d9ef>if</span> <span style=color:#f92672>.</span>Site<span style=color:#f92672>.</span>Params<span style=color:#f92672>.</span>enableGitalk }}
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>div id<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;gitalk-container&#34;</span><span style=color:#f92672>&gt;&lt;/</span>div<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>link rel<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;stylesheet&#34;</span> href<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&#34;</span><span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>script src<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&#34;</span><span style=color:#f92672>&gt;&lt;/</span>script<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/</span>head<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>body<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;</span>script<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> gitalk <span style=color:#f92672>=</span> new Gitalk({
+</span></span><span style=display:flex><span>     id: <span style=color:#e6db74>&#39;location.pathname&#39;</span>,
+</span></span><span style=display:flex><span>    clientID: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.clientID }}&#39;</span>, 
+</span></span><span style=display:flex><span>    clientSecret: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.clientSecret }}&#39;</span>,
+</span></span><span style=display:flex><span>    repo: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.repo }}&#39;</span>,
+</span></span><span style=display:flex><span>    owner: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>,
+</span></span><span style=display:flex><span>    admin: [<span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>],
+</span></span><span style=display:flex><span>    proxy: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.proxy }}&#39;</span>, 
+</span></span><span style=display:flex><span>    title: <span style=color:#e6db74>&#39;{{ .Site.Params.Gitalk.title }}&#39;</span>,
+</span></span><span style=display:flex><span>    distractionFreeMode: false <span style=color:#f92672>//</span> Facebook<span style=color:#f92672>-</span>like distraction free mode  
+</span></span><span style=display:flex><span>     
+</span></span><span style=display:flex><span>     });     
+</span></span><span style=display:flex><span>  (function() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> ([<span style=color:#e6db74>&#34;localhost&#34;</span>, <span style=color:#e6db74>&#34;127.0.0.1&#34;</span>]<span style=color:#f92672>.</span>indexOf(window<span style=color:#f92672>.</span>location<span style=color:#f92672>.</span>hostname) <span style=color:#f92672>!=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>) {
+</span></span><span style=display:flex><span>      document<span style=color:#f92672>.</span>getElementById(<span style=color:#e6db74>&#39;gitalk-container&#39;</span>)<span style=color:#f92672>.</span>innerHTML <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Gitalk comments not available by default when the website is previewed locally.&#39;</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    gitalk<span style=color:#f92672>.</span>render(<span style=color:#e6db74>&#39;gitalk-container&#39;</span>);
+</span></span><span style=display:flex><span>  })();
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/</span>script<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/</span>body<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/</span>html<span style=color:#f92672>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>然后在single.html页面，找到这个 {{ partial &ldquo;comments.html&rdquo; . }}，在下面加入 {{ partial &ldquo;gitalk.html&rdquo; . }}</p><p>因为我用gitalk评论系统是用来做微言页面。所以我的就加在我的微言页面了。
+但如果你的系统自带gitalk，就不需要额外添加了，又或者可以在comments.html页面里面直接加入我上面的gitalk代码就可以了。
+然后在你的配置文件config.toml加入这段代码</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>[Params]
+</span></span><span style=display:flex><span>  enableGitalk = true
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[Params.Gitalk]
+</span></span><span style=display:flex><span>    clientID = &#34;9fdd81a0137ba23&#34; # 上面申请OAuth Apps项目里的 ID
+</span></span><span style=display:flex><span>    clientSecret = &#34;2b0d69b9cee2c69d54cc8&#34; # 上面申请OAuth Apps项目里的密钥
+</span></span><span style=display:flex><span>    repo = &#34;gitalk&#34; # 项目仓库名字
+</span></span><span style=display:flex><span>    owner = &#34;jawaylog&#34; # github账号名字
+</span></span><span style=display:flex><span>    admin = &#34;jawaylog&#34; # Github库所有者和合作者，也可以像我的一样
+</span></span><span style=display:flex><span>    id= &#34;location.pathname&#34; 
+</span></span><span style=display:flex><span>    labels= &#34;gitalk&#34; #
+</span></span><span style=display:flex><span>    perPage= 15  
+</span></span><span style=display:flex><span>    pagerDirection= &#34;last&#34; 
+</span></span><span style=display:flex><span>    createIssueManually= false 
+</span></span><span style=display:flex><span>    distractionFreeMode= false 
+</span></span><span style=display:flex><span>    proxy = &#34;https://xx.xx.netlify.app/github_access_token&#34; //这里填写你的代理地址
+</span></span><span style=display:flex><span>    title = &#34;RulatedayDnd5eWiki-Comment&#34;
+</span></span></code></pre></td></tr></table></div></div><h3 id=三gitalk评论系统出现-error-validation-failed>三、Gitalk评论系统出现 Error: Validation Failed</h3><p><img src=3.png data-fancybox=gallery alt=3></p><p>这个问题是我嵌入Gitalk评论，部署上去之后出现了。真的是一个坑填完又来一个坑。这是由于labels的50个字符长度限制问题，不能超过50个字符。</p><p>在gitalk.html里，加入这个就可以解决了。</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>title: &#39;{{ .Site.Params.Gitalk.title }}&#39;,
+</span></span></code></pre></td></tr></table></div></div><p>具体实现代码在上个问题里。</p><p><img src=4.png data-fancybox=gallery alt></p><p>本文参看部分文章如下：</p><p><a href=https://prohibitorum.top/7cc2c97a15b4.html>解决 Gitalk 无法获取 Github Token 问题</a></p><p><a href=https://github.com/Dedicatus546/cors-server>Dedicatus546/cors-server项目</a></p><h3 id=11-cors-server项目>1.1 cors-server项目</h3><p>最近发现cors-server项目 部署失败</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span> <span style=color:#960050;background-color:#1e0010>警告</span>https:<span style=color:#f92672>//</span>registry<span style=color:#f92672>.</span>nlark<span style=color:#f92672>.</span>com<span style=color:#f92672>/</span>setprototypeof<span style=color:#f92672>/</span>download<span style=color:#f92672>/</span>setprototypeof<span style=color:#f92672>-</span><span style=color:#ae81ff>1.2</span><span style=color:#f92672>.</span><span style=color:#ae81ff>0.</span>tgz错误
+</span></span></code></pre></td></tr></table></div></div><p><img src=6.png data-fancybox=gallery alt>
+发现是这个地址是访问不了，在项目里面更改地址了就可以了</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>将pnpm-lock.yaml里面的https://registry.nlark.com全部更改为https://registry.npmmirror.com
+</span></span></code></pre></td></tr></table></div></div><p><img src=7.png data-fancybox=gallery alt></p><p>如有问题，欢迎留言更正。</p><p>更新于2024.07.02</p><div class=cc-say>本文著作权归作者 [welog] 享有，未经作者书面授权，禁止转载，封面图片来源于 [&nbsp;<span>互联网</span>&nbsp;] ，本文仅供个人学习、研究和欣赏使用。如有异议，请联系博主及时处理。</div><div class=tags><a href=/tags/gitalk>gitalk</a>
+<a href=/tags/hugo>hugo</a></div></div></div><a id=gototop class="hidden pc"><i class="iconfont icon-up"></i></a>
+<script src=/js/dongtai.js></script><div class="footer pc"><div class=navigation><a href=/>首页</a>
+<a href=/rss>朋友圈</a>
+<a href=/friends>伙伴们</a>
+<a href=/about>关于我</a></div><div class=copyright>Copyright&copy;2023-2025&nbsp;&nbsp;All Rights Reserved.&nbsp;&nbsp;
+<a href=https://beian.miit.gov.cn/ target=_blank rel="nofollow noreferrer">粤ICP备2024299131号</a><br>Theme by <a id=copyright-pc href=https://oneblog.net/oneblog title=自豪地使用OneBlog主题 target=_blank>OneBlog</a> V3.6.2<div class=switch><span>夜间模式</span>
+<input type=checkbox id=night2 class=night-toggle>
+<label for=night2 class=switchBtn></label></div></div><div class=contact></div></div><script src=/sdk/jquery.min.js></script><script src=/sdk/fancybox3/jquery.fancybox.min.js></script><script src=/sdk/layer/layer.js></script><script src=/sdk/highlightjs/highlight.min.js></script><script defer>document.addEventListener("DOMContentLoaded",function(){const t=document.querySelectorAll("pre code"),e=new IntersectionObserver(function(t){t.forEach(function(t){t.isIntersecting&&(hljs.highlightElement(t.target),e.unobserve(t.target))})},{rootMargin:"0px",threshold:.1});t.forEach(function(t){e.observe(t),t.style.filter="none"})})</script><script src=/js/emoji.js></script><script src=/js/comments.js></script><script src=/js/main.js></script><script type=text/javascript></script></body></html>

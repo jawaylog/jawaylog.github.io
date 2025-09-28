@@ -1,0 +1,180 @@
+/* 文章列表容器 - 使用主题变量 */
+.article-list {
+  max-width: var(--hera-article-width);
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--hera-background-white);
+}
+
+/* 单篇文章容器 - 添加放大动画 */
+.article-item {
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--hera-background-white);
+  border: 1px solid transparent;
+  transform: scale(1);
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+}
+
+.article-item:hover {
+  border-color: var(--hera-border-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+/* 文章图片（头像） */
+.article-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--hera-border-color-light);
+  background: var(--hera-background-gray-lightest);
+  transition: transform 0.3s ease;
+}
+
+.article-item:hover .article-image {
+  transform: scale(1.08);
+}
+
+/* 文章内容区域 */
+.article-content {
+  flex: 1;
+  min-width: 0;
+  transition: transform 0.3s ease;
+}
+
+.article-item:hover .article-content {
+  transform: translateX(4px);
+}
+
+/* 文章元数据（站点名称和时间） */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.article-meta .time {
+  color: var(--hera-text-gray-lightest);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.site-name {
+  white-space: nowrap;
+  flex-shrink: 0;
+  color: var(--hera-text-gray);
+  transition: color 0.2s ease;
+}
+
+/* 文章标题 */
+.article-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  text-decoration: underline;
+  color: var(--hera-text-color);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 4px 0;
+  transition: all 0.2s ease;
+}
+
+.article-title:hover {
+  text-decoration: none;
+  color: var(--hera-main-color);
+}
+
+/* 文章摘要 - 桌面端3行，移动端2行 */
+.article-summary {
+  color: var(--hera-text-light);
+  font-size: var(--hera-font-size-smallest);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 8px;
+  transition: color 0.3s ease;
+}
+
+.article-item:hover .article-summary {
+  color: var(--hera-text-gray);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .article-summary {
+    -webkit-line-clamp: 2; /* 平板及以下设备2行 */
+  }
+  
+  .article-item {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  .article-item:hover {
+    transform: scale(1.01);
+  }
+  .article-image {
+    width: 40px;
+    height: 40px;
+  }
+  .article-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-list {
+    padding: 10px;
+  }
+  .article-item:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .article-summary {
+    font-size: 0.9rem;
+  }
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .article-item {
+    background: var(--hera-background-gray-lightest);
+  }
+  .article-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .article-image {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--hera-border-color);
+  }
+  .article-summary {
+    color: var(--hera-text-gray);
+  }
+}
+
+.dark .article-item {
+  background: var(--hera-background-gray-lightest);
+}
+.dark .article-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.dark .article-image {
+  background: rgba(255, 255, 255, 0.05);
+}

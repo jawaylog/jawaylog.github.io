@@ -1,0 +1,176 @@
+/**
+ * Updated: 2025-07-26
+ * Author: ©彼岸临窗 oneblog.net
+ *
+ * 注释含命名规范，开源不易，如需引用请注明来源:彼岸临窗 https://oneblog.net。
+ * 本主题已取得软件著作权（登记号：2025SR0334142）和外观设计专利（专利号：第7121519号），请严格遵循GPL-2.0协议使用本主题及源码。
+ */
+ 
+.col-tb-offset-2 {
+    margin-left: 0;
+    width: 100%;
+}
+
+#tab1 {
+    min-height: 700px;
+}
+
+#tab-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+#tab-nav {
+    list-style: none;
+    padding: 15px;
+    width: 150px;
+    margin: 0 20px 0 0;
+    background: #fff;
+    border-radius: 10px;
+}
+
+#tab-nav li {
+    margin: 0;
+}
+
+#tab-nav li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 10px 20px 30px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#tab-nav li a.active {
+    background-color: #6d6b6b;
+    color: #fff;
+    border-radius: 10px 20px 30px 10px;
+    text-align: center;
+    box-shadow: 3px 3px 8px #b9bbc4, -5px -5px 8px #fff;
+}
+
+#tab-content {
+    flex: 1;
+    padding: 10px 36px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/**图标列表**/
+.icon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 每列最小120px，自动填充 */
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.icon-item i {
+    font-size: 24px; /* 图标大小 */
+    margin-bottom: 8px; /* 图标与文字间距 */
+}
+
+.icon-item span {
+    font-size: 14px; /* 文字大小 */
+    color: #666; /* 文字颜色 */
+}
+
+/**底部提交按钮**/
+.typecho-option-submit li{
+    float: right;
+}
+
+.primary {
+    background-color: #515151;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+.primary:hover {
+    background-color: #4079ff;
+}
+
+/**文章自定义字段**/
+.full-width-input {
+    width: 100%;
+    box-sizing: border-box; /* 确保填充和边框包含在宽度内 */
+}
+
+/**编辑器美化**/
+body {
+    background: #ffffff;
+}
+
+#btn-save,#btn-preview {
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+/* 选择文章编辑器的输入框并设置默认样式 */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="number"] {
+    font-size: 14px;
+    outline: none; /* 去掉默认的聚焦边框 */
+}
+
+/* 设置聚焦状态下的边框样式 */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border: 1px solid #000000; 
+}
+
+
+/**主题设置备份与恢复**/
+.backup-listen button {
+    border: none;
+    border-radius: 20px;
+    background-color: #6d6b6b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    transition: 0.4s ease all;
+}
+
+.backup-listen button:hover {
+    background-color: #393939;
+}
+
+.backupbtn {
+    margin: 10px 0 0 30px;
+}

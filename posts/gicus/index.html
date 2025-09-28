@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta name=viewport content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0,width=device-width"><meta charset=utf-8><link rel=dns-prefetch href=https://at.alicdn.com><link rel=dns-prefetch href=https://weavatar.com><title>Giscus评论系统简单配置 - 微影随行
+</title><link href=/sdk/animate.compat.css rel=stylesheet><link href=//at.alicdn.com/t/c/font_3940454_drimor4umam.css rel=stylesheet><link rel=stylesheet href=/sdk/fancybox3/jquery.fancybox.min.css><link href=/css/main.css rel=stylesheet><link href=/css/m.css rel=stylesheet><link href=/css/app.css rel=stylesheet><link href=/css/archives.css rel=stylesheet><link href=/css/rss.css rel=stylesheet><style>:root{--theme-color:#ff5050}</style><meta property="og:description" content="给博客弄个评论系统，有互动才更加有乐趣。 看了其他的一些评论系统，就选择了Giscus评论系统。"><meta property="og:image" content="/img/bg.jpg"><meta name=image content="/img/bg.jpg"><link rel=apple-touch-icon-precomposed href=/img/bg.jpg><meta name=msapplication-TileImage content="/img/bg.jpg"><script>var logoUrl="/img/logo.png",logoWhiteUrl="/img/logo.png",bannerSwitch="on";(function(){var e=document.cookie.replace(/(?:(?:^|.*;\\s*)eyeProtectMode\\s*\\=\\s*([^;]*).*$)|^.*$/,"$1");e==="dark"&&document.documentElement.classList.add("night")})()</script></head><body><div class=main><div class=menu><div class="close m"><span id=close><i class="iconfont icon-cancel"></i></span></div><ul><li><a href=/><i class="iconfont icon-home"></i>首页</a></li><li><a href=/archives><i class="iconfont icon-archives"></i>微文章</a></li><li><a href=/memo><i class="iconfont icon-archives"></i>随笔录</a></li><li><a href=/welog><i class="iconfont icon-archives"></i>微言语</a></li><li class=pc><a href=javascript:void(0); onclick=openSearch()><i class="iconfont icon-search"></i>搜索</a></li></ul><div class="copyright m"><div class=switch>夜间模式<input type=checkbox id=night1 class=switchBtn><label for=night1 class=switchBtn></label></div><span>©2023-2025&nbsp;&nbsp;<a href=https://xieha.cn/>微影随行</a></span>
+<span>Theme by <a id=copyright-m href=https://oneblog.net/oneblog title=自豪地使用OneBlog主题 target=_blank>OneBlog</a></span></div></div><div class="header bg-white m"><i class="iconfont icon-nav"></i>
+<a class=logo id=logo href=https://xieha.cn/ style=background-image:url(/img/logo.png)></a><i id=search-btn class="iconfont icon-search"></i></div><div class=search-layer><button class="close-search pc"><i class="iconfont icon-cancel"></i></button><div class=search><h5 class=pc>搜索</h5><form autocomplete=off id=search action=https://xieha.cn/search method=get role=search class=search-form><input type=text name=q class=input placeholder=输入关键字搜索 required>
+<button type=submit class=search-icon>
+<span class=m>搜索</span>
+<i class="iconfont icon-search pc"></i></button></form></div><div class="tagscloud pc"><h5>标签</h5><a href=https://xieha.cn/tags/%E6%97%85%E6%B8%B8/>旅游(3)</a>
+<a href=https://xieha.cn/tags/2020/>2020(2)</a>
+<a href=https://xieha.cn/tags/hugo/>Hugo(2)</a>
+<a href=https://xieha.cn/tags/memo/>Memo(2)</a>
+<a href=https://xieha.cn/tags/%E5%9B%BD%E5%BA%86/>国庆(2)</a>
+<a href=https://xieha.cn/tags/%E5%A5%B3%E6%9C%8B%E5%8F%8B/>女朋友(2)</a>
+<a href=https://xieha.cn/tags/%E7%9B%AE%E6%A0%87/>目标(2)</a>
+<a href=https://xieha.cn/tags/2019/>2019(1)</a>
+<a href=https://xieha.cn/tags/2021/>2021(1)</a>
+<a href=https://xieha.cn/tags/2024/>2024(1)</a></div></div><div class="post_thumb blur"><div class="post_bg lazy-load" data-src=https://img.xieha.cn/i/2024/12/09/6755eef805c87.jpg></div><div class=pc><i class="iconfont icon-nav menu-button"></i><div class="post_header padding animated fadeIn"><a href=/categories/%E6%8A%98%E8%85%BE%E5%90%A7>折腾吧</a><h1>Giscus评论系统简单配置</h1><div class=post_meta><span>2022.10.12</span>
+<span>/</span>
+<span>0&nbsp;阅读</span>
+<span>/</span>
+<span>0&nbsp;评论</span>
+<span>/</span>
+<span>192&nbsp;字</span></div></div></div></div><div class="m blur"><div class=category><a href=/categories/%E6%8A%98%E8%85%BE%E5%90%A7>折腾吧</a></div><div class=post_info><h1>Giscus评论系统简单配置</h1><span>阅读&nbsp;0</span>
+<span>0&nbsp;评论</span>
+<span>发表于2022.10.12</span></div></div><div class="post_content padding blur animated fadeIn"><p><img src=https://img.xieha.cn/i/2024/10/21/6716117612146.png data-fancybox=gallery alt>
+很早之前就想给博客弄个评论系统，又互动才更加有乐趣。看了其他的一些评论系统，就选择了Giscus评论系统，由于小白一个，弄了很久才搞明白怎么回事。</p><h2 id=一使用说明与介绍>一、使用说明与介绍</h2><h4 id=11-新建github项目>1.1 新建github项目</h4><p>在github里面，我们需要新建一个项目仓库，用作giscus储存评论。</p><h4 id=12-满足以下条件>1.2 满足以下条件：</h4><ul><li>此仓库是公开的，否则访客将无法查看 discussion。</li><li>giscus app 已安装否则访客将无法评论和回应。</li><li>Discussions功能已在你的仓库中启用。
+<img src=1.png data-fancybox=gallery alt></li></ul><h2 id=二安装与配置>二、安装与配置</h2><h4 id=21-寻找分类名与id>2.1 寻找分类名与id</h4><p>在giscus官网找到这里，这是只要填写分类名，分类id就行了。</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>&lt;script src=&#34;https://giscus.app/client.js&#34;
+</span></span><span style=display:flex><span>        data-repo=&#34;[在此输入仓库]&#34;
+</span></span><span style=display:flex><span>        data-repo-id=&#34;[在此输入仓库 ID]&#34;
+</span></span><span style=display:flex><span>        data-category=&#34;[在此输入分类名]&#34;
+</span></span><span style=display:flex><span>        data-category-id=&#34;[在此输入分类 ID]&#34;
+</span></span><span style=display:flex><span>        data-mapping=&#34;pathname&#34;
+</span></span><span style=display:flex><span>        data-strict=&#34;0&#34;
+</span></span><span style=display:flex><span>        data-reactions-enabled=&#34;1&#34;
+</span></span><span style=display:flex><span>        data-emit-metadata=&#34;0&#34;
+</span></span><span style=display:flex><span>        data-input-position=&#34;bottom&#34;
+</span></span><span style=display:flex><span>        data-theme=&#34;preferred_color_scheme&#34;
+</span></span><span style=display:flex><span>        data-lang=&#34;zh-CN&#34;
+</span></span><span style=display:flex><span>        crossorigin=&#34;anonymous&#34;
+</span></span><span style=display:flex><span>        async&gt;
+</span></span><span style=display:flex><span>&lt;/script&gt;
+</span></span></code></pre></td></tr></table></div></div><p><img src=3.png data-fancybox=gallery alt></p><p>其实看了上面的数值，我当时是有点懵的，查了下其他博主的说法。</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>data-repo=&#34;[在此输入仓库]&#34;
+</span></span><span style=display:flex><span>data-repo-id=&#34;[在此输入仓库 ID]&#34;
+</span></span></code></pre></td></tr></table></div></div><p>如果上面的 仓库 名字设置显示成功，这两个数值我们是不用设置的。我们只需要设置分类名和分类ID就可以了。</p><p>repo_id是托管博客的代码仓库的一个标识值，category是该仓库Issues里面对应的分类（或者说是主题）。一个仓库默认具有下面几个分类：Announcements、General、Ideas、Q&amp;A、Show and tell。这里我选择Announcements作为评论的分类。最后的category_id类似repo_id也是对该分类的一个标识值。</p><p>那如何快速的获取这些数据呢，可以通过GitHub官方的<a target=_blank href=https://docs.github.com/en/graphql/overview/explorer/>GraphQL API Explorer</a>查询到。这里把查询所用的语句进行记录。
+<img src=5.png data-fancybox=gallery alt></p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>{
+</span></span><span style=display:flex><span> repository(owner:  &#34;jawaylog&#34;, name: &#34;giscus&#34;) {
+</span></span><span style=display:flex><span>   id
+</span></span><span style=display:flex><span>   discussionCategories (first: 5) {
+</span></span><span style=display:flex><span>     nodes {
+</span></span><span style=display:flex><span>       name
+</span></span><span style=display:flex><span>       id
+</span></span><span style=display:flex><span>     }
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span> }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><p>点击查询可得以下结果</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>&#34;nodes&#34;: [
+</span></span><span style=display:flex><span>         {
+</span></span><span style=display:flex><span>           &#34;name&#34;: &#34;Announcements&#34;,
+</span></span><span style=display:flex><span>           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kb&#34;
+</span></span><span style=display:flex><span>         },
+</span></span><span style=display:flex><span>         {
+</span></span><span style=display:flex><span>           &#34;name&#34;: &#34;General&#34;,
+</span></span><span style=display:flex><span>           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kc&#34;
+</span></span><span style=display:flex><span>         },
+</span></span><span style=display:flex><span>         {
+</span></span><span style=display:flex><span>           &#34;name&#34;: &#34;Ideas&#34;,
+</span></span><span style=display:flex><span>           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Ke&#34;
+</span></span><span style=display:flex><span>         },
+</span></span><span style=display:flex><span>         {
+</span></span><span style=display:flex><span>           &#34;name&#34;: &#34;Polls&#34;,
+</span></span><span style=display:flex><span>           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kg&#34;
+</span></span><span style=display:flex><span>         },
+</span></span><span style=display:flex><span>         {
+</span></span><span style=display:flex><span>           &#34;name&#34;: &#34;Q&amp;A&#34;,
+</span></span><span style=display:flex><span>           &#34;id&#34;: &#34;DIC_kwDOIMxYZc4CR8Kd&#34;
+</span></span><span style=display:flex><span>         }
+</span></span><span style=display:flex><span>       ]
+</span></span><span style=display:flex><span>     }
+</span></span><span style=display:flex><span>   }
+</span></span><span style=display:flex><span> }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><p>配置完最终得到的代码是这样的：</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>&lt;script src=&#34;https://giscus.app/client.js&#34;
+</span></span><span style=display:flex><span>       data-repo=&#34;jawaylog/giscus&#34;
+</span></span><span style=display:flex><span>       data-repo-id=&#34;R_kgDOIMxYZQ&#34;
+</span></span><span style=display:flex><span>       data-category=&#34;Announcements&#34;
+</span></span><span style=display:flex><span>       data-category-id=&#34;DIC_kwDOIMxYZc4CR8Kb&#34;
+</span></span><span style=display:flex><span>       data-mapping=&#34;pathname&#34;
+</span></span><span style=display:flex><span>       data-strict=&#34;0&#34;
+</span></span><span style=display:flex><span>       data-reactions-enabled=&#34;1&#34;
+</span></span><span style=display:flex><span>       data-emit-metadata=&#34;0&#34;
+</span></span><span style=display:flex><span>       data-input-position=&#34;bottom&#34;
+</span></span><span style=display:flex><span>       data-theme=&#34;preferred_color_scheme&#34;
+</span></span><span style=display:flex><span>       data-lang=&#34;zh-CN&#34;
+</span></span><span style=display:flex><span>       crossorigin=&#34;anonymous&#34;
+</span></span><span style=display:flex><span>       async&gt;
+</span></span><span style=display:flex><span>&lt;/script&gt;
+</span></span></code></pre></td></tr></table></div></div><p>至于如何显示评论系统，需要根据各自的主题文档设置，又或者你可以尝试在_config.yml配置。
+<img src=featured.png data-fancybox=gallery alt></p><div class=cc-say>本文著作权归作者 [welog] 享有，未经作者书面授权，禁止转载，封面图片来源于 [&nbsp;<span>互联网</span>&nbsp;] ，本文仅供个人学习、研究和欣赏使用。如有异议，请联系博主及时处理。</div><div class=tags><a href=/tags/giscus>giscus</a>
+<a href=/tags/%E8%AF%84%E8%AE%BA>评论</a></div></div></div><a id=gototop class="hidden pc"><i class="iconfont icon-up"></i></a>
+<script src=/js/dongtai.js></script><div class="footer pc"><div class=navigation><a href=/>首页</a>
+<a href=/rss>朋友圈</a>
+<a href=/friends>伙伴们</a>
+<a href=/about>关于我</a></div><div class=copyright>Copyright&copy;2023-2025&nbsp;&nbsp;All Rights Reserved.&nbsp;&nbsp;
+<a href=https://beian.miit.gov.cn/ target=_blank rel="nofollow noreferrer">粤ICP备2024299131号</a><br>Theme by <a id=copyright-pc href=https://oneblog.net/oneblog title=自豪地使用OneBlog主题 target=_blank>OneBlog</a> V3.6.2<div class=switch><span>夜间模式</span>
+<input type=checkbox id=night2 class=night-toggle>
+<label for=night2 class=switchBtn></label></div></div><div class=contact></div></div><script src=/sdk/jquery.min.js></script><script src=/sdk/fancybox3/jquery.fancybox.min.js></script><script src=/sdk/layer/layer.js></script><script src=/sdk/highlightjs/highlight.min.js></script><script defer>document.addEventListener("DOMContentLoaded",function(){const t=document.querySelectorAll("pre code"),e=new IntersectionObserver(function(t){t.forEach(function(t){t.isIntersecting&&(hljs.highlightElement(t.target),e.unobserve(t.target))})},{rootMargin:"0px",threshold:.1});t.forEach(function(t){e.observe(t),t.style.filter="none"})})</script><script src=/js/emoji.js></script><script src=/js/comments.js></script><script src=/js/main.js></script><script type=text/javascript></script></body></html>

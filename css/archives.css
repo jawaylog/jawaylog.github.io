@@ -1,0 +1,232 @@
+/* ====================== */
+/* 基础样式 */
+/* ====================== */
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #0000FF;
+    --gray-light: #ccc;
+    --gray-dark: #666;
+    --font-family: "LXGW WenKai Screen", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+/* ====================== */
+/* 分类和标签列表 */
+/* ====================== */
+.tag-list ul,
+.category-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list ul li,
+.category-list ul li {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--text-color);
+    flex: 1 1 calc(24% - 20px);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.category-list ul li span {
+    display: inline;
+    margin-left: 2px;
+    color: var(--gray-dark);
+    letter-spacing: 0.5px;
+}
+
+.tag-list ul li a,
+.category-list ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.tag-list ul li a:hover,
+.category-list ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .tag-list ul li,
+    .category-list ul li {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* ====================== */
+/* 归档内容 */
+/* ====================== */
+.year-section {
+    margin-bottom: 20px;
+}
+
+.year-title,
+h3 {
+    color: var(--gray-dark);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.archive--title__year {
+    font-size: 22px !important;
+}
+
+.month-card {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.month-title {
+    color: var(--gray-dark);
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.listing {
+    list-style: none;
+    padding: 0;
+}
+
+.listing li {
+    padding: 8px 15px;
+    position: relative;
+    color: var(--text-color);
+}
+
+.listing li:not(:last-child) {
+    border-bottom: 1px dashed var(--gray-light);
+}
+
+.archive-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.archive-title a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+}
+
+.archive-date {
+    font-size: 15px;
+    color: var(--gray-dark);
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.archive-title a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.month-indicator {
+    font-weight: bold;
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: none;
+}
+
+.listing li:first-child .month-indicator {
+    display: block;
+}
+
+/* ====================== */
+/* 归档列表 */
+/* ====================== */
+.archive--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.archive--title {
+    font-size: 18px;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+.archive--title__year {
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.archive--meta {
+    font-size: 12px;
+    color: var(--gray-dark);
+    margin-top: 5px;
+}
+
+.archive--item {
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+.archive--item a:hover {
+    color: var(--link-color);
+}
+
+.archive--tagList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.archive--tagItem {
+    margin: 10px;
+    background-color: var(--background-color);
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--gray-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .archive--list {
+        grid-gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .archive--title {
+        font-size: 14px;
+    }
+
+    .archive--item {
+        padding: 10px;
+    }
+}
