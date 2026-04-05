@@ -1,0 +1,330 @@
+/* ====================== */
+/* 移动端专用样式 - 只作用于 .mobile-only 容器内 */
+/* ====================== */
+
+/* 强制隐藏移动端中所有不需要显示的原有元素 */
+.mobile-only .navbar,
+.mobile-only .header,
+.mobile-only .menu-button,
+.mobile-only .head,
+.mobile-only .banner-container,
+.mobile-only .desktop-content,
+.mobile-only .pc {
+    display: none !important;
+}
+
+/* 确保移动端主容器没有多余边距 */
+.mobile-only .main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* 移动端自定义头部样式 */
+.mobile-custom-header {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* 头像样式 */
+.mobile-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 博客名称 */
+.mobile-blog-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+/* 博客介绍 */
+.mobile-bio {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 社交链接区域 */
+.mobile-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.mobile-social a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.mobile-social a:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+/* 移动端memo容器 */
+.mobile-only .memo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+}
+
+/* 移动端卡片容器 */
+.mobile-only #memo {
+    padding: 0;
+    margin: 0;
+}
+
+/* 移动端卡片样式 */
+.mobile-only .memocard {
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 92%;
+    margin: 12px auto;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 第一个卡片顶部无间距 */
+.mobile-only .memocard:first-child {
+    margin-top: 0;
+}
+
+/* 最后一个卡片底部保持间距 */
+.mobile-only .memocard:last-child {
+    margin-bottom: 12px;
+}
+
+/* 引号图标 - 单独占一行，在正文上方 */
+.mobile-only .memocard.memo-card .memo_preview {
+    display: block;
+}
+
+/* 引号图标样式 */
+.mobile-only .memocard.memo-card .memo_preview::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="%23999" d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+/* 普通卡片（非memo卡片） */
+.mobile-only .memocard:not(.memo-card) .memo_preview {
+    margin-bottom: 10px;
+}
+
+/* 隐藏原有的伪元素引号 */
+.mobile-only .memocard::before {
+    display: none;
+}
+
+.mobile-only .memocard:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.mobile-only .memo_preview {
+    margin-bottom: 10px;
+}
+
+/* 标题样式 */
+.mobile-only .memo_title {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* 摘要内容 */
+.mobile-only .memo_content_wrapper p {
+    margin: 0;
+    line-height: 1.8;
+    color: #555;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    font-size: 1.1rem;
+}
+
+/* 卡片底部元信息 */
+.mobile-only .card_meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.mobile-only .memo-date {
+    font-weight: 500;
+}
+
+/* 移动端头部图片样式 */
+.mobile-only .m .memo_thumb {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.mobile-only .m .memo_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.mobile-only .m .memo_header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.mobile-only .m .memo_header h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.mobile-only .m .memo_meta {
+    display: flex;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.mobile-only .m .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .mobile-only .memo {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .mobile-only .memocard {
+        width: 94%;
+        margin: 12px auto;
+        padding: 18px 14px;
+    }
+    
+    .mobile-only .memocard:first-child {
+        margin-top: 0;
+    }
+    
+    .mobile-only .memocard:last-child {
+        margin-bottom: 12px;
+    }
+    
+    .mobile-only .memo_title {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    
+    .mobile-only .memo_content_wrapper p {
+        -webkit-line-clamp: 5;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .mobile-only .card_meta {
+        font-size: 0.8rem;
+        margin-top: 8px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .mobile-only .card_meta span:last-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 40%;
+    }
+    
+    .mobile-only .card_meta span:first-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 60%;
+    }
+    
+    .mobile-only .memocard.memo-card .memo_preview::before {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 6px;
+    }
+    
+    /* 移动端自定义头部响应式 */
+    .mobile-custom-header {
+        padding: 30px 20px 25px;
+    }
+    
+    .mobile-avatar {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .mobile-blog-name {
+        font-size: 1.3rem;
+    }
+    
+    .mobile-bio {
+        font-size: 0.8rem;
+    }
+    
+    .mobile-social a {
+        font-size: 1.2rem;
+    }
+}

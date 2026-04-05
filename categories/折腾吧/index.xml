@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>折腾吧 on 微影随行</title><link>https://xieha.cn/categories/%E6%8A%98%E8%85%BE%E5%90%A7/</link><description>Recent content in 折腾吧 on 微影随行</description><generator>Hugo</generator><language>zh-CN</language><copyright>© 2024 我的博客. All rights reserved.</copyright><lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xieha.cn/categories/%E6%8A%98%E8%85%BE%E5%90%A7/index.xml" rel="self" type="application/rss+xml"/><item><title>折腾博客记20240912</title><link>https://xieha.cn/posts/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912/</link><pubDate>Thu, 12 Sep 2024 00:36:01 +0800</pubDate><guid>https://xieha.cn/posts/%E6%8A%98%E8%85%BE%E5%8D%9A%E5%AE%A2%E8%AE%B020240912/</guid><description>&lt;p>最近一直在不断的折腾博客，整合memos到博客里面，安装artalk以及同步GitHub仓库文件。糟糕的是，memos已经搞好了，安装artalk遇到了很多麻烦，弄好才发现原来这么简单。因为一开始就配置错误，域名这块错误了。导致后面的很多问题出现，试过重装卸载多次，发表留言询问别人。后来还是重装的时候，留意到博客示例，填下看看，才成功。&lt;/p>
+&lt;p>问题1
+Failed to load comments
+TypeError: Failed to fetch&lt;/p>
+&lt;p>&lt;img src="https://img.xieha.cn/i/2024/10/21/6716144ec2620.png" alt="">&lt;/p>
+&lt;p>第一是安装的时候没有正确填写自己博客地址。而我就是那种了。以为安装地址链接是填写这artalk域名地址。正确是你要嵌入的地址。比如你要把评论嵌入你的博客地址，那么你就是填写你的博客地址。后续artalk地址可以通过反向代理ip地址就行了。其实是官方一开始的给的例子就可以看出了。可能当时比较马大哈，哈哈。&lt;/p>
+&lt;p>还有其他的情况是要在artalk后台加入域名白名单。官方好像说过的api问题也会这样。&lt;/p>
+&lt;p>关于memos这方面。由于官方经常迭代升级，改变很多东西。具体啥的我也不太清楚。如果经常升级的话。会导致其他大佬给的js用不了。这个我是深有体会。目前我的版本是0.18.2。不太想升级了，也不敢升级。不然有一堆问题。咱又不会解决。只能跟随大佬们的脚步。&lt;/p>
+&lt;p>目前还在折腾怎么本地博客更新同步服务器上。坎坷呀&lt;/p>
+&lt;p>哈哈，最重要的是，文章内容不怎么更新，功能却要有，实在是有点搞笑了。&lt;/p></description></item><item><title>Gitalk评论系统Error: Network Error</title><link>https://xieha.cn/posts/gitalk/</link><pubDate>Sat, 26 Nov 2022 15:22:45 +0800</pubDate><guid>https://xieha.cn/posts/gitalk/</guid><description>收集一些gitalk评论系统出现的一些问题，方便以后查询并解决</description></item><item><title>Giscus评论系统简单配置</title><link>https://xieha.cn/posts/gicus/</link><pubDate>Wed, 12 Oct 2022 22:41:02 +0800</pubDate><guid>https://xieha.cn/posts/gicus/</guid><description>给博客弄个评论系统，有互动才更加有乐趣。 看了其他的一些评论系统，就选择了Giscus评论系统。</description></item><item><title>记录一些Hugo的错误日志</title><link>https://xieha.cn/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</link><pubDate>Mon, 03 Oct 2022 16:07:16 +0800</pubDate><guid>https://xieha.cn/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9Bhugo%E7%9A%84%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97/</guid><description>&lt;p>&lt;strong>注意：&lt;/strong> 这里记录的是hugo运行过程中发生的错误与解决方法。&lt;/p>
+&lt;p>运营之中，难免会发生各种各样的问题，也经常要搜索各种问题答案，归档起来，也方便些。&lt;/p>
+&lt;h3 id="问题1">问题1&lt;/h3>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>fatal: unable to access &amp;#39;https://github.com/nunocoracao/blowfish.git/&amp;#39;: OpenSSL SSL_read: Connection was reset, errno 10054 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="1.jpg" alt="Featured Blowfish image">&lt;/p>
+&lt;p>产生原因：一般是这是因为服务器的SSL证书没有经过第三方机构的签署，所以才报错
+参考网上解决办法：解除ssl验证后，再上传就OK了&lt;/p></description></item></channel></rss>
